@@ -3,7 +3,7 @@ LICENSE = "BSD"
 
 LIC_FILES_CHKSUM = "file://README;md5=b02a793c9b7893b4ce1f39f0b231ccd7"
  
-INC_PR = "r3"
+INC_PR = "r4"
 
 SRC_URI = "http://sourceforge.net/projects/ocf-linux/files/ocf-linux/${PV}/ocf-linux-${PV}.tar.gz"
 
@@ -21,5 +21,5 @@ do_install() {
     install -m 0644 ${S}/ocf/*.h ${D}${includedir}/crypto/
 }
 
-ALLOW_EMPTY = "1"
+ALLOW_EMPTY_${PN} = "1"
 BBCLASSEXTEND = "native nativesdk"
