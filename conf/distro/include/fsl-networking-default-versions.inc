@@ -4,8 +4,4 @@ PREFERRED_VERSION_u-boot-mkimage-native_powerpc = "2011.06"
 PREFERRED_VERSION_oprofile = "0.9.6"
 PREFERRED_VERSION_openssl_p3041ds = "1.0.1c"
 PREFERRED_VERSION_openssl_p4080ds = "1.0.1c"
-PREFERRED_VERSION_fmc_e500mc = "0.9.23"
-PREFERRED_VERSION_fmc_e5500 = "0.9.23"
-PREFERRED_VERSION_fmc_e5500-64b = "0.9.23"
-PREFERRED_VERSION_fmc_p1023rds = "0.9.23"
 
