@@ -1,0 +1,46 @@
+diff -urN libvirt-1.0.3/src/qemu/qemu_capabilities.c libvirt-1.0.3/src/qemu/qemu_capabilities.c
+--- libvirt-1.0.3/src/qemu/qemu_capabilities.c	2013-03-05 12:18:07.000000000 +0800
++++ libvirt-1.0.3/src/qemu/qemu_capabilities.c	2013-03-05 13:17:36.000000000 +0800
+@@ -2204,6 +2204,9 @@
+         virQEMUCapsClear(qemuCaps, QEMU_CAPS_NO_ACPI);
+     }
+ 
++    if (qemuCaps->arch == VIR_ARCH_PPC)
++        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
++
+     /* virQEMUCapsExtractDeviceStr will only set additional caps if qemu
+      * understands the 0.13.0+ notion of "-device driver,".  */
+     if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
+@@ -2444,6 +2447,9 @@
+         virQEMUCapsSet(qemuCaps, QEMU_CAPS_NO_ACPI);
+     }
+ 
++    if (qemuCaps->arch == VIR_ARCH_PPC)
++        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
++
+     if (virQEMUCapsProbeQMPCommands(qemuCaps, mon) < 0)
+         goto cleanup;
+     if (virQEMUCapsProbeQMPEvents(qemuCaps, mon) < 0)
+diff -urN libvirt-1.0.3/src/qemu/qemu_command.c libvirt-1.0.3/src/qemu/qemu_command.c
+--- libvirt-1.0.3/src/qemu/qemu_command.c	2013-03-05 12:18:07.000000000 +0800
++++ libvirt-1.0.3/src/qemu/qemu_command.c	2013-03-05 13:19:22.000000000 +0800
+@@ -6751,7 +6751,8 @@
+                 virCommandAddArg(cmd, host);
+                 VIR_FREE(host);
+             }
+-            if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE)) {
++            if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
++                def->os.arch != VIR_ARCH_PPC) {
+                 virCommandAddArg(cmd, "-device");
+                 nic = qemuBuildNicDevStr(net, vlan, bootindex, qemuCaps);
+                 if (!nic)
+@@ -6412,7 +6412,8 @@
+ 
+             /* Use -chardev with -device if they are available */
+             if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_CHARDEV) &&
+-                virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE)) {
++                virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
++                def->os.arch != VIR_ARCH_PPC) {
+                 virCommandAddArg(cmd, "-chardev");
+                 if (!(devstr = qemuBuildChrChardevStr(&serial->source,
+                                                       serial->info.alias,
