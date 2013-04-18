@@ -1,0 +1,37 @@
+From 211c654ff89d9a2c5a1f6b50640bb52f9641a256 Mon Sep 17 00:00:00 2001
+From: Kumar Gala <galak@kernel.crashing.org>
+Date: Sat, 16 Apr 2011 12:34:34 -0500
+Subject: [PATCH 2/2] Fix cross compiling on PPC
+
+Renamed ARCH check to use powerpc (for ppc32) and powerpc64.
+
+Signed-off-by: Kumar Gala <galak@kernel.crashing.org>
+---
+ Makefile |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 77cd122..fb3ab61 100644
+--- a/Makefile
++++ b/Makefile
+@@ -34,7 +34,7 @@ CPPFLAGS += -D__LIBHUGETLBFS__
+ ARCH = $(shell uname -m | sed -e s/i.86/i386/)
+ CC = gcc
+ 
+-ifeq ($(ARCH),ppc64)
++ifeq ($(ARCH),powerpc64)
+ CC64 = $(CC) -m64
+ ELF64 = elf64ppc
+ TMPLIB64 = lib64
+@@ -44,7 +44,7 @@ CC32 = $(CC) -m32
+ ELF32 = elf32ppclinux
+ endif
+ else
+-ifeq ($(ARCH),ppc)
++ifeq ($(ARCH),powerpc)
+ CC32 = $(CC) -m32
+ ELF32 = elf32ppclinux
+ TMPLIB32 = lib
+-- 
+1.7.0.2
+

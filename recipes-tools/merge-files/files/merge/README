@@ -1,0 +1,10 @@
+#
+# Copyright (C) 2012 Freescale Semiconductor Inc.
+#
+
+This package is used to merge specified files into rootfs.
+
+Steps:
+1> copy files to meta-fsl-ppc-private/recipes-tools/merge-files/files/merge/
+2> make sure package 'merge-files' in the IMAGE_INSTALL list
+3> bitbake <image_type>

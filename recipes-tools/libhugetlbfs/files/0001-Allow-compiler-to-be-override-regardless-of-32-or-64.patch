@@ -1,0 +1,82 @@
+From 8261a6faa38b1580a41ba3cfd5a08ddcb95ce9d2 Mon Sep 17 00:00:00 2001
+From: Kumar Gala <galak@kernel.crashing.org>
+Date: Sat, 16 Apr 2011 12:46:04 -0500
+Subject: [PATCH 1/2] Allow compiler to be override regardless of 32 or 64-bit build
+
+Provide an easy means for cross compiling to override the compiler
+without having to know if we intend a 32-bit or 64-bit build.
+
+Signed-off-by: Kumar Gala <galak@kernel.crashing.org>
+---
+ Makefile |   21 +++++++++++----------
+ 1 files changed, 11 insertions(+), 10 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index d781871..77cd122 100644
+--- a/Makefile
++++ b/Makefile
+@@ -32,50 +32,51 @@ CFLAGS += -Wall -fPIC
+ CPPFLAGS += -D__LIBHUGETLBFS__
+ 
+ ARCH = $(shell uname -m | sed -e s/i.86/i386/)
++CC = gcc
+ 
+ ifeq ($(ARCH),ppc64)
+-CC64 = gcc -m64
++CC64 = $(CC) -m64
+ ELF64 = elf64ppc
+ TMPLIB64 = lib64
+ TMPLIB32 = lib
+ ifneq ($(BUILDTYPE),NATIVEONLY)
+-CC32 = gcc -m32
++CC32 = $(CC) -m32
+ ELF32 = elf32ppclinux
+ endif
+ else
+ ifeq ($(ARCH),ppc)
+-CC32 = gcc -m32
++CC32 = $(CC) -m32
+ ELF32 = elf32ppclinux
+ TMPLIB32 = lib
+ else
+ ifeq ($(ARCH),i386)
+-CC32 = gcc
++CC32 = $(CC)
+ ELF32 = elf_i386
+ TMPLIB32 = lib
+ else
+ ifeq ($(ARCH),x86_64)
+-CC64 = gcc -m64
++CC64 = $(CC) -m64
+ ELF64 = elf_x86_64
+ TMPLIB64 = lib64
+ TMPLIB32 = lib
+ ifneq ($(BUILDTYPE),NATIVEONLY)
+-CC32 = gcc -m32
++CC32 = $(CC) -m32
+ ELF32 = elf_i386
+ endif
+ else
+ ifeq ($(ARCH),ia64)
+-CC64 = gcc
++CC64 = $(CC)
+ TMPLIB64 = lib64
+ CFLAGS += -DNO_ELFLINK
+ else
+ ifeq ($(ARCH),sparc64)
+-CC64 = gcc -m64
++CC64 = $(CC) -m64
+ TMPLIB64 = lib64
+ CFLAGS += -DNO_ELFLINK
+ else
+ ifeq ($(ARCH),s390x)
+-CC64 = gcc -m64
+-CC32 = gcc -m31
++CC64 = $(CC) -m64
++CC32 = $(CC) -m31
+ TMPLIB64 = lib64
+ TMPLIB32 = lib
+ CFLAGS += -DNO_ELFLINK
+-- 
+1.7.0.2
+
