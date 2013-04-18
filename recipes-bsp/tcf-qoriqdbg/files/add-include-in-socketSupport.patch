@@ -1,0 +1,10 @@
+--- tcf-qoriqdbg-4.0.0.105390-r2/tcf-qoriqdbg-4.0.0.105390/core.internal/socketSupport.cpp	2011-10-07 18:15:25.000000000 -0500
++++ tcf-qoriqdbg-4.0.0.105390/core.internal/socketSupport.cpp	2012-10-30 05:27:20.627395526 -0500
+@@ -46,6 +46,7 @@
+ // Linux interfaces for getifaddrs/freeifaddrs
+ #include <sys/types.h>
+ 
++#include <unistd.h>
+ // To disable the nagle algorithm
+ #include <netinet/tcp.h>
+ 

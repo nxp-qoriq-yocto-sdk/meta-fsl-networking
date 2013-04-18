@@ -1,0 +1,32 @@
+From 6875c410a5c63781acaff4d6038da3337cf68297 Mon Sep 17 00:00:00 2001
+From: Bhaskar Upadhaya <Bhaskar.Upadhaya@freescale.com>
+Date: Fri, 29 Apr 2011 09:46:06 +0530
+Subject: [PATCH] Cantest fix for Flexcan
+
+
+Signed-off-by: Bhaskar Upadhaya <Bhaskar.Upadhaya@freescale.com>
+---
+ a/cansend.c |    7 -------
+ 1 files changed, 0 insertions(+), 7 deletions(-)
+
+diff --git a/cansend.c b/cansend.c
+index 27413f9..c9820b3 100644
+--- a/cansend.c
++++ b/cansend.c
+@@ -90,13 +90,6 @@ int main(int argc, char **argv)
+     addr.can_ifindex = ifr.ifr_ifindex;
+ 
+     ifr.ifr_ifru.ifru_ivalue = 1000000/2;
+-    ret = ioctl(s, SIOCSCANBAUDRATE, &ifr);
+-    if (ret) {
+-	    printf("Err: cantest failed to set up baud rate for can port %s\n",
+-			    					argv[1]);
+-	    printf("     Please check the settings of system clock.\n");
+-	    exit(1);
+-    }
+ 
+     if (bind(s, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+       perror("bind");
+-- 
+1.6.5.6
+
