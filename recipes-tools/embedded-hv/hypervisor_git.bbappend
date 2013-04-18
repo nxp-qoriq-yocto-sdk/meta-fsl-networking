@@ -1,15 +1,15 @@
-FILESEXTRAPATHS_prepend_fsl-networking := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PR_append_fsl-networking = "+fsl_ppc_private.3"
+PR_append = "+fsl.4"
 
-SRC_URI_append_fsl-networking = " \
+SRC_URI_append = " \
 	git://git.am.freescale.net/gitolite/sdk/hypertrk.git;name=hypertrk;destsuffix=git/hypertrk \
 "
-SRCREV_hypertrk_fsl-networking = "975c98b562186afbd3bbf103ae54b96cf9b3e533"
+SRCREV_hypertrk = "975c98b562186afbd3bbf103ae54b96cf9b3e533"
 
-PKG_HV_HYPERTRK_SUPPORT_fsl-networking="n"
+PKG_HV_HYPERTRK_SUPPORT = "n"
 
-do_compile_prepend_fsl-networking () {
+do_compile_prepend () {
     if [ "${PKG_HV_HYPERTRK_SUPPORT}" == "y" ]
     then
         oe_runmake silentoldconfig
