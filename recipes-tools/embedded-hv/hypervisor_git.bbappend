@@ -1,11 +1,23 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PR_append = "+fsl.4"
+PRINC := "${@int(PRINC) + 1}"
+
+SRC_URI = " \
+        git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor \
+        git://git.am.freescale.net/gitolite/hv/kconfig.git;name=kconfig;destsuffix=git/kconfig \
+        git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos \
+        git://www.jdl.com/software/dtc.git;name=dtc;destsuffix=dtc \
+        file://81-fsl-embedded-hv.rules \
+         "
 
 SRC_URI_append = " \
 	git://git.am.freescale.net/gitolite/sdk/hypertrk.git;name=hypertrk;destsuffix=git/hypertrk \
 "
-SRCREV_hypertrk = "975c98b562186afbd3bbf103ae54b96cf9b3e533"
+
+SRCREV_hypervisor = "${AUTOREV}"
+SRCREV_kconfig = "${AUTOREV}"
+SRCREV_libos = "${AUTOREV}"
+SRCREV_hypertrk = "${AUTOREV}"
 
 PKG_HV_HYPERTRK_SUPPORT = "n"
 
