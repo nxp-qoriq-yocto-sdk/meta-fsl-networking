@@ -1,7 +1,7 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r5"
+PR = "r6"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
@@ -22,11 +22,18 @@ S = "${WORKDIR}/git"
 EXTRA_OEMAKE = "'ARCH=${TARGET_ARCH}' 'OPT=${CFLAGS}' 'CC=${CC}' BUILDTYPE=NATIVEONLY"
 CFLAGS += "-fexpensive-optimizations -frename-registers -fomit-frame-pointer -g0"
 
+TARGET_CC_ARCH += "${LDFLAGS}"
+
 do_install() {
-        oe_runmake PREFIX=${prefix} DESTDIR=${D} install
+        oe_runmake PREFIX=${prefix} DESTDIR=${D} install-tests
 }
 
 PARALLEL_MAKE_pn-${PN} = ""
 
 PACKAGES += "${PN}-perl"
+FILES_${PN}-dbg += "${libdir}/libhugetlbfs/tests/obj32/.debug ${libdir}/libhugetlbfs/tests/obj64/.debug"
 FILES_${PN}-perl = "${libdir}/perl5"
+FILES_${PN}-dev += "${libdir}/libhugetlbfs/tests"
+
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+
