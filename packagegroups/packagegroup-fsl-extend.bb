@@ -63,7 +63,7 @@ RDEPENDS_packagegroup-fsl-extend = "\
 "
 
 # packages in meta-oe
-RRECOMMENDS_packagegroup-fsl-misc = "\
+RRECOMMENDS_packagegroup-fsl-extend = "\
     bonnie++ \
     bridge-utils \
     cramfs \
