@@ -1,7 +1,7 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r6"
+PR = "r7"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
@@ -34,7 +34,7 @@ PARALLEL_MAKE_pn-${PN} = ""
 # for ${PN}-tests and ${PN}-dbg
 PACKAGES="${PN}-dbg ${PN}-tests ${PN}-staticdev ${PN} ${PN}-doc ${PN}-dev ${PN}-locale ${PN}-perl"
 
-FILES_${PN}-dbg += "${libdir}/libhugetlbfs/tests/obj32/.debug"
+FILES_${PN}-dbg += "${libdir}/libhugetlbfs/tests/obj32/.debug ${libdir}/libhugetlbfs/tests/obj64/.debug"
 FILES_${PN}-perl = "${libdir}/perl5"
 FILES_${PN}-tests = "${libdir}/libhugetlbfs/tests/* \
                      ${libdir}/*.so"
