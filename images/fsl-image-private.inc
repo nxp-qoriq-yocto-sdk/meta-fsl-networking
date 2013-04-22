@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 5}"
+PRINC := "${@int(PRINC) + 6}"
 
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
@@ -41,7 +41,7 @@ IMAGE_INSTALL_append_e6500 += " \
 "
 
 IMAGE_INSTALL_append_e6500-64b += " \
-        fmc
+        fmc \
 	pme-tools \
         tcf-qoriqdbg \
         usdpaa \
