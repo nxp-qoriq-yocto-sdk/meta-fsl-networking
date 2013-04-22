@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 4}"
+PRINC := "${@int(PRINC) + 5}"
 
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
@@ -7,9 +7,9 @@ IMAGE_INSTALL_append_e500v2 = " \
         testfloat \
 "
 
-# FIXME: add fmc back for all DPAA boards
 # FIXME: add qoriq-debug back for e5500-64b
 IMAGE_INSTALL_append_e500mc += " \
+        fmc \
         fsl-tlu \
         libppc \
 	pme-tools \
@@ -18,6 +18,7 @@ IMAGE_INSTALL_append_e500mc += " \
 "
 
 IMAGE_INSTALL_append_e5500 += " \
+        fmc \
         libppc \
 	pme-tools \
         qoriq-debug \
@@ -26,26 +27,29 @@ IMAGE_INSTALL_append_e5500 += " \
 "
 
 IMAGE_INSTALL_append_e5500-64b += " \
+        fmc \
 	pme-tools \
         tcf-qoriqdbg \
         usdpaa \
 "
 
 IMAGE_INSTALL_append_e6500 += " \
+        fmc \
 	pme-tools \
         tcf-qoriqdbg \
         usdpaa \
 "
 
 IMAGE_INSTALL_append_e6500-64b += " \
+        fmc
 	pme-tools \
         tcf-qoriqdbg \
         usdpaa \
 "
 
-#IMAGE_INSTALL_append_p1023rds += " \
-#        fmc \
-#"
+IMAGE_INSTALL_append_p1023rds += " \
+        fmc \
+"
 
 IMAGE_INSTALL_append_p2020rdb += " \
         ixxat-stack-ptp \
