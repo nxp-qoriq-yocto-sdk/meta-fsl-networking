@@ -1,7 +1,9 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PRINC := "${@int(PRINC) + 1}"
+PRINC := "${@int(PRINC) + 2}"
 
 SRC_URI_append = " file://fix-qemu-cmd-${PV}.patch"
+
+DEPENDS_append = " libpciaccess augeas"
 
 PACKAGECONFIG ??= "qemu yajl polkit lxc test remote macvtap libvirtd netcf"
