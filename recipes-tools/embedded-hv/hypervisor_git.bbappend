@@ -1,23 +1,22 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PRINC := "${@int(PRINC) + 1}"
+PRINC := "${@int(PRINC) + 2}"
 
-SRC_URI = " \
-        git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor \
-        git://git.am.freescale.net/gitolite/hv/kconfig.git;name=kconfig;destsuffix=git/kconfig \
-        git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos \
-        git://www.jdl.com/software/dtc.git;name=dtc;destsuffix=dtc \
+SRC_URI = "${URL-HYPERVISOR};name=hypervisor \
+        ${URL-KCONFIG};name=kconfig;destsuffix=git/kconfig \
+        ${URL-LIBOS};name=libos;destsuffix=git/libos \
+        ${URL-DTC};name=dtc;destsuffix=dtc \
         file://81-fsl-embedded-hv.rules \
          "
 
 SRC_URI_append = " \
-	git://git.am.freescale.net/gitolite/sdk/hypertrk.git;name=hypertrk;destsuffix=git/hypertrk \
+	${URL-HYPERTRK};name=hypertrk;destsuffix=git/hypertrk \
 "
 
-SRCREV_hypervisor = "${AUTOREV}"
-SRCREV_kconfig = "${AUTOREV}"
-SRCREV_libos = "${AUTOREV}"
-SRCREV_hypertrk = "${AUTOREV}"
+SRCREV_hypervisor = "${SHA-HYPERVISOR}"
+SRCREV_kconfig = "${SHA-KCONFIG}"
+SRCREV_libos = "${SHA-LIBOS}"
+SRCREV_hypertrk = "${SHA-HYPERTRK}"
 
 PKG_HV_HYPERTRK_SUPPORT = "n"
 

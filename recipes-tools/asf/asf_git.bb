@@ -1,11 +1,11 @@
 DESCRIPTION = "Non-DPAA software Application Specific Fast-path"
 SECTION = "libppc"
 LICENSE = "GPLv2"
-PR = "r7"
+PR = "r8"
 LIC_FILES_CHKSUM = "file://COPYING;md5=9960b017720861b8c50c8c08723e57aa"
 
-SRCREV = "${AUTOREV}"
-SRC_URI = "git://git.am.freescale.net/gitolite/asf.git;branch=asf-sdk-1.4"
+SRCREV = "${SHA-ASF}"
+SRC_URI = "${URL-ASF}"
 
 DEPENDS="virtual/kernel"
 

@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 1}"
+PRINC := "${@int(PRINC) + 2}"
 
-SRC_URI = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git"
-SRCREV = "${AUTOREV}"
+SRC_URI = "${URL-FMLIB}"
+SRCREV = "${SHA-FMLIB}"

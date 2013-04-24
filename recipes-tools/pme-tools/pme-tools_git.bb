@@ -1,14 +1,13 @@
 DESCRIPTION = "Pattern matcher tools"
 SECTION = "pme-tools"
 LICENSE = "Freescale EULA"
-PR = "r10"
+PR = "r11"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f6bc49903590148d5df43337785b67cd"
 
 EXCLUDE_FROM_WORLD_pn-pme-tools = "1"
 
-SRCREV = "c087ab4a6f66551836f87a3028f13767cc0abd6c"
-SRC_URI = "git://git.am.freescale.net/gitolite/pme_tools.git;protocol=git \
-"
+SRCREV = "${SHA-PMETOOLS}"
+SRC_URI = "${URL-PMETOOLS}"
 
 S= "${WORKDIR}/git"
 

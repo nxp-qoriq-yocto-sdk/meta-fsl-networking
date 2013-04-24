@@ -1,16 +1,15 @@
 DESCRIPTION = "CST Tool"
 SECTION = "cst"
 LICENSE = "BSD"
-PR = "r10"
+PR = "r11"
 
 # TODO: fix license - this file is not a license
 LIC_FILES_CHKSUM = "file://RELEASENOTES;beginline=8;endline=43;md5=5a7b22a2c96b5f94e0498c5f413aa8d3"
 
 DEPENDS += "openssl"
 
-SRCREV = "${AUTOREV}"
-SRC_URI = "git://git.am.freescale.net/gitolite/cst.git \
-"
+SRCREV = "${SHA-CST}"
+SRC_URI = "${URL-CST}"
 
 S = "${WORKDIR}/git"
 
