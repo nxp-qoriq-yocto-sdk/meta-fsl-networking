@@ -1,9 +1,9 @@
 DESCRIPTION = "The stack images of ptp"
 SECTION = "1588"
-LICENSE = "IXXAT EULA"
+LICENSE = "IXXAT-EULA"
 LIC_FILES_CHKSUM = "file://ptp_p2020rdb;md5=10b6559698b2a212519975054b1766d9"
 
-PR = "r1"
+PR = "r2"
 
 SRC_URI = "file://ixxat-demopackage-P2020RDB-PCA-v1.05.tar.gz \
 "
