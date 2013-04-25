@@ -1,6 +1,6 @@
 DESCRIPTION = "optimized memcpy implementation"
 SECTION = "libppc"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r11"
 LIC_FILES_CHKSUM = "file://Makefile;endline=21;md5=45d81c6e015ed7c8917e766ff1fd4499"
 

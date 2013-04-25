@@ -1,6 +1,6 @@
 DESCRIPTION = "Diagnostic binary"
 SECTION = "Diagnostic"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://README;md5=2732f100f6a00868f0cdb02065bc8f00"
 
 PR = "r1"

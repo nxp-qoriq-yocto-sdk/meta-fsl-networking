@@ -1,6 +1,6 @@
 DESCRIPTION = "Support for writing file to devices connected on I2C bus"
 SECTION = "i2c-flash-util"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 

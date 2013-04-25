@@ -1,6 +1,6 @@
 DESCRIPTION = "Put specified files into rootfs"
 SECTION = "merge-files"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://../merge/README;endline=3;md5=945c2ef603d2006cced7fffd2af773d5"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"

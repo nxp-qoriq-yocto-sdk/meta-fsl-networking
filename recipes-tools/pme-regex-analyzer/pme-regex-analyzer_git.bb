@@ -1,6 +1,6 @@
 DESCRIPTION = "Pattern Matcher Regex Analyzer"
 SECTION = "pme"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r6"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d2626c94d1a34e8c168bb23682afc98e"
 

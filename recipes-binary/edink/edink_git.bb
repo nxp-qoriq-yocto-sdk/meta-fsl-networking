@@ -1,6 +1,6 @@
 DESCRIPTION = "Edink binary"
 SECTION = "Edink"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://README;md5=ce68f8c5240ace21f5880b4c29662394"
 
 PR = "r1"

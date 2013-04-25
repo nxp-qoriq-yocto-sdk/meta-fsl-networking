@@ -1,6 +1,6 @@
 DESCRIPTION = "qe microcode binary"
 SECTION = "qe-ucode"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://README;md5=2bd6b1f0a347695faf3f841714698b7d"
 
 PR = "r2"

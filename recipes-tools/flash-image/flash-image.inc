@@ -1,6 +1,6 @@
 DESCRIPTION = "Generate flash images"
 SECTION = "flash-image"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://COPYING;md5=457d7f1ad0c73c7102bc0563e8cb9aac"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"

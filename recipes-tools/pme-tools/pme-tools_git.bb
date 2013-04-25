@@ -1,6 +1,6 @@
 DESCRIPTION = "Pattern matcher tools"
 SECTION = "pme-tools"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r11"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f6bc49903590148d5df43337785b67cd"
 

@@ -1,6 +1,6 @@
 DESCRIPTION = "SPID based TCF agent"
 SECTION = "tcf-qoriqdbg"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r3"
 LIC_FILES_CHKSUM = "file://Makefile;beginline=6;endline=17;md5=75c98af1c2fa46281fbdac337244d196"
 

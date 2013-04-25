@@ -1,6 +1,6 @@
 DESCRIPTION = "Userspace proxy agent for Code Warrrior HyperTrk"
 SECTION = "hyperrelay"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=95560debfde180684364319811cc1421"
 

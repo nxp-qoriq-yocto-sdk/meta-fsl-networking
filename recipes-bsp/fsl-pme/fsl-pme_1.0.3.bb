@@ -1,5 +1,5 @@
 DESCRIPTION = "User space application for Pattern Matcher"
-LICENSE = "Freescale EULA"
+LICENSE = "Freescale-EULA"
 PR = "r1"
 DEPENDS="libedit"
 LIC_FILES_CHKSUM = "file://Freescale_Software_License.txt;md5=01425ba2740a00e5f5402177fa741238"
