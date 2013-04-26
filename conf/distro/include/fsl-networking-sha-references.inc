@@ -86,3 +86,7 @@ SHA-HVTEST = "${AUTOREV}"
 URL-SKMMHOST = "git://bus.ap.freescale.net/scm/c29x/c293_skmm_host.git"
 SHA-SKMMHOST = "${AUTOREV}"
 
+# qemu
+URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.4"
+SHA-QEMU = "${AUTOREV}"
+

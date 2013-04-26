@@ -6,9 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=441c28d2cf86e15a37fa47e15a72fbac \
 # This means v1.4 with FSL specific patches applied
 PV = "1.4+fsl"
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/qemu.git;protocol=git;branch=fsl-sdk-v1.4 \
-"
-SRCREV = "${AUTOREV}"
+SRC_URI = "${URL-QEMU}"
+SRCREV = "${SHA-QEMU}"
 
 S = "${WORKDIR}/git"
 
