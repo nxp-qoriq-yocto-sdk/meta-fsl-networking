@@ -39,8 +39,8 @@ IMAGE_INSTALL_append_e5500-64b = " \
 IMAGE_INSTALL_append_e6500 = " \
         fm-ucode \
         hv-cfg \
-        hypervisor \
-        hypervisor-partman \
+        lib64-hypervisor \
+        lib64-hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_e6500-64b = " \
