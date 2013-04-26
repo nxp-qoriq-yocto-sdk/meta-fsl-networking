@@ -3,10 +3,12 @@ SECTION = "skmm"
 LICENSE = "BSD & GPLv2"
 LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=39e58bedc879163c9338596e52df5b1f"
 
+PR = "r1"
+
 DEPENDS = "libedit"
 
-SRC_URI = "git://bus.ap.freescale.net/scm/c29x/skmm-ep.git;"
-SRCREV = "$(AUTOREV)"
+SRC_URI = "${URL-SKMM}"
+SRCREV = "${SHA-SKMM}"
 
 COMPATIBLE_MACHINE = "(p4080ds)"
 
