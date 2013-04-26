@@ -57,6 +57,8 @@ IMAGE_INSTALL_append_p2020rdb += " \
 
 IMAGE_INSTALL_append_p4080ds += " \
         tcf-qoriqdbg \
+        skmm \
+        skmmhost \
 "
 
 # fsl specific packages
