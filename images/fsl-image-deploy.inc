@@ -3,7 +3,7 @@
 #
 # deploy pkgs for all fsl images
 
-PRINC := "${@int(PRINC) + 3}"
+PRINC := "${@int(PRINC) + 4}"
 
 IMAGE_INSTALL_append_p1020mbg = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
@@ -38,24 +38,22 @@ IMAGE_INSTALL_append_e5500-64b = " \
 
 IMAGE_INSTALL_append_e6500 = " \
         fm-ucode \
-        hv-cfg \
         lib64-hypervisor \
         lib64-hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_e6500-64b = " \
         fm-ucode \
-        hv-cfg \
         hypervisor \
         hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_b4420qds = " rcw"
 IMAGE_INSTALL_append_b4420qds-64b = " rcw"
-IMAGE_INSTALL_append_b4860qds = " rcw"
-IMAGE_INSTALL_append_b4860qds-64b = " rcw"
-IMAGE_INSTALL_append_t4240qds = " rcw"
-IMAGE_INSTALL_append_t4240qds-64b = " rcw"
+IMAGE_INSTALL_append_b4860qds = " rcw hv-cfg"
+IMAGE_INSTALL_append_b4860qds-64b = " rcw hv-cfg"
+IMAGE_INSTALL_append_t4240qds = " rcw hv-cfg"
+IMAGE_INSTALL_append_t4240qds-64b = " rcw hv-cfg"
 
 IMAGE_INSTALL_append_p1023rds = " \
         fm-ucode \
