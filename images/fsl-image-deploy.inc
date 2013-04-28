@@ -1,9 +1,9 @@
 #
-# Copyright (C) 2012 Freescale Semiconductor Inc.
+# Copyright (C) 2012,2013 Freescale Semiconductor Inc.
 #
 # deploy pkgs for all fsl images
 
-PRINC := "${@int(PRINC) + 4}"
+PRINC := "${@int(PRINC) + 5}"
 
 IMAGE_INSTALL_append_p1020mbg = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
@@ -55,7 +55,7 @@ IMAGE_INSTALL_append_b4860qds-64b = " rcw hv-cfg"
 IMAGE_INSTALL_append_t4240qds = " rcw hv-cfg"
 IMAGE_INSTALL_append_t4240qds-64b = " rcw hv-cfg"
 
-IMAGE_INSTALL_append_p1023rds = " \
+IMAGE_INSTALL_append_p1023rdb = " \
         fm-ucode \
 "
 
