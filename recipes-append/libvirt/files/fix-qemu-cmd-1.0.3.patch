@@ -1,46 +1,66 @@
-diff -urN libvirt-1.0.3/src/qemu/qemu_capabilities.c libvirt-1.0.3/src/qemu/qemu_capabilities.c
---- libvirt-1.0.3/src/qemu/qemu_capabilities.c	2013-03-05 12:18:07.000000000 +0800
-+++ libvirt-1.0.3/src/qemu/qemu_capabilities.c	2013-03-05 13:17:36.000000000 +0800
-@@ -2204,6 +2204,9 @@
+Upstream-Status: Pending
+
+-we now always run qemu-system-ppc64 and thus need toenable MULTIBUS capability
+-special case handling for the way qemu serial portis handled now needs to be extended to ppc64
+-in virQEMUCapsGet force chardev to be NULL becausewe don't support chardev for console
+-remove change the modified the way network devicearguments are handled
+-- we should use -device/-netdev
+
+Signed-off-by: Stuart Yoder <stuart.yoder@freescale.com>
+
+diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
+index 40022c1..9587d9f 100644
+--- a/src/qemu/qemu_capabilities.c
++++ b/src/qemu/qemu_capabilities.c
+@@ -2204,6 +2204,9 @@ virQEMUCapsInitHelp(virQEMUCapsPtr qemuCaps, uid_t runUid, gid_t runGid)
          virQEMUCapsClear(qemuCaps, QEMU_CAPS_NO_ACPI);
      }
  
-+    if (qemuCaps->arch == VIR_ARCH_PPC)
++    if (qemuCaps->arch == VIR_ARCH_PPC || qemuCaps->arch == VIR_ARCH_PPC64)
 +        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
 +
      /* virQEMUCapsExtractDeviceStr will only set additional caps if qemu
       * understands the 0.13.0+ notion of "-device driver,".  */
      if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
-@@ -2444,6 +2447,9 @@
+@@ -2444,6 +2447,9 @@ virQEMUCapsInitQMP(virQEMUCapsPtr qemuCaps,
          virQEMUCapsSet(qemuCaps, QEMU_CAPS_NO_ACPI);
      }
  
-+    if (qemuCaps->arch == VIR_ARCH_PPC)
++    if (qemuCaps->arch == VIR_ARCH_PPC || qemuCaps->arch == VIR_ARCH_PPC64)
 +        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
 +
      if (virQEMUCapsProbeQMPCommands(qemuCaps, mon) < 0)
          goto cleanup;
      if (virQEMUCapsProbeQMPEvents(qemuCaps, mon) < 0)
-diff -urN libvirt-1.0.3/src/qemu/qemu_command.c libvirt-1.0.3/src/qemu/qemu_command.c
---- libvirt-1.0.3/src/qemu/qemu_command.c	2013-03-05 12:18:07.000000000 +0800
-+++ libvirt-1.0.3/src/qemu/qemu_command.c	2013-03-05 13:19:22.000000000 +0800
-@@ -6751,7 +6751,8 @@
-                 virCommandAddArg(cmd, host);
-                 VIR_FREE(host);
-             }
--            if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE)) {
-+            if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
-+                def->os.arch != VIR_ARCH_PPC) {
-                 virCommandAddArg(cmd, "-device");
-                 nic = qemuBuildNicDevStr(net, vlan, bootindex, qemuCaps);
-                 if (!nic)
-@@ -6412,7 +6412,8 @@
+diff --git a/src/qemu/qemu_command.c b/src/qemu/qemu_command.c
+index 201fac1..2c2d93b 100644
+--- a/src/qemu/qemu_command.c
++++ b/src/qemu/qemu_command.c
+@@ -6412,7 +6412,9 @@ qemuBuildCommandLine(virConnectPtr conn,
  
              /* Use -chardev with -device if they are available */
              if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_CHARDEV) &&
 -                virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE)) {
 +                virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
++                def->os.arch != VIR_ARCH_PPC64 &&
 +                def->os.arch != VIR_ARCH_PPC) {
                  virCommandAddArg(cmd, "-chardev");
                  if (!(devstr = qemuBuildChrChardevStr(&serial->source,
                                                        serial->info.alias,
+diff --git a/src/qemu/qemu_process.c b/src/qemu/qemu_process.c
+index 9f1507a..8c716b3 100644
+--- a/src/qemu/qemu_process.c
++++ b/src/qemu/qemu_process.c
+@@ -1624,6 +1624,12 @@ qemuProcessFindCharDevicePTYsMonitor(virDomainObjPtr vm,
+     bool chardevfmt = virQEMUCapsGet(qemuCaps, QEMU_CAPS_CHARDEV);
+     int i = 0;
+ 
++    /* right now on PPC QEMU_CAPS_CHARDEV is a problem...it is
++     * needed for the monitor, but not supported for the serial
++     * console, so clear the value
++     */
++    chardevfmt = 0;  // we don't support chardev for console
++
+     if (qemuProcessLookupPTYs(vm->def->serials, vm->def->nserials,
+                               paths, chardevfmt) < 0)
+         return -1;
