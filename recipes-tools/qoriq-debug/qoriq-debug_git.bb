@@ -1,13 +1,13 @@
 DESCRIPTION = "QorIQ Debug File System Module"
 SECTION = "qoriq-debug"
 LICENSE = "GPL"
-PR = "r6"
+PR = "r7"
 LIC_FILES_CHKSUM = "file://COPYING;md5=e29234dd5d40dc352cc60cc0c93437ba"
 
 inherit module autotools
 
 SRC_URI = "git://git.am.freescale.net/gitolite/soc-debug/qoriq-debug.git;protocol=git"
-SRCREV = "b789ed0d93cc93c8c113cdf745ac7eae08c1fe4f"
+SRCREV = "08de2902af9a79ba9e436a284b8d7754b351f608"
 
 S = "${WORKDIR}/git"
 
