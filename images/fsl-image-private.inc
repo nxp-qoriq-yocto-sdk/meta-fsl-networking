@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 6}"
+PRINC := "${@int(PRINC) + 7}"
 
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
@@ -7,7 +7,6 @@ IMAGE_INSTALL_append_e500v2 = " \
         testfloat \
 "
 
-# FIXME: add qoriq-debug back for e5500-64b
 IMAGE_INSTALL_append_e500mc += " \
         fmc \
         fsl-tlu \
@@ -29,6 +28,7 @@ IMAGE_INSTALL_append_e5500 += " \
 IMAGE_INSTALL_append_e5500-64b += " \
         fmc \
 	pme-tools \
+	qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
