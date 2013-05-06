@@ -3,7 +3,7 @@ SECTION = "skmm"
 LICENSE = "BSD & GPLv2"
 LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=39e58bedc879163c9338596e52df5b1f"
 
-PR = "r1"
+PR = "r2"
 
 DEPENDS = "libedit"
 
@@ -25,3 +25,5 @@ do_compile_prepend () {
 do_install () {
 	oe_runmake ARCH=${TARGET_ARCH} install DESTDIR=${D}
 }
+
+FILES_${PN} += "/home/root/.skmm/*"
