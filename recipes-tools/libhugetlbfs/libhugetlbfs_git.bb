@@ -1,7 +1,7 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r6"
+PR = "r7"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
@@ -15,6 +15,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://0003-libhugetlbfs-Remove-segment-based-alignment-restric.patch \
 	        file://0004-tests-run_tests.py-fix-typo-in-test-invocation.patch \
 	        file://skip-checking-LIB32-and-LIB64-if-they-point-to-the-s.patch \
+	        file://libhugetlbfs-Fix-perl-lib-can-not-be-shiped-to-sub-p.patch \
 "
 
 S = "${WORKDIR}/git"

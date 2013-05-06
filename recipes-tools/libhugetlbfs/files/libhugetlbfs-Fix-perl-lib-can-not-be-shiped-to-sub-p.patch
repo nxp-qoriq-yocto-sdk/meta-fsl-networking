@@ -1,0 +1,29 @@
+From f6aab55052b8ad7b9498b325c8a26cac25703b01 Mon Sep 17 00:00:00 2001
+From: Yu Zongchun <b40527@freescale.com>
+Date: Mon, 6 May 2013 18:06:02 +0800
+Subject: [PATCH] libhugetlbfs:Fix perl lib can not be shiped to sub-package
+ issue for 64bit board
+
+---
+ Makefile |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 03966b2..adbd91e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -149,7 +149,11 @@ LDSCRIPTDIR = $(PREFIX)/share/libhugetlbfs/ldscripts
+ BINDIR = $(PREFIX)/share/libhugetlbfs
+ EXEDIR = $(PREFIX)/bin
+ DOCDIR = $(PREFIX)/share/doc/libhugetlbfs
++ifdef CC32
+ PMDIR = $(PREFIX)/lib/perl5/TLBC
++else
++PMDIR = $(PREFIX)/lib64/perl5/TLBC
++endif
+ MANDIR1 = $(PREFIX)/share/man/man1
+ MANDIR3 = $(PREFIX)/share/man/man3
+ MANDIR7 = $(PREFIX)/share/man/man7
+-- 
+1.7.5.4
+
