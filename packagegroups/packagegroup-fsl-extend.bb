@@ -29,7 +29,6 @@ RDEPENDS_packagegroup-fsl-extend = "\
     lsb \
     lsbtest \
     lsof \
-    lxc \
     man \
     man-pages \
     mdadm \
@@ -86,4 +85,12 @@ RRECOMMENDS_packagegroup-fsl-extend = "\
     tcpdump \
     tiobench \
     wget \
+"
+
+# packages in meta-virtualization
+RRECOMMENDS_packagegroup-fsl-extend += "\
+    lxc \
+    libvirt \
+    libvirt-libvirtd \
+    libvirt-virsh \
 "
