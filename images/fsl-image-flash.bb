@@ -7,7 +7,7 @@
 require images/fsl-image-minimal.bb
 require images/fsl-image-deploy.inc
 
-PRINC := "${@int(PRINC) + 1}"
+PRINC := "${@int(PRINC) + 2}"
 
 IMAGE_INSTALL += " \
         packagegroup-core-ssh-dropbear \
@@ -18,6 +18,8 @@ IMAGE_INSTALL += " \
         e2fsprogs-e2fsck \
         e2fsprogs-tune2fs \
         mtd-utils \
+        mtd-utils-jffs2 \
+        mtd-utils-ubifs \
         dosfstools \
         net-tools \
         kmod \
