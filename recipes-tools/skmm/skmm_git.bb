@@ -3,14 +3,14 @@ SECTION = "skmm"
 LICENSE = "BSD & GPLv2"
 LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=39e58bedc879163c9338596e52df5b1f"
 
-PR = "r2"
+PR = "r3"
 
 DEPENDS = "libedit"
 
 SRC_URI = "${URL-SKMM}"
 SRCREV = "${SHA-SKMM}"
 
-COMPATIBLE_MACHINE = "(p4080ds)"
+COMPATIBLE_MACHINE = "(p4080ds|t4240qds)"
 
 S = "${WORKDIR}/git"
 
