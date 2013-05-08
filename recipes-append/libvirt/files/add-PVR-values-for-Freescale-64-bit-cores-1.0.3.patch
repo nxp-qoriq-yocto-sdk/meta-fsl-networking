@@ -1,0 +1,30 @@
+From e23c89879118419fe335c4a4548a58a06b231504 Mon Sep 17 00:00:00 2001
+From: Stuart Yoder <stuart.yoder@freescale.com>
+Date: Wed, 8 May 2013 17:58:05 -0500
+Subject: [PATCH] add PVR values for Freescale 64-bit cores
+
+Signed-off-by: Stuart Yoder <stuart.yoder@freescale.com>
+---
+ src/cpu/cpu_powerpc.c |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/cpu/cpu_powerpc.c b/src/cpu/cpu_powerpc.c
+index 5e1a7b9..6b68692 100644
+--- a/src/cpu/cpu_powerpc.c
++++ b/src/cpu/cpu_powerpc.c
+@@ -48,6 +48,12 @@ static const struct cpuPowerPC cpu_defs[] = {
+     {"POWER7", "IBM", 0x003f0200},
+     {"POWER7_v2.1", "IBM", 0x003f0201},
+     {"POWER7_v2.3", "IBM", 0x003f0203},
++    {"POWERPC_e5500_v10", "FSL", 0x80240010},
++    {"POWERPC_e5500_v11", "FSL", 0x80240011},
++    {"POWERPC_e5500_v12", "FSL", 0x80240012},
++    {"POWERPC_e5500_v1020", "FSL", 0x80241020},
++    {"POWERPC_e6500_v10", "FSL", 0x80400010},
++    {"POWERPC_e6500_v20", "FSL", 0x80400020},
+     {NULL, NULL, 0xffffffff}
+ };
+ 
+-- 
+1.7.9.7
+
