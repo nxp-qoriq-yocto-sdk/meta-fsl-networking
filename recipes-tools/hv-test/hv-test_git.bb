@@ -1,7 +1,7 @@
 DESCRIPTION = "Hypervisor Tests"
 SECTION = "hv-test"
 LICENSE = "BSD"
-PR = "r3"
+PR = "r4"
 LIC_FILES_CHKSUM = "file://test/Makefile;endline=22;md5=8c01493cac52b32609798388f739d624"
 
 DEPENDS = "u-boot-mkimage-native"
@@ -70,4 +70,10 @@ RDEPENDS_${PN} = " \
                 mingetty \
                 inetutils \
                 kernel-image \
+                libvirt \
+                libvirt-libvirtd  \
+                libvirt-virsh \
+                rt-tests \
+                netperf \
+                lmbench \
 "
