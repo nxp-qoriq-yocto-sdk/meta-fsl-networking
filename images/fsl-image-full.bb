@@ -3,7 +3,7 @@ PRIVATE_FULL = "yes"
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 2}"
+PRINC := "${@int(PRINC) + 3}"
 
 # don't inherit the rpm database removal bit
 ROOTFS_POSTPROCESS_COMMAND = ""
@@ -27,6 +27,10 @@ IMAGE_INSTALL += " \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
     packagegroup-fsl-extend \
+    ${@multilib_pkg_extend(d, "gcc")} \
+    ${@multilib_pkg_extend(d, "binutils")} \
+    ${@multilib_pkg_extend(d, "libgcc-dev")} \
+    ${@multilib_pkg_extend(d, "eglibc-dev")} \
     u-boot-images \
     kernel-image \
     kernel-modules \

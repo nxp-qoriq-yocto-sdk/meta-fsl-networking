@@ -1,4 +1,4 @@
-PR = "r3"
+PR = "r4"
 
 require fsl-toolchain-bare.bb
 
@@ -12,6 +12,10 @@ TOOLCHAIN_TARGET_TASK += " \
 	libgomp-staticdev \
 	libstdc++-staticdev \
 	${TCLIBC}-staticdev \
+	${@multilib_pkg_extend(d, "gcc")} \
+	${@multilib_pkg_extend(d, "binutils")} \
+	${@multilib_pkg_extend(d, "libgcc-dev")} \
+	${@multilib_pkg_extend(d, "eglibc-dev")} \
 	"
 
 TOOLCHAIN_HOST_TASK += " \
