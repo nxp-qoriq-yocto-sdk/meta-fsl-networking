@@ -32,6 +32,7 @@ EXTRA_OEMAKE_powerpc64 = 'GUEST64=y CROSS_COMPILE=${TARGET_PREFIX} CC="${TARGET_
 DEFCONFIG_e500mc = "e500mc_defconfig"
 DEFCONFIG_e500v2 = "e500v2_defconfig"
 DEFCONFIG_e5500 = "e500mc_defconfig"
+DEFCONFIG_e6500 = "e500mc_defconfig"
 DEFCONFIG_powerpc64 = "corenet64_defconfig"
 
 do_configure () {
