@@ -1,6 +1,6 @@
-PR = "r3"
-
 require recipes-core/meta/meta-toolchain.bb
+
+PRINC := "${@int(PRINC) + 1}"
 
 TOOLCHAIN_OUTPUTNAME = "${SDK_NAME}-toolchain-bare-${DISTRO_VERSION}"
 TOOLCHAIN_TARGET_TASK = "packagegroup-core-standalone-sdk-target"

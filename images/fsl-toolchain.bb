@@ -1,6 +1,6 @@
-PR = "r4"
-
 require fsl-toolchain-bare.bb
+
+PRINC := "${@int(PRINC) + 1}"
 
 TOOLCHAIN_OUTPUTNAME = "${SDK_NAME}-toolchain-${DISTRO_VERSION}"
 TOOLCHAIN_TARGET_TASK += " \
@@ -16,6 +16,19 @@ TOOLCHAIN_TARGET_TASK += " \
 	${@multilib_pkg_extend(d, "binutils")} \
 	${@multilib_pkg_extend(d, "libgcc-dev")} \
 	${@multilib_pkg_extend(d, "eglibc-dev")} \
+	${@multilib_pkg_extend(d, "eglibc-staticdev")} \
+	${@multilib_pkg_extend(d, "eglibc-utils")} \
+	${@multilib_pkg_extend(d, "eglibc-thread-db")} \
+	${@multilib_pkg_extend(d, "eglibc-extra-nss")} \
+	${@multilib_pkg_extend(d, "libcidn")} \
+	${@multilib_pkg_extend(d, "libstdc++")} \
+	${@multilib_pkg_extend(d, "libstdc++-dev")} \
+	${@multilib_pkg_extend(d, "libstdc++-staticdev")} \
+	${@multilib_pkg_extend(d, "glib-2.0")} \
+	${@multilib_pkg_extend(d, "glib-2.0-dev")} \
+	${@multilib_pkg_extend(d, "libgomp")} \
+	${@multilib_pkg_extend(d, "libgomp-dev")} \
+	${@multilib_pkg_extend(d, "libgomp-staticdev")} \
 	"
 
 TOOLCHAIN_HOST_TASK += " \
