@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 7}"
+PRINC := "${@int(PRINC) + 8}"
 
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
@@ -47,7 +47,7 @@ IMAGE_INSTALL_append_e6500-64b += " \
         usdpaa \
 "
 
-IMAGE_INSTALL_append_p1023rds += " \
+IMAGE_INSTALL_append_p1023rdb += " \
         fmc \
 "
 
