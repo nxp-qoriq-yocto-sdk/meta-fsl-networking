@@ -1,10 +1,10 @@
 DESCRIPTION = "Put specified files into rootfs"
 SECTION = "merge-files"
 LICENSE = "Freescale-EULA"
-LIC_FILES_CHKSUM = "file://../merge/README;endline=3;md5=945c2ef603d2006cced7fffd2af773d5"
+LIC_FILES_CHKSUM = "file://../merge/README;endline=3;md5=48cfa72ed1089e8072eef6a9cb7518c4"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-PR = "r9"
+PR = "r10"
 
 SRC_URI = "file://merge"
 S = "${WORKDIR}/merge"
