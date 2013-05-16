@@ -3,7 +3,7 @@
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 3}"
+PRINC := "${@int(PRINC) + 4}"
 
 # common opensource packages
 # FIXME: add bridge-utils back
@@ -32,3 +32,5 @@ IMAGE_INSTALL += " \
     tcpdump \
     libhugetlbfs \
 "
+
+ROOTFS_POSTPROCESS_COMMAND += "find ${IMAGE_ROOTFS} -type f -name uImage* | xargs rm -rf; "
