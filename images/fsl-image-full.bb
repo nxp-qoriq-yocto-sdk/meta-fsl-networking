@@ -3,7 +3,7 @@ PRIVATE_FULL = "yes"
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 3}"
+PRINC := "${@int(PRINC) + 4}"
 
 # don't inherit the rpm database removal bit
 ROOTFS_POSTPROCESS_COMMAND = ""
@@ -26,6 +26,7 @@ IMAGE_INSTALL += " \
     packagegroup-core-basic \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
+    packagegroup-self-hosted-debug \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
     ${@multilib_pkg_extend(d, "binutils")} \
