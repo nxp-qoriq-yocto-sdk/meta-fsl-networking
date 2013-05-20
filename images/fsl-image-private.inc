@@ -61,6 +61,10 @@ IMAGE_INSTALL_append_p4080ds += " \
         skmmhost \
 "
 
+IMAGE_INSTALL_append_t4240qds += " \
+        skmm \
+        skmmhost \
+"
 # fsl specific packages
 IMAGE_INSTALL += " \
         mux-server \
