@@ -3,10 +3,7 @@ PRIVATE_FULL = "yes"
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 4}"
-
-# don't inherit the rpm database removal bit
-ROOTFS_POSTPROCESS_COMMAND = ""
+PRINC := "${@int(PRINC) + 5}"
 
 CORE_SPECIFIC = " \
     fm-ucode-image \
