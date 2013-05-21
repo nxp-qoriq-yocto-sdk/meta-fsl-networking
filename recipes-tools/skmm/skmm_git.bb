@@ -16,14 +16,20 @@ S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE = 'V=1 MACHINE=${MACHINE}'
 
-do_compile_prepend () {
+export LIBEDIT_CFLAGS="$(pkg-config --cflags libedit)"
+export LIBEDIT_LDFLAGS="$(pkg-config --libs --static libedit)"
+
+do_compile () {
 	export ARCH=${TARGET_ARCH}
-	export LIBEDIT_CFLAGS="$(pkg-config --cflags libedit)"
-	export LIBEDIT_LDFLAGS="$(pkg-config --libs --static libedit)"
+	oe_runmake HOST=x86_64 clean
+	oe_runmake HOST=x86_64
+	oe_runmake HOST=powerpc clean
+	oe_runmake HOST=powerpc
 }
 
 do_install () {
-	oe_runmake ARCH=${TARGET_ARCH} install DESTDIR=${D}
+	oe_runmake ARCH=${TARGET_ARCH} HOST=x86_64 install DESTDIR=${D}
+	oe_runmake ARCH=${TARGET_ARCH} HOST=powerpc install DESTDIR=${D}
 }
 
 FILES_${PN} += "/home/root/.skmm/*"
