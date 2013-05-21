@@ -1,7 +1,7 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r7"
+PR = "r8"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
@@ -16,6 +16,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://0004-tests-run_tests.py-fix-typo-in-test-invocation.patch \
 	        file://skip-checking-LIB32-and-LIB64-if-they-point-to-the-s.patch \
 	        file://libhugetlbfs-Fix-perl-lib-can-not-be-shiped-to-sub-p.patch \
+	        file://0001-install-perl-lib-to-directory-perl-instead-of-perl5.patch \
 "
 
 S = "${WORKDIR}/git"
@@ -33,7 +34,7 @@ PARALLEL_MAKE_pn-${PN} = ""
 
 PACKAGES += "${PN}-perl"
 FILES_${PN}-dbg += "${libdir}/libhugetlbfs/tests/obj32/.debug ${libdir}/libhugetlbfs/tests/obj64/.debug"
-FILES_${PN}-perl = "${libdir}/perl5"
+FILES_${PN}-perl = "${libdir}/perl"
 FILES_${PN}-dev += "${libdir}/libhugetlbfs/tests"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
