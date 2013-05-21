@@ -1,4 +1,6 @@
-PRINC := "${@int(PRINC) + 1}"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI +="file://disable-rpmb.patch "
+PRINC := "${@int(PRINC) + 2}"
+
+SRC_URI += "file://disable-rpmb.patch"
 
