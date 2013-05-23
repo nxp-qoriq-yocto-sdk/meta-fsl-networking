@@ -1,9 +1,8 @@
-PRINC := "${@int(PRINC) + 2}"
+PRINC := "${@int(PRINC) + 3}"
 
 inherit update-alternatives
 
-ALTERNATIVE_NAME = "ifconfig"
-ALTERNATIVE_LINK = "${base_sbindir}/ifconfig"
-ALTERNATIVE_PATH = "${base_sbindir}/ifconfig.net-tools"
+ALTERNATIVE_${PN} = "ifconfig"
+ALTERNATIVE_LINK_NAME[ifconfig] = "${base_sbindir}/ifconfig"
 ALTERNATIVE_PRIORITY = "200"
 
