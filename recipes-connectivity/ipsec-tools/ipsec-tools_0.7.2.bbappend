@@ -1,19 +1,19 @@
-FILESEXTRAPATHS_prepend_fsl-networking := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI_append_fsl-networking = " file://test_setkey"
+SRC_URI_append = " file://test_setkey"
 
-EXTRA_OECONF_append_fsl-networking = "\
+EXTRA_OECONF_append = "\
     --enable-dpd \
     --enable-ipv6 \
     --enable-natt \
 "
 
-PR_append_fsl-networking = "+fsl_ppc_private.2"
+PR_append = "+fsl.3"
 
-do_install_append_fsl-networking(){
+do_install_append(){
     install -d  ${D}/test_setkey
     cp ${WORKDIR}/test_setkey/* ${D}/test_setkey
 }
 
-FILES_${PN}_append_fsl-networking = " /test_setkey/*"
+FILES_${PN}_append = " /test_setkey/*"
 
