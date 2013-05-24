@@ -1,6 +1,6 @@
 DESCRIPTION = "Freescale TLU test package"
-LICENSE = "GPL"
-PR = "r0"
+LICENSE = "GPLv2"
+PR = "r1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=8a71d0475d08eee76d8b6d0c6dbec543"
 
 SRC_URI = " file://fsl_tlu-1.0.0-alpha5-2.tar.gz \

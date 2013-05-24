@@ -1,7 +1,7 @@
 DESCRIPTION = "QorIQ Debug File System Module"
 SECTION = "qoriq-debug"
-LICENSE = "GPL"
-PR = "r7"
+LICENSE = "GPLv2+"
+PR = "r8"
 LIC_FILES_CHKSUM = "file://COPYING;md5=e29234dd5d40dc352cc60cc0c93437ba"
 
 inherit module autotools
