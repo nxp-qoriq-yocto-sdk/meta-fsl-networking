@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PRINC := "${@int(PRINC) + 2}"
+PRINC := "${@int(PRINC) + 3}"
 
 SRC_URI = "${URL-HYPERVISOR};name=hypervisor \
         ${URL-KCONFIG};name=kconfig;destsuffix=git/kconfig \
@@ -21,7 +21,7 @@ SRCREV_hypertrk = "${SHA-HYPERTRK}"
 PKG_HV_HYPERTRK_SUPPORT = "n"
 
 do_compile_prepend () {
-    if [ "${PKG_HV_HYPERTRK_SUPPORT}" == "y" ]
+    if [ "${PKG_HV_HYPERTRK_SUPPORT}" = "y" ]
     then
         oe_runmake silentoldconfig
         export HV_DIR=$PWD
