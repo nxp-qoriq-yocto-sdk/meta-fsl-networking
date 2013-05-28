@@ -1,4 +1,4 @@
-PRINC := "${@int(PRINC) + 8}"
+PRINC := "${@int(PRINC) + 9}"
 
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
@@ -51,7 +51,7 @@ IMAGE_INSTALL_append_p1023rdb += " \
         fmc \
 "
 
-IMAGE_INSTALL_append_p2020rdb += " \
+IMAGE_INSTALL_append_p1025twr += " \
         ixxat-stack-ptp \
 "
 
