@@ -1,8 +1,8 @@
-require fsl-toolchain-bare.bb
+require recipes-core/meta/meta-toolchain.bb
 
-PRINC := "${@int(PRINC) + 1}"
+PRINC := "${@int(PRINC) + 4}"
 
-TOOLCHAIN_OUTPUTNAME = "${SDK_NAME}-toolchain-${DISTRO_VERSION}"
+TOOLCHAIN_NEED_CONFIGSITE_CACHE += "zlib"
 TOOLCHAIN_TARGET_TASK += " \
 	glib-2.0 \
 	glib-2.0-dev \
