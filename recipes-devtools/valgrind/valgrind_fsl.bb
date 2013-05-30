@@ -4,6 +4,7 @@ LICENSE = "GPLv2 & GPLv2+ & BSD"
 LIC_FILES_CHKSUM = "file://../valgrind-3.8.1/COPYING;md5=c46082167a314d785d012a244748d803"
 
 PV = "3.8.1+${DISTRO}"
+PR = "r1"
 
 SRC_URI = "file://${BPN}-3.8.1.tar.gz \
     file://valgrind-3.8.1-sepbuildfix.patch \
@@ -20,8 +21,10 @@ PARALLEL_MAKE = ""
 
 do_install_append () {
     install -m 644 ${B}/default.supp ${D}/${libdir}/valgrind/
+    find ${D} -type f | xargs sed -i '1s,#!.*perl,#!${USRBINPATH}/env perl,'
 }
 
 FILES_${PN}-dbg += "${libdir}/${PN}/*/.debug/*"
 RRECOMMENDS_${PN}_powerpc += "${TCLIBC}-dbg"
 RRECOMMENDS_${PN}_powerpc64 += "${TCLIBC}-dbg"
+RDEPENDS_${PN} += "perl"
