@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-PRINC := "${@int(PRINC) + 3}"
+PRINC := "${@int(PRINC) + 4}"
 
 SRC_URI = "${URL-HYPERVISOR};name=hypervisor \
         ${URL-KCONFIG};name=kconfig;destsuffix=git/kconfig \
@@ -30,3 +30,6 @@ do_compile_prepend () {
         cd ..
     fi
 }
+
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+
