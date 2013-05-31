@@ -1,7 +1,7 @@
 DESCRIPTION = "Pattern matcher tools"
 SECTION = "pme-tools"
 LICENSE = "Freescale-EULA"
-PR = "r11"
+PR = "r12"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f6bc49903590148d5df43337785b67cd"
 
 EXCLUDE_FROM_WORLD_pn-pme-tools = "1"
@@ -19,7 +19,7 @@ do_compile_prepend () {
 }
 
 do_install () {
- 	install -m 755 -d ${D}${bindir} -d ${D}${libdir} -d ${D}${sbindir}
+ 	install -m 755 -d ${D}${bindir} -d ${D}${sbindir}
  	oe_runmake INSTALL_DIR=${D}/usr install
 
 	# add runtime support files
