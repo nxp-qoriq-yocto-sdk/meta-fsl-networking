@@ -1,12 +1,12 @@
 DESCRIPTION = "Userspace debug agent for PA CodeWarrior"
 SECTION = "apptrk"
 LICENSE = "Freescale-EULA"
-PR = "r3"
+PR = "r4"
 LIC_FILES_CHKSUM = "file://COPYING;md5=95560debfde180684364319811cc1421"
 
 DEPENDS = "elfutils"
 
-SRCREV = "02ff1af9f5df8364599e10a299e50afe2c8eda1a"
+SRCREV = "9b96f4aa0a7a9d1ab2f979dda7c932b1314fbf42"
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/apptrk.git \
 "
 
