@@ -3,9 +3,9 @@ SECTION = "web-sysmon"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=12f884d2ae1ff87c09e5b7ccc2c4ca7e"
 
-PR = "r1"
+PR = "r2"
 
-SRC_URI = "git://git.ap.freescale.net/scm/web-sysmon.git"
+SRC_URI = "git://git.am.freescale.net/gitolite/users/b38951/web-sysmon.git"
 SRCREV = "40b47611378ef5c07d98f0f691bb146ae52dcdc1"
 
 S = "${WORKDIR}/git"
