@@ -75,7 +75,7 @@ SHA-ETHCONFIG = "${AUTOREV}"
 
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
-SHA-FMC = "870d425317fa693e85cf24825c7296d6147cd66e"
+SHA-FMC = "f2e1a831a96f1d04d3d5a5970d2e54c38098cf39"
 
 # hv-test
 URL-HVTEST = "git://git.am.freescale.net/gitolite/hv/hv-test.git"
