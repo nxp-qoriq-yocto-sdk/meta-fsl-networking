@@ -1,6 +1,6 @@
 DESCRIPTION = "User space application for Pattern Matcher"
 LICENSE = "Freescale-EULA"
-PR = "r1"
+PR = "r2"
 DEPENDS="libedit"
 LIC_FILES_CHKSUM = "file://Freescale_Software_License.txt;md5=01425ba2740a00e5f5402177fa741238"
 
@@ -17,7 +17,7 @@ do_compile(){
 
 do_install() {
     install -d ${D}/fsl_pme ${D}/etc
-    install -d ${D}/usr/sbin -d ${D}/sbin
+    install -d ${D}/usr/sbin
     install bin/* ${D}/usr/sbin/
     install -m 644 sample* ${D}/fsl_pme/
     install -m 644 modprobe.conf ${D}/etc
