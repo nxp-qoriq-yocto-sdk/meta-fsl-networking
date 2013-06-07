@@ -1,0 +1,24 @@
+Upstream-Status: Pending
+
+If /etc/mtab is a symlink to /proc/self/mounts, 
+mounting fails because addmntent returns an error.  
+As a consequence, the Private directory is unusable.
+
+Signed-off-by: Guo Chunrong <B40290@freescale.com>
+
+--- a/hugeadm.c	2013-06-05 04:11:02.503932338 -0500
++++ b/hugeadm.c	2013-06-05 04:12:22.301054692 -0500
+@@ -559,10 +559,10 @@
+ 			entry.mnt_type = FS_NAME;
+ 			entry.mnt_opts = options;
+ 			entry.mnt_freq = 0;
+-			entry.mnt_passno = 0;
++			entry.mnt_passno = 0;       
+ 			if (addmntent(mounts, &entry))
+-				WARNING("Unable to add entry %s to %s, error: %s\n",
+-					path, MOUNTED, strerror(errno));
++			/*	WARNING("Unable to add entry %s to %s, error: %s\n",
++					path, MOUNTED, strerror(errno)); */
+ 			endmntent(mounts);
+ 		} else {
+ 			WARNING("Unable to open %s, error: %s\n",

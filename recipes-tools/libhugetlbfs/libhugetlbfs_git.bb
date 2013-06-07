@@ -1,7 +1,7 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r8"
+PR = "r9"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
@@ -17,6 +17,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://skip-checking-LIB32-and-LIB64-if-they-point-to-the-s.patch \
 	        file://libhugetlbfs-Fix-perl-lib-can-not-be-shiped-to-sub-p.patch \
 	        file://0001-install-perl-lib-to-directory-perl-instead-of-perl5.patch \
+                file://disable-warning-call-addmntent.patch \
 "
 
 S = "${WORKDIR}/git"
