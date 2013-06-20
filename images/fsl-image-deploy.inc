@@ -10,6 +10,7 @@ IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1021rdb = " vsc7385-firmware qe-ucode"
 IMAGE_INSTALL_append_p1024rdb = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1025rdb = " vsc7385-firmware qe-ucode"
+IMAGE_INSTALL_append_p1025twr = " qe-ucode"
 IMAGE_INSTALL_append_p2020rdb = " vsc7385-firmware"
 
 IMAGE_INSTALL_append_e500mc = " \

@@ -3,9 +3,9 @@ SECTION = "qe-ucode"
 LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://README;md5=2bd6b1f0a347695faf3f841714698b7d"
 
-PR = "r2"
+PR = "r3"
 
-COMPATIBLE_MACHINE = "(p1025rdb|p1021rdb)"
+COMPATIBLE_MACHINE = "(p1025rdb|p1021rdb|p1025twr)"
 
 inherit deploy
 
