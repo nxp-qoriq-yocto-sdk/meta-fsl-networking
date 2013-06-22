@@ -9,10 +9,6 @@ SHA-LIBPPC = "${AUTOREV}"
 URL-PMETOOLS = "git://git.am.freescale.net/gitolite/pme_tools.git"
 SHA-PMETOOLS = "${AUTOREV}"
 
-# usdpaa
-URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git"
-SHA-USDPAA = "${AUTOREV}"
-
 
 #================== FSL packages out side of sdk-devel.git ================#
 # hv-test
