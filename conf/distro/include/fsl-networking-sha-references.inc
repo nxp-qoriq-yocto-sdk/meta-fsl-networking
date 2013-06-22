@@ -5,10 +5,6 @@
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git"
 SHA-DTC = "${AUTOREV}"
 
-# hv-cfg
-URL-HVCFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git"
-SHA-HVCFG = "${AUTOREV}"
-
 # hypervisor
 URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git"
 URL-KCONFIG = "git://git.am.freescale.net/gitolite/hv/kconfig.git"
