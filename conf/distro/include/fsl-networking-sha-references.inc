@@ -5,10 +5,6 @@
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git"
 SHA-DTC = "${AUTOREV}"
 
-# fm-ucode
-URL-FMUCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git"
-SHA-FMUCODE = "${AUTOREV}"
-
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git"
 SHA-FMLIB = "${AUTOREV}"

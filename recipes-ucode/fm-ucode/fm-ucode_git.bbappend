@@ -1,4 +1,0 @@
-PRINC := "${@int(PRINC) + 2}"
-
-SRC_URI = "${URL-FMUCODE}"
-SRCREV = "${SHA-FMUCODE}"
