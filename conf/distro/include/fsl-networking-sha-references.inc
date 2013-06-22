@@ -9,10 +9,6 @@ SHA-LIBPPC = "${AUTOREV}"
 URL-PMETOOLS = "git://git.am.freescale.net/gitolite/pme_tools.git"
 SHA-PMETOOLS = "${AUTOREV}"
 
-# u-boot
-URL-UBOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git"
-SHA-UBOOT = "${AUTOREV}"
-
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git"
 SHA-USDPAA = "${AUTOREV}"
