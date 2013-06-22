@@ -1,20 +1,6 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages managed by sdk-devel.git ================#
-# dtc
-URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git"
-SHA-DTC = "${AUTOREV}"
-
-# hypervisor
-URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git"
-URL-KCONFIG = "git://git.am.freescale.net/gitolite/hv/kconfig.git"
-URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git"
-URL-HYPERTRK = "git://git.am.freescale.net/gitolite/sdk/hypertrk.git"
-SHA-HYPERVISOR = "${AUTOREV}"
-SHA-KCONFIG = "${AUTOREV}"
-SHA-LIBOS = "${AUTOREV}"
-SHA-HYPERTRK = "${AUTOREV}"
-
 # libppc
 URL-LIBPPC = "git://git.am.freescale.net/gitolite/libppc.git"
 SHA-LIBPPC = "${AUTOREV}"
