@@ -9,10 +9,6 @@ SHA-LIBPPC = "${AUTOREV}"
 URL-PMETOOLS = "git://git.am.freescale.net/gitolite/pme_tools.git"
 SHA-PMETOOLS = "${AUTOREV}"
 
-# rcw
-URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git"
-SHA-RCW = "${AUTOREV}"
-
 # u-boot
 URL-UBOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git"
 SHA-UBOOT = "${AUTOREV}"
