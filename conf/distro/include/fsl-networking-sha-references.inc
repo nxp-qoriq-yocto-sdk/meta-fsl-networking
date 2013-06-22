@@ -1,10 +1,6 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages managed by sdk-devel.git ================#
-# boot-format
-URL-BOOTFORMAT = "git://git.am.freescale.net/gitolite/sdk/boot-format.git"
-SHA-BOOTFORMAT = "${AUTOREV}"
-
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git"
 SHA-CST = "${AUTOREV}"

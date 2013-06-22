@@ -1,4 +1,0 @@
-PRINC := "${@int(PRINC) + 1}"
-
-SRC_URI = "${URL-BOOTFORMAT}"
-SRCREV = "${SHA-BOOTFORMAT}"
