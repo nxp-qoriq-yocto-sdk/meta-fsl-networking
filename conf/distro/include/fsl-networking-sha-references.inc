@@ -1,10 +1,6 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages managed by sdk-devel.git ================#
-# asf
-URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=asf-sdk-1.4"
-SHA-ASF = "${AUTOREV}"
-
 # boot-format
 URL-BOOTFORMAT = "git://git.am.freescale.net/gitolite/sdk/boot-format.git"
 SHA-BOOTFORMAT = "${AUTOREV}"
