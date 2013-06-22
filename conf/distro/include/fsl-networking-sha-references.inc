@@ -5,10 +5,6 @@
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git"
 SHA-DTC = "${AUTOREV}"
 
-# fmlib
-URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git"
-SHA-FMLIB = "${AUTOREV}"
-
 # hv-cfg
 URL-HVCFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git"
 SHA-HVCFG = "${AUTOREV}"
