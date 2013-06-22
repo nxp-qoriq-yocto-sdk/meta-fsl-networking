@@ -5,10 +5,6 @@
 URL-LIBPPC = "git://git.am.freescale.net/gitolite/libppc.git"
 SHA-LIBPPC = "${AUTOREV}"
 
-# linux
-URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git"
-SHA-LINUX = "${AUTOREV}"
-
 # pme-tools
 URL-PMETOOLS = "git://git.am.freescale.net/gitolite/pme_tools.git"
 SHA-PMETOOLS = "${AUTOREV}"
