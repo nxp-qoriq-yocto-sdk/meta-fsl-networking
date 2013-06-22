@@ -57,10 +57,6 @@ SHA-USDPAA = "${AUTOREV}"
 
 
 #================== FSL packages out side of sdk-devel.git ================#
-# eth-config
-URL-ETHCONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git"
-SHA-ETHCONFIG = "${AUTOREV}"
-
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
 SHA-FMC = "f2e1a831a96f1d04d3d5a5970d2e54c38098cf39"
