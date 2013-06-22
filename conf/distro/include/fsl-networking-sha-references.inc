@@ -35,7 +35,3 @@ SHA-SKMMHOST = "${AUTOREV}"
 URL-SKMM = "git://git.am.freescale.net/gitolite/users/b21284/skmm-ep.git"
 SHA-SKMM = "${AUTOREV}"
 
-# qemu
-URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.4"
-SHA-QEMU = "${AUTOREV}"
-
