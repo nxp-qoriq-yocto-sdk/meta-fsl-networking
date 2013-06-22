@@ -1,10 +1,6 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages managed by sdk-devel.git ================#
-# cst
-URL-CST = "git://git.am.freescale.net/gitolite/cst.git"
-SHA-CST = "${AUTOREV}"
-
 # dtc
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git"
 SHA-DTC = "${AUTOREV}"
