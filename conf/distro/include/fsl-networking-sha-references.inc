@@ -27,7 +27,3 @@ SHA-HVTEST = "${AUTOREV}"
 URL-SKMMHOST = "git://git.am.freescale.net/gitolite/users/b21284/skmm-host.git"
 SHA-SKMMHOST = "${AUTOREV}"
 
-# skmm
-URL-SKMM = "git://git.am.freescale.net/gitolite/users/b21284/skmm-ep.git"
-SHA-SKMM = "${AUTOREV}"
-
