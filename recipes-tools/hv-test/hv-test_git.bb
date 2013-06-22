@@ -1,7 +1,7 @@
 DESCRIPTION = "Hypervisor Tests"
 SECTION = "hv-test"
 LICENSE = "BSD"
-PR = "r4"
+PR = "r5"
 LIC_FILES_CHKSUM = "file://test/Makefile;endline=22;md5=8c01493cac52b32609798388f739d624"
 
 DEPENDS = "u-boot-mkimage-native"
@@ -13,17 +13,18 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 inherit deploy
 
 S = "${WORKDIR}/git"
-SRCREV = "${AUTOREV}"
 
 # TODO: fix dtc to use the already built package
-SRC_URI = " \
-	git://git.am.freescale.net/gitolite/hv/hv-test.git;name=hv-test \
+SRC_URI = " git://git.am.freescale.net/gitolite/hv/hv-test.git;name=hv-test \
 	git://git.am.freescale.net/gitolite/hv/kconfig.git;name=kconfig;destsuffix=git/kconfig \
 	git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos \
 	git://git.am.freescale.net/gitolite/mirrors/dtc.git;name=dtc;destsuffix=git/dtc \
-	  "
+"
 
 SRCREV_FORMAT="hypervisor"
+SRCREV = "2660090f9869b5364362dfb63302f89da03f7b63"
+SRCREV_kconfig = "a56025d4da992b856796b0eccac2e410d751dbac"
+SRCREV_libos = "5268371581f3ef3959be2a53235edfa6a8c6aa7c"
 SRCREV_dtc = "033089f29099bdfd5c2d6986cdb9fd07b16cfde0"
 
 EXTRA_OEMAKE = 'CROSS_COMPILE=${TARGET_PREFIX} CC="${TARGET_PREFIX}gcc ${TOOLCHAIN_OPTIONS}"'
