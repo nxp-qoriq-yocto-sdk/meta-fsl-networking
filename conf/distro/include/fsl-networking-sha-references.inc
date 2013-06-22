@@ -49,10 +49,6 @@ SHA-USDPAA = "${AUTOREV}"
 
 
 #================== FSL packages out side of sdk-devel.git ================#
-# fmc
-URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
-SHA-FMC = "f2e1a831a96f1d04d3d5a5970d2e54c38098cf39"
-
 # hv-test
 URL-HVTEST = "git://git.am.freescale.net/gitolite/hv/hv-test.git"
 SHA-HVTEST = "${AUTOREV}"
