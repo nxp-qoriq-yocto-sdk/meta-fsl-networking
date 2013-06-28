@@ -1,7 +1,7 @@
 DESCRIPTION = "optimized memcpy implementation"
 SECTION = "libppc"
 LICENSE = "Freescale-EULA"
-PR = "r11"
+PR = "r12"
 LIC_FILES_CHKSUM = "file://Makefile;endline=21;md5=45d81c6e015ed7c8917e766ff1fd4499"
 
 SRCREV = "${SHA-LIBPPC}"
@@ -33,4 +33,3 @@ do_install () {
 }
 
 ALLOW_EMPTY_${PN} = "1"
-RDEPEND_${PN} = "${PN}-dev"
