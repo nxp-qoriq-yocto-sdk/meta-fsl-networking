@@ -32,6 +32,8 @@ IMAGE_INSTALL += " \
     packagegroup-self-hosted-debug \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
+    ${@multilib_pkg_extend(d, "cpp")} \
+    ${@multilib_pkg_extend(d, "g++")} \
     ${@multilib_pkg_extend(d, "binutils")} \
     ${@multilib_pkg_extend(d, "libgcc-dev")} \
     ${@multilib_pkg_extend(d, "eglibc-dev")} \
