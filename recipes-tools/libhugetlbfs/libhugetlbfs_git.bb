@@ -18,6 +18,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://libhugetlbfs-Fix-perl-lib-can-not-be-shiped-to-sub-p.patch \
 	        file://0001-install-perl-lib-to-directory-perl-instead-of-perl5.patch \
                 file://disable-warning-call-addmntent.patch \
+                file://0001-libhugetlbfs-avoid-search-host-library-path-for-cros.patch \
 "
 
 S = "${WORKDIR}/git"

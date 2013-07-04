@@ -1,0 +1,69 @@
+From 94abfe6cf483cd4e8c6bc6233d5c92054aab9096 Mon Sep 17 00:00:00 2001
+From: Zongchun Yu <Zongchun.Yu@freescale.com>
+Date: Tue, 2 Jul 2013 21:10:18 -0500
+Subject: [PATCH] libhugetlbfs: avoid search host library path for cross
+ compilation
+
+Signed-off-by: Zongchun Yu <Zongchun.Yu@freescale.com>
+---
+ ldscripts/elf32ppclinux.xB   |    2 +-
+ ldscripts/elf32ppclinux.xBDT |    2 +-
+ ldscripts/elf64ppc.xB        |    2 +-
+ ldscripts/elf64ppc.xBDT      |    2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/ldscripts/elf32ppclinux.xB b/ldscripts/elf32ppclinux.xB
+index 28ad88d..0497392 100644
+--- a/ldscripts/elf32ppclinux.xB
++++ b/ldscripts/elf32ppclinux.xB
+@@ -3,7 +3,7 @@ OUTPUT_FORMAT("elf32-powerpc", "elf32-powerpc",
+ 	      "elf32-powerpc")
+ OUTPUT_ARCH(powerpc:common)
+ ENTRY(_start)
+-SEARCH_DIR("/usr/powerpc-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib");
++/* SEARCH_DIR("/usr/powerpc-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib"); */
+ INPUT(-lhugetlbfs);
+ PHDRS
+ {
+diff --git a/ldscripts/elf32ppclinux.xBDT b/ldscripts/elf32ppclinux.xBDT
+index 497882b..e5d8865 100644
+--- a/ldscripts/elf32ppclinux.xBDT
++++ b/ldscripts/elf32ppclinux.xBDT
+@@ -3,7 +3,7 @@ OUTPUT_FORMAT("elf32-powerpc", "elf32-powerpc",
+ 	      "elf32-powerpc")
+ OUTPUT_ARCH(powerpc:common)
+ ENTRY(_start)
+-SEARCH_DIR("/usr/powerpc-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib");
++/* SEARCH_DIR("/usr/powerpc-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib"); */
+ INPUT(-lhugetlbfs);
+ PHDRS
+ {
+diff --git a/ldscripts/elf64ppc.xB b/ldscripts/elf64ppc.xB
+index 1a9c1ab..9a14e70 100644
+--- a/ldscripts/elf64ppc.xB
++++ b/ldscripts/elf64ppc.xB
+@@ -3,7 +3,7 @@ OUTPUT_FORMAT("elf64-powerpc", "elf64-powerpc",
+ 	      "elf64-powerpc")
+ OUTPUT_ARCH(powerpc:common64)
+ ENTRY(_start)
+-SEARCH_DIR("/usr/powerpc64-linux-gnu/lib64"); SEARCH_DIR("/usr/local/lib64"); SEARCH_DIR("/lib64"); SEARCH_DIR("/usr/lib64"); SEARCH_DIR("/usr/powerpc64-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib");
++/* SEARCH_DIR("/usr/powerpc64-linux-gnu/lib64"); SEARCH_DIR("/usr/local/lib64"); SEARCH_DIR("/lib64"); SEARCH_DIR("/usr/lib64"); SEARCH_DIR("/usr/powerpc64-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib"); */
+ INPUT(-lhugetlbfs);
+ PHDRS
+ {
+diff --git a/ldscripts/elf64ppc.xBDT b/ldscripts/elf64ppc.xBDT
+index 5477294..3b33153 100644
+--- a/ldscripts/elf64ppc.xBDT
++++ b/ldscripts/elf64ppc.xBDT
+@@ -3,7 +3,7 @@ OUTPUT_FORMAT("elf64-powerpc", "elf64-powerpc",
+ 	      "elf64-powerpc")
+ OUTPUT_ARCH(powerpc:common64)
+ ENTRY(_start)
+-SEARCH_DIR("/usr/powerpc64-linux-gnu/lib64"); SEARCH_DIR("/usr/local/lib64"); SEARCH_DIR("/lib64"); SEARCH_DIR("/usr/lib64"); SEARCH_DIR("/usr/powerpc64-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib");
++/* SEARCH_DIR("/usr/powerpc64-linux-gnu/lib64"); SEARCH_DIR("/usr/local/lib64"); SEARCH_DIR("/lib64"); SEARCH_DIR("/usr/lib64"); SEARCH_DIR("/usr/powerpc64-linux-gnu/lib"); SEARCH_DIR("/usr/local/lib"); SEARCH_DIR("/lib"); SEARCH_DIR("/usr/lib"); */
+ INPUT( -lhugetlbfs );
+ PHDRS
+ {
+-- 
+1.7.9.7
+
