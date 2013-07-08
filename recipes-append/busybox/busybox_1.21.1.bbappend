@@ -1,6 +1,6 @@
 PR_append = "+fsl_networking"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
 SRC_URI_append = " file://defconfig-fsl"
 
