@@ -12,8 +12,8 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE = "8192"
 
-# remove not needed ipkg informations
-ROOTFS_POSTPROCESS_COMMAND += " mkdir ${IMAGE_ROOTFS}/images; cp ${DEPLOY_DIR_IMAGE}/fsl-image-minimal-${MACHINE}.ext2.gz.u-boot ${IMAGE_ROOTFS}/images"
+# copy minimal rootfs image into kvm rootfs
+ROOTFS_POSTPROCESS_COMMAND += " mkdir ${IMAGE_ROOTFS}/images; cp ${DEPLOY_DIR_IMAGE}/fsl-image-minimal-${MACHINE}.ext2.gz ${IMAGE_ROOTFS}/images"
 
 IMAGE_FSTYPES = "tar.gz ext2.gz.u-boot"
 
