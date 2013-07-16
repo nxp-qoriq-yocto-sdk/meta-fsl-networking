@@ -2,6 +2,8 @@ require recipes-core/meta/meta-toolchain.bb
 
 PRINC := "${@int(PRINC) + 4}"
 
+MULTILIB_VARIANTS_pn-${PN} = ""
+TOOLCHAIN_HOST_TASK = "nativesdk-packagegroup-sdk-host packagegroup-cross-canadian-${TRANSLATED_TARGET_ARCH}"
 TOOLCHAIN_NEED_CONFIGSITE_CACHE += "zlib"
 TOOLCHAIN_TARGET_TASK += " \
 	glib-2.0 \
@@ -12,23 +14,6 @@ TOOLCHAIN_TARGET_TASK += " \
 	libgomp-staticdev \
 	libstdc++-staticdev \
 	${TCLIBC}-staticdev \
-	${@multilib_pkg_extend(d, "gcc")} \
-	${@multilib_pkg_extend(d, "binutils")} \
-	${@multilib_pkg_extend(d, "libgcc-dev")} \
-	${@multilib_pkg_extend(d, "eglibc-dev")} \
-	${@multilib_pkg_extend(d, "eglibc-staticdev")} \
-	${@multilib_pkg_extend(d, "eglibc-utils")} \
-	${@multilib_pkg_extend(d, "eglibc-thread-db")} \
-	${@multilib_pkg_extend(d, "eglibc-extra-nss")} \
-	${@multilib_pkg_extend(d, "libcidn")} \
-	${@multilib_pkg_extend(d, "libstdc++")} \
-	${@multilib_pkg_extend(d, "libstdc++-dev")} \
-	${@multilib_pkg_extend(d, "libstdc++-staticdev")} \
-	${@multilib_pkg_extend(d, "glib-2.0")} \
-	${@multilib_pkg_extend(d, "glib-2.0-dev")} \
-	${@multilib_pkg_extend(d, "libgomp")} \
-	${@multilib_pkg_extend(d, "libgomp-dev")} \
-	${@multilib_pkg_extend(d, "libgomp-staticdev")} \
 	"
 
 TOOLCHAIN_HOST_TASK += " \
