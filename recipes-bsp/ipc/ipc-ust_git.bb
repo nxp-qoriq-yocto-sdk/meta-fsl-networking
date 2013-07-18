@@ -15,7 +15,7 @@ S = "${WORKDIR}/git"
 # workaround for issue of parallel build, required a actual fix in ipc source
 PARALLEL_MAKE = ""
 
-EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX}"
+EXTRA_OEMAKE = 'CROSS_COMPILE="${TARGET_PREFIX}" CC="${CC}" AR="${AR}"'
 
 do_compile () {
     case ${MACHINE} in
