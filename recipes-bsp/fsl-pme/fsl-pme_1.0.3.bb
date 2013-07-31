@@ -16,16 +16,16 @@ do_compile(){
 }
 
 do_install() {
-    install -d ${D}/fsl_pme ${D}/etc
+    install -d ${D}/opt/fsl_pme ${D}/etc
     install -d ${D}/usr/sbin
     install bin/* ${D}/usr/sbin/
-    install -m 644 sample* ${D}/fsl_pme/
+    install -m 644 sample* ${D}/opt/fsl_pme/
     install -m 644 modprobe.conf ${D}/etc
     install -d ${D}/etc/hotplug
     install -m 755 misc.agent ${D}/etc/hotplug
 }
 
-FILES_${PN} += "/fsl_pme/*"
+FILES_${PN} += "/opt/fsl_pme/*"
 
 SRC_URI[md5sum] = "77dfb738d4a0b38b374fb2c008ee702b"
 SRC_URI[sha256sum] = "50c11ab5729bcb98cf6757bfa4cca264429cdfd67c11ea952dbf214494d708b9"
