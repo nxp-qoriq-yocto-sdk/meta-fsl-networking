@@ -11,9 +11,9 @@ EXTRA_OECONF_append = "\
 PR_append = "+fsl.3"
 
 do_install_append(){
-    install -d  ${D}/test_setkey
-    cp ${WORKDIR}/test_setkey/* ${D}/test_setkey
+    install -d  ${D}/opt/test_setkey
+    cp ${WORKDIR}/test_setkey/* ${D}/opt/test_setkey
 }
 
-FILES_${PN}_append = " /test_setkey/*"
+FILES_${PN}_append = " /opt/test_setkey/*"
 
