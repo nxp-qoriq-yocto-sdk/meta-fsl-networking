@@ -1,25 +1,28 @@
-From 8261a6faa38b1580a41ba3cfd5a08ddcb95ce9d2 Mon Sep 17 00:00:00 2001
-From: Kumar Gala <galak@kernel.crashing.org>
-Date: Sat, 16 Apr 2011 12:46:04 -0500
-Subject: [PATCH 1/2] Allow compiler to be override regardless of 32 or 64-bit build
+From efba2e8dae0d2140289acd7a7fcc0e30ff00d676 Mon Sep 17 00:00:00 2001
+From: Chunrong Guo <B40290@freescale.com>
+Date: Mon, 5 Aug 2013 21:36:57 -0500
+Subject: [PATCH] Allow compiler to be override regardless of 32 or 64-bit build
 
 Provide an easy means for cross compiling to override the compiler
 without having to know if we intend a 32-bit or 64-bit build.
 
 Signed-off-by: Kumar Gala <galak@kernel.crashing.org>
+Signed-off-by: Chunrong <B40290@freescale.com>
 ---
- Makefile |   21 +++++++++++----------
- 1 files changed, 11 insertions(+), 10 deletions(-)
+ Makefile |   23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index d781871..77cd122 100644
+index 48205af..878c71b 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -32,50 +32,51 @@ CFLAGS += -Wall -fPIC
+@@ -33,58 +33,59 @@ CFLAGS += -Wall -fPIC
  CPPFLAGS += -D__LIBHUGETLBFS__
  
  ARCH = $(shell uname -m | sed -e s/i.86/i386/)
 +CC = gcc
+ 
+ CUSTOM_LDSCRIPTS = yes
  
  ifeq ($(ARCH),ppc64)
 -CC64 = gcc -m64
@@ -38,6 +41,13 @@ index d781871..77cd122 100644
 +CC32 = $(CC) -m32
  ELF32 = elf32ppclinux
  TMPLIB32 = lib
+ else
+ ifeq ($(ARCH),armv7l)
+-CC32 = gcc
++CC32 = $(CC)
+ TMPLIB32 = lib
+ ELF32 += armelf_linux_eabi
+ CUSTOM_LDSCRIPTS = no
  else
  ifeq ($(ARCH),i386)
 -CC32 = gcc
@@ -74,9 +84,9 @@ index d781871..77cd122 100644
 -CC32 = gcc -m31
 +CC64 = $(CC) -m64
 +CC32 = $(CC) -m31
+ ELF32 = elf_s390
+ ELF64 = elf64_s390
  TMPLIB64 = lib64
- TMPLIB32 = lib
- CFLAGS += -DNO_ELFLINK
 -- 
-1.7.0.2
+1.7.9.7
 

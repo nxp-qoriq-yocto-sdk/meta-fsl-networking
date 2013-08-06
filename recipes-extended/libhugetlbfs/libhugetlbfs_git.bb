@@ -1,14 +1,13 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
 SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
-PR = "r9"
 
 DEPENDS = "sysfsutils perl"
 RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resource"
 
 LIC_FILES_CHKSUM = "file://LGPL-2.1;md5=2d5025d4aa3495befef8f17206a5b0a1"
 
-SRCREV = "03687a4235f9e1bb972dd13f16792e4adf2ebb17"
+SRCREV = "7649454b6fed355bf53517d5106ae211b533aced"
 SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhugetlbfs \
         	file://0001-Allow-compiler-to-be-override-regardless-of-32-or-64.patch \
 	        file://0002-Fix-cross-compiling-on-PPC.patch \
@@ -17,7 +16,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://skip-checking-LIB32-and-LIB64-if-they-point-to-the-s.patch \
 	        file://libhugetlbfs-Fix-perl-lib-can-not-be-shiped-to-sub-p.patch \
 	        file://0001-install-perl-lib-to-directory-perl-instead-of-perl5.patch \
-                file://disable-warning-call-addmntent.patch \
+                file://checks-if-mtab-is-a-symlink.patch \
                 file://0001-libhugetlbfs-avoid-search-host-library-path-for-cros.patch \
 "
 
