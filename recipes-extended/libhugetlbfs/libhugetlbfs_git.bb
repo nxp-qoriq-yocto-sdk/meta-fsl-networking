@@ -18,6 +18,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
 	        file://0001-install-perl-lib-to-directory-perl-instead-of-perl5.patch \
                 file://checks-if-mtab-is-a-symlink.patch \
                 file://0001-libhugetlbfs-avoid-search-host-library-path-for-cros.patch \
+                file://tests-Makefile-install-static-4G-edge-testcases.patch \
 "
 
 S = "${WORKDIR}/git"
