@@ -1,12 +1,52 @@
-Upstream-Status: Pending
-
-Add e500mc event in oprofile to add e500mc support
+From 71a511f83e4cc6a6bb2ad183a69c9ef11056f433 Mon Sep 17 00:00:00 2001
+From: Zhenhua Luo <zhenhua.luo@freescale.com>
+Date: Wed, 7 Aug 2013 23:16:38 -0500
+Subject: [PATCH 1/2] add e500mc support
 
 Signed-off-by: George Stephen <Stephen.George@freescale.com>
-===============================================================================
-diff -urN oprofile-0.9.6/events/ppc/e500mc/events oprofile-0.9.6-new/events/ppc/e500mc/events
---- oprofile-0.9.6/events/ppc/e500mc/events	1970-01-01 08:00:00.000000000 +0800
-+++ oprofile-0.9.6-new/events/ppc/e500mc/events	2010-08-16 17:57:49.000000000 +0800
+Signed-off-by: Zhenhua Luo <zhenhua.luo@freescale.com>
+---
+ events/Makefile.am           |    1 +
+ events/Makefile.in           |    1 +
+ events/ppc/e500mc/events     |  120 ++++++++++++++++++++++++++++++++++++++++++
+ events/ppc/e500mc/unit_masks |    4 ++
+ libop/op_cpu_type.c          |    1 +
+ libop/op_cpu_type.h          |    1 +
+ libop/op_events.c            |    1 +
+ utils/ophelp.c               |    1 +
+ 8 files changed, 130 insertions(+)
+ create mode 100644 events/ppc/e500mc/events
+ create mode 100644 events/ppc/e500mc/unit_masks
+
+diff --git a/events/Makefile.am b/events/Makefile.am
+index 7c14713..429b2bf 100644
+--- a/events/Makefile.am
++++ b/events/Makefile.am
+@@ -72,6 +72,7 @@ event_files = \
+ 	ppc/7450/events ppc/7450/unit_masks \
+ 	ppc/e500/events ppc/e500/unit_masks \
+ 	ppc/e500v2/events ppc/e500v2/unit_masks \
++	ppc/e500mc/events ppc/e500mc/unit_masks \
+ 	ppc/e300/events ppc/e300/unit_masks \
+ 	tile/tile64/events tile/tile64/unit_masks \
+ 	tile/tilepro/events tile/tilepro/unit_masks \
+diff --git a/events/Makefile.in b/events/Makefile.in
+index 7fac3d0..306ef72 100644
+--- a/events/Makefile.in
++++ b/events/Makefile.in
+@@ -285,6 +285,7 @@ event_files = \
+ 	ppc/7450/events ppc/7450/unit_masks \
+ 	ppc/e500/events ppc/e500/unit_masks \
+ 	ppc/e500v2/events ppc/e500v2/unit_masks \
++	ppc/e500mc/events ppc/e500mc/unit_masks \
+ 	ppc/e300/events ppc/e300/unit_masks \
+ 	tile/tile64/events tile/tile64/unit_masks \
+ 	tile/tilepro/events tile/tilepro/unit_masks \
+diff --git a/events/ppc/e500mc/events b/events/ppc/e500mc/events
+new file mode 100644
+index 0000000..509630c
+--- /dev/null
++++ b/events/ppc/e500mc/events
 @@ -0,0 +1,120 @@
 +# e500mc Events
 +# 
@@ -128,40 +168,57 @@ diff -urN oprofile-0.9.6/events/ppc/e500mc/events oprofile-0.9.6-new/events/ppc/
 +event:0xb2 counters:0,1,2,3 um:zero minimum:500 name:LOAD_RETRY : Number of load retries
 +event:0xb3 counters:0,1,2,3 um:zero minimum:500 name:STWCX_SUCCESS : Number of successful stwcx. instructions
 +event:0xb4 counters:0,1,2,3 um:zero minimum:500 name:STWCX_UNSUCCESS : Number of unsuccessful stwcx. instructions
-diff -urN oprofile-0.9.6/events/ppc/e500mc/unit_masks oprofile-0.9.6-new/events/ppc/e500mc/unit_masks
---- oprofile-0.9.6/events/ppc/e500mc/unit_masks	1970-01-01 08:00:00.000000000 +0800
-+++ oprofile-0.9.6-new/events/ppc/e500mc/unit_masks	2010-08-16 17:56:03.000000000 +0800
+diff --git a/events/ppc/e500mc/unit_masks b/events/ppc/e500mc/unit_masks
+new file mode 100644
+index 0000000..395c653
+--- /dev/null
++++ b/events/ppc/e500mc/unit_masks
 @@ -0,0 +1,4 @@
 +# e500 possible unit masks
 +#
 +name:zero type:mandatory default:0x0
 +	0x0 No unit mask
-diff -urN oprofile-0.9.6/libop/op_cpu_type.c oprofile-0.9.6-new/libop/op_cpu_type.c
---- oprofile-0.9.6/libop/op_cpu_type.c	2009-11-24 23:25:17.000000000 +0800
-+++ oprofile-0.9.6-new/libop/op_cpu_type.c	2010-08-16 17:56:03.000000000 +0800
-@@ -82,6 +82,7 @@
- 	{ "ppc64 compat version 1", "ppc64/ibm-compat-v1", CPU_PPC64_IBM_COMPAT_V1, 4 },
-    	{ "Intel Core/i7", "i386/core_i7", CPU_CORE_I7, 4 },
-    	{ "Intel Atom", "i386/atom", CPU_ATOM, 2 },
+diff --git a/libop/op_cpu_type.c b/libop/op_cpu_type.c
+index 07e26a0..82a475a 100644
+--- a/libop/op_cpu_type.c
++++ b/libop/op_cpu_type.c
+@@ -66,6 +66,7 @@ static struct cpu_descr const cpu_descrs[MAX_CPU_TYPE] = {
+ 	{ "NEC VR5500", "mips/vr5500", CPU_MIPS_VR5500, 2 },
+ 	{ "e500", "ppc/e500", CPU_PPC_E500, 4 },
+ 	{ "e500v2", "ppc/e500v2", CPU_PPC_E500_2, 4 },
 +	{ "e500mc", "ppc/e500mc", CPU_PPC_E500MC, 4 },
- };
-  
- static size_t const nr_cpu_descrs = sizeof(cpu_descrs) / sizeof(struct cpu_descr);
-diff -urN oprofile-0.9.6/libop/op_cpu_type.h oprofile-0.9.6-new/libop/op_cpu_type.h
---- oprofile-0.9.6/libop/op_cpu_type.h	2009-11-24 23:25:17.000000000 +0800
-+++ oprofile-0.9.6-new/libop/op_cpu_type.h	2010-08-16 17:56:03.000000000 +0800
-@@ -79,6 +79,7 @@
- 	CPU_PPC64_IBM_COMPAT_V1, /**< IBM PPC64 processor compat mode version 1 */
-    	CPU_CORE_I7, /* Intel Core i7, Nehalem */
-    	CPU_ATOM, /* First generation Intel Atom */
-+	CPU_PPC_E500MC,	/**< e500mc */
- 	MAX_CPU_TYPE
- } op_cpu;
+ 	{ "Core Solo / Duo", "i386/core", CPU_CORE, 2 },
+ 	{ "PowerPC G4", "ppc/7450",  CPU_PPC_7450, 6 },
+ 	{ "Core 2", "i386/core_2", CPU_CORE_2, 2 },
+diff --git a/libop/op_cpu_type.h b/libop/op_cpu_type.h
+index c7e953f..2b52595 100644
+--- a/libop/op_cpu_type.h
++++ b/libop/op_cpu_type.h
+@@ -59,6 +59,7 @@ typedef enum {
+ 	CPU_MIPS_VR5500, /**< MIPS VR5500, VR5532 and VR7701 */
+ 	CPU_PPC_E500,	/**< e500 */
+ 	CPU_PPC_E500_2,	/**< e500v2 */
++	CPU_PPC_E500MC, /**< e500mc */
+ 	CPU_CORE, /**< Core Solo / Duo series */
+ 	CPU_PPC_7450, /**< PowerPC G4 */
+ 	CPU_CORE_2, /**< Intel Core 2 */
+diff --git a/libop/op_events.c b/libop/op_events.c
+index ae8e1e5..d4b6899 100644
+--- a/libop/op_events.c
++++ b/libop/op_events.c
+@@ -1182,6 +1182,7 @@ void op_default_event(op_cpu cpu_type, struct op_default_event_descr * descr)
  
-diff -urN oprofile-0.9.6/utils/ophelp.c oprofile-0.9.6-new/utils/ophelp.c
---- oprofile-0.9.6/utils/ophelp.c	2009-11-24 23:25:17.000000000 +0800
-+++ oprofile-0.9.6-new/utils/ophelp.c	2010-08-16 17:56:03.000000000 +0800
-@@ -619,6 +619,7 @@
+ 		case CPU_PPC_E500:
+ 		case CPU_PPC_E500_2:
++		case CPU_PPC_E500MC:
+ 		case CPU_PPC_E300:
+ 			descr->name = "CPU_CLK";
+ 			break;
+diff --git a/utils/ophelp.c b/utils/ophelp.c
+index 2714830..0636827 100644
+--- a/utils/ophelp.c
++++ b/utils/ophelp.c
+@@ -732,6 +732,7 @@ int main(int argc, char const * argv[])
  
  	case CPU_PPC_E500:
  	case CPU_PPC_E500_2:
@@ -169,3 +226,6 @@ diff -urN oprofile-0.9.6/utils/ophelp.c oprofile-0.9.6-new/utils/ophelp.c
  		event_doc =
  			"See PowerPC e500 Core Complex Reference Manual\n"
  			"Chapter 7: Performance Monitor\n"
+-- 
+1.7.9.7
+

@@ -1,42 +1,51 @@
-Upstream-Status: Pending
+From eec2a2bf6bf312f7aa68d78cba37184c11b00b33 Mon Sep 17 00:00:00 2001
+From: Zhenhua Luo <zhenhua.luo@freescale.com>
+Date: Wed, 7 Aug 2013 23:21:41 -0500
+Subject: [PATCH 2/2] add e6500 support
 
-Add e6500 support in oprofile
+Signed-off-by: Zhenhua Luo <zhenhua.luo@freescale.com>
+---
+ events/Makefile.am          |    1 +
+ events/Makefile.in          |    1 +
+ events/ppc/e6500/events     |  266 +++++++++++++++++++++++++++++++++++++++++++
+ events/ppc/e6500/unit_masks |    4 +
+ libop/op_cpu_type.c         |    1 +
+ libop/op_cpu_type.h         |    1 +
+ libop/op_events.c           |    1 +
+ utils/ophelp.c              |    1 +
+ 8 files changed, 276 insertions(+)
+ create mode 100644 events/ppc/e6500/events
+ create mode 100644 events/ppc/e6500/unit_masks
 
-Signed-off-by: Zhenhua Luo <b19537@freescale.com> 
-diff -urN oprofile-0.9.6-old/events/Makefile.am oprofile-0.9.6/events/Makefile.am
---- oprofile-0.9.6-old/events/Makefile.am	2012-12-02 20:42:30.968089423 -0600
-+++ oprofile-0.9.6/events/Makefile.am	2012-12-02 21:11:31.993137111 -0600
-@@ -56,6 +56,7 @@
- 	ppc/7450/events ppc/7450/unit_masks \
+diff --git a/events/Makefile.am b/events/Makefile.am
+index 429b2bf..cc33d68 100644
+--- a/events/Makefile.am
++++ b/events/Makefile.am
+@@ -73,6 +73,7 @@ event_files = \
  	ppc/e500/events ppc/e500/unit_masks \
+ 	ppc/e500v2/events ppc/e500v2/unit_masks \
  	ppc/e500mc/events ppc/e500mc/unit_masks \
 +	ppc/e6500/events ppc/e6500/unit_masks \
- 	ppc/e500v2/events ppc/e500v2/unit_masks \
- 	ppc/e300/events ppc/e300/unit_masks
- 
-diff -urN oprofile-0.9.6-old/events/Makefile.in oprofile-0.9.6/events/Makefile.in
---- oprofile-0.9.6-old/events/Makefile.in	2012-12-02 20:42:30.977085519 -0600
-+++ oprofile-0.9.6/events/Makefile.in	2012-12-02 21:12:49.450053796 -0600
-@@ -259,6 +259,7 @@
- 	ppc/7450/events ppc/7450/unit_masks \
+ 	ppc/e300/events ppc/e300/unit_masks \
+ 	tile/tile64/events tile/tile64/unit_masks \
+ 	tile/tilepro/events tile/tilepro/unit_masks \
+diff --git a/events/Makefile.in b/events/Makefile.in
+index 306ef72..0cdaea4 100644
+--- a/events/Makefile.in
++++ b/events/Makefile.in
+@@ -286,6 +286,7 @@ event_files = \
  	ppc/e500/events ppc/e500/unit_masks \
+ 	ppc/e500v2/events ppc/e500v2/unit_masks \
  	ppc/e500mc/events ppc/e500mc/unit_masks \
 +	ppc/e6500/events ppc/e6500/unit_masks \
- 	ppc/e500v2/events ppc/e500v2/unit_masks \
- 	ppc/e300/events ppc/e300/unit_masks
- 
-@@ -313,7 +314,7 @@
- 
- 
- distdir: $(DISTFILES)
--	$(mkdir_p) $(distdir)/alpha/ev4 $(distdir)/alpha/ev5 $(distdir)/alpha/ev6 $(distdir)/alpha/ev67 $(distdir)/alpha/pca56 $(distdir)/arm/armv6 $(distdir)/arm/armv7 $(distdir)/arm/mpcore $(distdir)/arm/xscale1 $(distdir)/arm/xscale2 $(distdir)/avr32 $(distdir)/i386/arch_perfmon $(distdir)/i386/athlon $(distdir)/i386/atom $(distdir)/i386/core $(distdir)/i386/core_2 $(distdir)/i386/core_i7 $(distdir)/i386/nehalem $(distdir)/i386/p4 $(distdir)/i386/p4-ht $(distdir)/i386/p6_mobile $(distdir)/i386/pii $(distdir)/i386/piii $(distdir)/i386/ppro $(distdir)/ia64/ia64 $(distdir)/ia64/itanium $(distdir)/ia64/itanium2 $(distdir)/mips/20K $(distdir)/mips/24K $(distdir)/mips/25K $(distdir)/mips/34K $(distdir)/mips/5K $(distdir)/mips/r10000 $(distdir)/mips/r12000 $(distdir)/mips/rm7000 $(distdir)/mips/rm9000 $(distdir)/mips/sb1 $(distdir)/mips/vr5432 $(distdir)/mips/vr5500 $(distdir)/ppc/7450 $(distdir)/ppc/e300 $(distdir)/ppc/e500 $(distdir)/ppc/e500mc $(distdir)/ppc/e500v2 $(distdir)/ppc64/970 $(distdir)/ppc64/970MP $(distdir)/ppc64/cell-be $(distdir)/ppc64/ibm-compat-v1 $(distdir)/ppc64/pa6t $(distdir)/ppc64/power4 $(distdir)/ppc64/power5 $(distdir)/ppc64/power5+ $(distdir)/ppc64/power5++ $(distdir)/ppc64/power6 $(distdir)/ppc64/power7 $(distdir)/rtc $(distdir)/x86-64/family10 $(distdir)/x86-64/family11h $(distdir)/x86-64/hammer
-+	$(mkdir_p) $(distdir)/alpha/ev4 $(distdir)/alpha/ev5 $(distdir)/alpha/ev6 $(distdir)/alpha/ev67 $(distdir)/alpha/pca56 $(distdir)/arm/armv6 $(distdir)/arm/armv7 $(distdir)/arm/mpcore $(distdir)/arm/xscale1 $(distdir)/arm/xscale2 $(distdir)/avr32 $(distdir)/i386/arch_perfmon $(distdir)/i386/athlon $(distdir)/i386/atom $(distdir)/i386/core $(distdir)/i386/core_2 $(distdir)/i386/core_i7 $(distdir)/i386/nehalem $(distdir)/i386/p4 $(distdir)/i386/p4-ht $(distdir)/i386/p6_mobile $(distdir)/i386/pii $(distdir)/i386/piii $(distdir)/i386/ppro $(distdir)/ia64/ia64 $(distdir)/ia64/itanium $(distdir)/ia64/itanium2 $(distdir)/mips/20K $(distdir)/mips/24K $(distdir)/mips/25K $(distdir)/mips/34K $(distdir)/mips/5K $(distdir)/mips/r10000 $(distdir)/mips/r12000 $(distdir)/mips/rm7000 $(distdir)/mips/rm9000 $(distdir)/mips/sb1 $(distdir)/mips/vr5432 $(distdir)/mips/vr5500 $(distdir)/ppc/7450 $(distdir)/ppc/e300 $(distdir)/ppc/e500 $(distdir)/ppc/e500mc $(distdir)/ppc/e6500 $(distdir)/ppc/e500v2 $(distdir)/ppc64/970 $(distdir)/ppc64/970MP $(distdir)/ppc64/cell-be $(distdir)/ppc64/ibm-compat-v1 $(distdir)/ppc64/pa6t $(distdir)/ppc64/power4 $(distdir)/ppc64/power5 $(distdir)/ppc64/power5+ $(distdir)/ppc64/power5++ $(distdir)/ppc64/power6 $(distdir)/ppc64/power7 $(distdir)/rtc $(distdir)/x86-64/family10 $(distdir)/x86-64/family11h $(distdir)/x86-64/hammer
- 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
- 	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's|.|.|g'`; \
- 	list='$(DISTFILES)'; for file in $$list; do \
-diff -urN oprofile-0.9.6-old/events/ppc/e6500/events oprofile-0.9.6/events/ppc/e6500/events
---- oprofile-0.9.6-old/events/ppc/e6500/events	1969-12-31 18:00:00.000000000 -0600
-+++ oprofile-0.9.6/events/ppc/e6500/events	2012-12-03 01:26:19.587012221 -0600
+ 	ppc/e300/events ppc/e300/unit_masks \
+ 	tile/tile64/events tile/tile64/unit_masks \
+ 	tile/tilepro/events tile/tilepro/unit_masks \
+diff --git a/events/ppc/e6500/events b/events/ppc/e6500/events
+new file mode 100644
+index 0000000..900faa4
+--- /dev/null
++++ b/events/ppc/e6500/events
 @@ -0,0 +1,266 @@
 +# e6500 Events
 +# 
@@ -304,33 +313,64 @@ diff -urN oprofile-0.9.6-old/events/ppc/e6500/events oprofile-0.9.6/events/ppc/e
 +event:0x1fe counters:0,1,2,3,4,5 um:zero minimum:500 name:L2_STASH_REQ : Stash request on AIn matches stash IDs for core or L2.
 +event:0x1ff counters:0,1,2,3,4,5 um:zero minimum:500 name:L2_SNOOP_REQ : Externally generated snoop requests. (Number of AIn from CoreNet not from self).
 +
-diff -urN oprofile-0.9.6-old/events/ppc/e6500/unit_masks oprofile-0.9.6/events/ppc/e6500/unit_masks
---- oprofile-0.9.6-old/events/ppc/e6500/unit_masks	1969-12-31 18:00:00.000000000 -0600
-+++ oprofile-0.9.6/events/ppc/e6500/unit_masks	2012-12-02 21:13:35.636215387 -0600
+diff --git a/events/ppc/e6500/unit_masks b/events/ppc/e6500/unit_masks
+new file mode 100644
+index 0000000..b7e7a23
+--- /dev/null
++++ b/events/ppc/e6500/unit_masks
 @@ -0,0 +1,4 @@
 +# e6500 possible unit masks
 +#
 +name:zero type:mandatory default:0x0
-+	0x0 No unit mask
-diff -urN oprofile-0.9.6-old/libop/op_cpu_type.c oprofile-0.9.6/libop/op_cpu_type.c
---- oprofile-0.9.6-old/libop/op_cpu_type.c	2012-12-02 20:42:30.965995783 -0600
-+++ oprofile-0.9.6/libop/op_cpu_type.c	2012-12-02 21:10:46.817254506 -0600
-@@ -83,6 +83,7 @@
-    	{ "Intel Core/i7", "i386/core_i7", CPU_CORE_I7, 4 },
-    	{ "Intel Atom", "i386/atom", CPU_ATOM, 2 },
++	0x0 no unit mask
+diff --git a/libop/op_cpu_type.c b/libop/op_cpu_type.c
+index 82a475a..371fc98 100644
+--- a/libop/op_cpu_type.c
++++ b/libop/op_cpu_type.c
+@@ -67,6 +67,7 @@ static struct cpu_descr const cpu_descrs[MAX_CPU_TYPE] = {
+ 	{ "e500", "ppc/e500", CPU_PPC_E500, 4 },
+ 	{ "e500v2", "ppc/e500v2", CPU_PPC_E500_2, 4 },
  	{ "e500mc", "ppc/e500mc", CPU_PPC_E500MC, 4 },
 +	{ "e6500", "ppc/e6500", CPU_PPC_E6500, 6 },
- };
-  
- static size_t const nr_cpu_descrs = sizeof(cpu_descrs) / sizeof(struct cpu_descr);
-diff -urN oprofile-0.9.6-old/libop/op_cpu_type.h oprofile-0.9.6/libop/op_cpu_type.h
---- oprofile-0.9.6-old/libop/op_cpu_type.h	2012-12-02 20:42:30.965995783 -0600
-+++ oprofile-0.9.6/libop/op_cpu_type.h	2012-12-02 21:09:41.425136378 -0600
-@@ -80,6 +80,7 @@
-    	CPU_CORE_I7, /* Intel Core i7, Nehalem */
-    	CPU_ATOM, /* First generation Intel Atom */
- 	CPU_PPC_E500MC,	/**< e500mc */
-+	CPU_PPC_E6500,	/**< e6500 */
- 	MAX_CPU_TYPE
- } op_cpu;
- 
+ 	{ "Core Solo / Duo", "i386/core", CPU_CORE, 2 },
+ 	{ "PowerPC G4", "ppc/7450",  CPU_PPC_7450, 6 },
+ 	{ "Core 2", "i386/core_2", CPU_CORE_2, 2 },
+diff --git a/libop/op_cpu_type.h b/libop/op_cpu_type.h
+index 2b52595..cb40779 100644
+--- a/libop/op_cpu_type.h
++++ b/libop/op_cpu_type.h
+@@ -60,6 +60,7 @@ typedef enum {
+ 	CPU_PPC_E500,	/**< e500 */
+ 	CPU_PPC_E500_2,	/**< e500v2 */
+ 	CPU_PPC_E500MC, /**< e500mc */
++	CPU_PPC_E6500, /**< e6500 */
+ 	CPU_CORE, /**< Core Solo / Duo series */
+ 	CPU_PPC_7450, /**< PowerPC G4 */
+ 	CPU_CORE_2, /**< Intel Core 2 */
+diff --git a/libop/op_events.c b/libop/op_events.c
+index d4b6899..dcebbea 100644
+--- a/libop/op_events.c
++++ b/libop/op_events.c
+@@ -1183,6 +1183,7 @@ void op_default_event(op_cpu cpu_type, struct op_default_event_descr * descr)
+ 		case CPU_PPC_E500:
+ 		case CPU_PPC_E500_2:
+ 		case CPU_PPC_E500MC:
++		case CPU_PPC_E6500:
+ 		case CPU_PPC_E300:
+ 			descr->name = "CPU_CLK";
+ 			break;
+diff --git a/utils/ophelp.c b/utils/ophelp.c
+index 0636827..ec2617a 100644
+--- a/utils/ophelp.c
++++ b/utils/ophelp.c
+@@ -733,6 +733,7 @@ int main(int argc, char const * argv[])
+ 	case CPU_PPC_E500:
+ 	case CPU_PPC_E500_2:
+ 	case CPU_PPC_E500MC:
++	case CPU_PPC_E6500:
+ 		event_doc =
+ 			"See PowerPC e500 Core Complex Reference Manual\n"
+ 			"Chapter 7: Performance Monitor\n"
+-- 
+1.7.9.7
+
