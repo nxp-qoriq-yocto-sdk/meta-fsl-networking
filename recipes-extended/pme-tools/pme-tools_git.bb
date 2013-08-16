@@ -15,6 +15,9 @@ PARALLEL_MAKE = ""
 EXTRA_OEMAKE = "ARCH=${TARGET_ARCH} USE_LTIB=1 LTIB_LIB_PATH=${STAGING_LIBDIR} SYSROOT=${STAGING_DIR_TARGET} CROSS_COMPILE=\"${HOST_PREFIX}\""
 EXTRA_CFLAGS = "-Wno-unused-but-set-parameter -Wno-enum-compare -Wno-unused-but-set-variable"
 do_compile_prepend () {
+    sed -i '/rec_yyget_leng/d' compilers/regularExpression/engine/pmrec.lex
+    sed -i '/src_yyget_leng/d' compilers/statefulRule/engine/pmsrc.lex
+    sed -i '/srcPreproc_yyget_leng/d' compilers/statefulRule/engine/pmsrc_preproc.lex
 	oe_runmake clean
 }
 
