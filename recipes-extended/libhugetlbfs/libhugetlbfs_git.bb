@@ -1,5 +1,4 @@
 DESCRIPTION = "A library which provides easy access to huge pages of memory"
-SECTION = "libhugetlbfs"
 LICENSE = "LGPLv2.1"
 
 DEPENDS = "sysfsutils perl"
@@ -19,6 +18,7 @@ SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhuget
                 file://checks-if-mtab-is-a-symlink.patch \
                 file://0001-libhugetlbfs-avoid-search-host-library-path-for-cros.patch \
                 file://tests-Makefile-install-static-4G-edge-testcases.patch \
+                file://0001-run_test.py-not-use-hard-coded-path-.-obj-hugeadm.patch \
 "
 
 S = "${WORKDIR}/git"
