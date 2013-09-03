@@ -10,6 +10,7 @@ SRC_URI = "file://${BPN}-3.8.1.tar.gz \
     file://valgrind-3.8.1-sepbuildfix.patch \
     file://configure-with-newer-glibc.patch \
     file://fix-out-of-tree-builds-with-newer-glibc.patch \
+    file://eglibc-2.18.patch \
 "
 SRC_URI[md5sum] = "2501cb21f4fc1dda2f22597e5ab71640"
 SRC_URI[sha256sum] = "98277024e910ad4528235aad8818668ef8adebc340c7a67a70e3fd523aaf416f"
@@ -25,6 +26,8 @@ do_install_append () {
     install -m 644 ${B}/default.supp ${D}/${libdir}/valgrind/
     find ${D} -type f | xargs sed -i '1s,#!.*perl,#!${USRBINPATH}/env perl,'
 }
+
+RDEPENDS_${PN} += "perl"
 
 FILES_${PN}-dbg += "${libdir}/${PN}/*/.debug/*"
 RRECOMMENDS_${PN}_powerpc += "${TCLIBC}-dbg"
