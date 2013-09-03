@@ -65,7 +65,6 @@ RDEPENDS_packagegroup-fsl-extend = "\
 RRECOMMENDS_packagegroup-fsl-extend = "\
     bonnie++ \
     bridge-utils \
-    cramfs \
     dbench \
     debianutils \
     i2c-tools \
