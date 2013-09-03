@@ -36,12 +36,12 @@ python () {
                 d.setVar('ERROR_QA', error_qa.replace(' arch', ''))
 }
 
-
-
 do_compile_prepend () {
     case ${MACHINE} in
         bsc9132qds|bsc9131rdb) SOC=B913x;;
         b4860qds) SOC=B4860;;
     esac
 }
+
+INHIBIT_PACKAGE_STRIP = "1"
 
