@@ -70,6 +70,7 @@ IMAGE_INSTALL += " \
         mux-server \
         merge-files \
         eth-config \
+	asf \
 "
 IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)}'
 IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)}'
