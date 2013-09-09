@@ -7,7 +7,7 @@ RDEPENDS_${PN} += "python python-io python-lang python-subprocess python-resourc
 LIC_FILES_CHKSUM = "file://LGPL-2.1;md5=2d5025d4aa3495befef8f17206a5b0a1"
 
 SRCREV = "7649454b6fed355bf53517d5106ae211b533aced"
-SRC_URI = " git://libhugetlbfs.git.sourceforge.net/gitroot/libhugetlbfs/libhugetlbfs \
+SRC_URI = " git://git.code.sf.net/p/libhugetlbfs/code \
         	file://0001-Allow-compiler-to-be-override-regardless-of-32-or-64.patch \
 	        file://0002-Fix-cross-compiling-on-PPC.patch \
 	        file://0003-libhugetlbfs-Remove-segment-based-alignment-restric.patch \
