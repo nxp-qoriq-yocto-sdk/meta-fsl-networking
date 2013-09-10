@@ -29,7 +29,6 @@ IMAGE_INSTALL += " \
     packagegroup-core-basic \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
-    packagegroup-self-hosted \
     packagegroup-self-hosted-debug \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
@@ -43,6 +42,7 @@ IMAGE_INSTALL += " \
     kernel-modules \
     dtc \
     qemu \
+    subversion \
     ${CORE_SPECIFIC} \
     ${MACHINE_SPECIFIC} \
 "
