@@ -3,7 +3,6 @@ require recipes-core/meta/meta-toolchain.bb
 PRINC := "${@int(PRINC) + 4}"
 
 MULTILIB_VARIANTS_pn-${PN} = ""
-TOOLCHAIN_HOST_TASK = "nativesdk-packagegroup-sdk-host packagegroup-cross-canadian-${TRANSLATED_TARGET_ARCH}"
 TOOLCHAIN_NEED_CONFIGSITE_CACHE += "zlib"
 TOOLCHAIN_TARGET_TASK += " \
 	glib-2.0 \
