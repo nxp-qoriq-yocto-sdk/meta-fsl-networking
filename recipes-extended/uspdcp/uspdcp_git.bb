@@ -9,8 +9,7 @@ DEPENDS += "virtual/kernel ipc"
 LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=83b6209ab517640a7390536a08d33609"
 
 SRCREV = "deb42f075478a7eee0353552a7c6cd809c3955cc"
-SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/uspdcp.git;protocol=git \
-"
+SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/uspdcp.git"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE="CROSS_COMPILE=${TARGET_PREFIX} IPC_DIR=${STAGING_INCDIR}/ipc KERNEL_DIR=${STAGING_KERNEL_DIR}"

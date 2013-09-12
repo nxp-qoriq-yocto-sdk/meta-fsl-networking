@@ -5,7 +5,7 @@ PR = "r6"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d2626c94d1a34e8c168bb23682afc98e"
 
 SRCREV = "6c8c601232fe916b44a7683e0adee982ab1e0a36"
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pme_regex_analyzer.git;protocol=git"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pme_regex_analyzer.git"
 
 S= "${WORKDIR}/git"
 

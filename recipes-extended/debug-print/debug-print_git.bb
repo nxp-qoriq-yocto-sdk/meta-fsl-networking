@@ -7,8 +7,7 @@ PR = "r2"
 LIC_FILES_CHKSUM = "file://memory_sharing/include/913x_pa_configuration_table.h;endline=32;md5=e7f330c6aa68fd4edde48d693e6709bb"
 
 SRCREV = "106dac87c20849e7e0996a3dabbf5be12d00dd02"
-SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/debug_print.git;protocol=git \
-"
+SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/debug_print.git"
 S = "${WORKDIR}/git"
 
 DEPENDS="virtual/kernel ipc"
