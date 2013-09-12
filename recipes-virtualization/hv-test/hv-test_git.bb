@@ -1,10 +1,9 @@
 DESCRIPTION = "Hypervisor Tests"
-SECTION = "hv-test"
 LICENSE = "BSD"
 PR = "r5"
 LIC_FILES_CHKSUM = "file://test/Makefile;endline=22;md5=8c01493cac52b32609798388f739d624"
 
-DEPENDS = "u-boot-mkimage-native"
+DEPENDS = "u-boot-mkimage-native dtc-native"
 
 # need this to avoid splitting into .debug folders that mess up the final
 # packaging
