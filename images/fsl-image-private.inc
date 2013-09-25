@@ -47,6 +47,10 @@ IMAGE_INSTALL_append_e6500-64b += " \
         usdpaa \
 "
 
+IMAGE_INSTALL_append_c293pcie += " \
+       pkc-firmware \
+"
+
 IMAGE_INSTALL_append_p1023rdb += " \
         fmc \
 "
