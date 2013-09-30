@@ -1,0 +1,2 @@
+SRC_URI = "${URL-USDPAA}"
+SRCREV = "${SHA-USDPAA}"
