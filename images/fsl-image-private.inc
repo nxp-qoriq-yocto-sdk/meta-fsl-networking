@@ -63,7 +63,6 @@ IMAGE_INSTALL_append_p4080ds += " \
         tcf-qoriqdbg \
         skmm \
         skmmhost \
-        pkc-host \
 "
 
 IMAGE_INSTALL_append_t4240qds += " \
