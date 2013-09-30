@@ -7,7 +7,7 @@ SHA-ASF = "${AUTOREV}"
 
 # flib
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git"
-SHA-FLIB = "${AUTOREV}
+SHA-FLIB = "${AUTOREV}"
 
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
