@@ -1,2 +1,5 @@
 SRC_URI = "${URL-HYPERVISOR}"
 SRCREV = "${SHA-HYPERVISOR}"
+SRCREV_kconfig = "${SHA-KCONFIG}"
+SRCREV_libos = "${SHA-LIBOS}"
+

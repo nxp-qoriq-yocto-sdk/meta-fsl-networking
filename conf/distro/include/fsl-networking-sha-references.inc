@@ -22,8 +22,17 @@ URL-FMUCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git"
 SHA-FMUCODE = "${AUTOREV}"
 
 # hypervisor
-URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git"
+URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor \
+	        git://git.am.freescale.net/gitolite/hv/kconfig.git;name=kconfig;destsuffix=git/kconfig \
+			git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos \
+		    git://www.jdl.com/software/dtc.git;name=dtc;destsuffix=dtc \
+		    git://git.freescale.com/ppc/sdk/hypertrk.git;name=hypertrk;destsuffix=git/hypertrk \
+		    file://0001-fix-sizeof-pointer-memaccess-error.patch \
+		    file://81-fsl-embedded-hv.rules \
+"
 SHA-HYPERVISOR = "ac860fabba52ac4bb0f71a6a81d164f36dc1f612"
+SHA-KCONFIG = "a56025d4da992b856796b0eccac2e410d751dbac"
+SHA-LIBOS = "8090dcca97827defd545cf2eb015bcee016dd540"
 
 # libppc
 URL-LIBPPC = "git://git.am.freescale.net/gitolite/libppc.git"
