@@ -39,8 +39,8 @@ IMAGE_INSTALL_append_e5500-64b = " \
 
 IMAGE_INSTALL_append_e6500 = " \
         fm-ucode \
-        lib64-hypervisor \
-        lib64-hypervisor-partman \
+        ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
+        ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
 "
 
 IMAGE_INSTALL_append_e6500-64b = " \
