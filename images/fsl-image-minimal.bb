@@ -8,6 +8,8 @@ LICENSE = "MIT"
 
 inherit core-image
 
+require images/fsl-image-deploy.inc
+
 IMAGE_ROOTFS_SIZE = "8192"
 
 IMAGE_FSTYPES = "tar.gz ext2.gz ext2.gz.u-boot jffs2 ubi"

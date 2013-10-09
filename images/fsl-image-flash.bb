@@ -5,7 +5,6 @@
 # packages to deploy other big images to large physical media, such as 
 # usb stick, hard drive.
 require images/fsl-image-minimal.bb
-require images/fsl-image-deploy.inc
 
 PRINC := "${@int(PRINC) + 2}"
 
