@@ -40,6 +40,7 @@ IMAGE_INSTALL += " \
     u-boot-images \
     kernel-image \
     kernel-modules \
+    kernel-devicetree \
     dtc \
     qemu \
     subversion \
