@@ -8,8 +8,8 @@ DEPENDS = "virtual/${TARGET_PREFIX}gcc libgcc"
 
 inherit deploy
 
-SRCREV = "175a0b603fb81f804f01da3f97a8918f00d44216"
-SRC_URI = "git://git.am.freescale.net/gitolite/users/b21284/pkc-firmware.git"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-firmware.git"
+SRCREV = "0af65b80d56eddfffabb61da2d637a550ae08f89"
 
 COMPATIBLE_MACHINE = "(c293pcie)"
 
