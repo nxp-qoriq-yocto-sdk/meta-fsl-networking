@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=6a26ed8e76a8ea2e019c525369ed0
 inherit  module
 
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git"
-SRCREV = "9d761f278f9010e89717887ace956542e2dc32cd"
+SRCREV = "c5b3a3e621a1a37ec96a7ce8b6ae1b0e1e857fb3"
 
 EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
 
