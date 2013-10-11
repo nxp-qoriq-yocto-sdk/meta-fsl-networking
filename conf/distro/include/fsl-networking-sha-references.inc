@@ -27,7 +27,6 @@ URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hyp
 			git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos \
 		    git://www.jdl.com/software/dtc.git;name=dtc;destsuffix=dtc \
 		    git://git.freescale.com/ppc/sdk/hypertrk.git;name=hypertrk;destsuffix=git/hypertrk \
-		    file://0001-fix-sizeof-pointer-memaccess-error.patch \
 		    file://81-fsl-embedded-hv.rules \
 "
 SHA-HYPERVISOR = "ac860fabba52ac4bb0f71a6a81d164f36dc1f612"
