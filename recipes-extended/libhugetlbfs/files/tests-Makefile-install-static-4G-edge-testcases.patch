@@ -1,28 +1,16 @@
-From 7f9be6fafd15c19a2a97ef19a2ece707b253b7a6 Mon Sep 17 00:00:00 2001
-From: Ting Liu <b28495@freescale.com>
-Date: Wed, 7 Aug 2013 16:01:24 +0800
-Subject: [PATCH] tests/Makefile: install static 4G-edge testcases
+Upstream-Status: Inappropriate [oe-core specific]
 
 TESTS_64 is empty, install will fail due to missing file operand
 
 Signed-off-by: Ting Liu <b28495@freescale.com>
----
- tests/Makefile |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/tests/Makefile b/tests/Makefile
-index 231e3b0..48da3ae 100644
---- a/tests/Makefile
-+++ b/tests/Makefile
-@@ -292,7 +292,7 @@ obj64/install:
- 	$(INSTALL) -m 755 wrapper-utils.sh $(DESTDIR)$(INST_TESTSDIR64)/obj64
+--- a/tests/Makefileold	2013-10-11 22:54:12.073313123 -0500
++++ b/tests/Makefile	2013-10-11 22:55:36.070305004 -0500
+@@ -293,6 +293,7 @@
  	$(INSTALL) -m 755 $(HELPERS:%=obj64/%) $(DESTDIR)$(INST_TESTSDIR64)/obj64
  	$(INSTALL) -m 755 $(HELPER_LIBS:%=obj64/%) $(DESTDIR)$(INST_TESTSDIR64)/obj64
--	$(INSTALL) -m 755 $(TESTS_64:%=obj64/%) $(DESTDIR)$(INST_TESTSDIR64)/obj64
+ #	$(INSTALL) -m 755 $(TESTS_64:%=obj64/%) $(DESTDIR)$(INST_TESTSDIR64)/obj64
 +	$(INSTALL) -m 755 $(TESTS_64_STATIC:%=obj64/%_static) $(DESTDIR)$(INST_TESTSDIR64)/obj64
  	$(INSTALL) -m 755 run_tests.py $(DESTDIR)$(INST_TESTSDIR64)
  
  install: $(OBJDIRS:%=%/install)
--- 
-1.7.5.4
-
