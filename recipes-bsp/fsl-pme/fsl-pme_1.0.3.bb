@@ -7,6 +7,7 @@ LIC_FILES_CHKSUM = "file://Freescale_Software_License.txt;md5=01425ba2740a00e5f5
 SRC_URI = " file://fsl_pme-${PV}.tar.gz \
             file://fsl_pme-${PV}-updates-to-build-and-modprobe.conf.patch;striplevel=2 \
             file://fsl_pme-${PV}-Code-Cleanup-fix-new-toolchain-warnings-etc.patch;striplevel=2 \
+            file://0001-add-missing-dependency-on-linked-libraries.patch \
           "
 S= "${WORKDIR}/fsl_pme-${PV}"
 

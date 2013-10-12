@@ -1,0 +1,35 @@
+From cbb4ebd770015df2e1294aaffc50a64cd6655754 Mon Sep 17 00:00:00 2001
+From: Ting Liu <ting.liu@freescale.com>
+Date: Fri, 11 Oct 2013 22:17:46 -0500
+Subject: [PATCH] add missing dependency on linked libraries
+
+Signed-off-by: Ting Liu <ting.liu@freescale.com>
+---
+ Makefile |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index c3f15f0..932e29c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -50,7 +50,7 @@ pmsmd_link_libs   += pthread
+ LIBS              := pmci
+ pmci_objs         := pmci.o
+ 
+-LIBS              := pmlalocal
++LIBS              += pmlalocal
+ pmlalocal_objs    := pmla_common.o pmla_local.o
+ 
+ # -------------------------------------------------------
+@@ -64,7 +64,7 @@ pmlalocal_objs    := pmla_common.o pmla_local.o
+ #
+ define build_app
+ $(1):bin bin/$(1)
+-bin/$(1):$($(1)_objs)
++bin/$(1):$($(1)_objs) $(foreach lib,$(LIBS),lib/lib$(lib).a)
+ 	$(LINK.o) $($(1)_objs) $(addprefix -L,$(LIB_PATH)) $(addprefix -I,$(INC_PATH)) $(addprefix -l,$($(1)_link_libs)) -o $$@
+ 	@echo "-----[ $(1) compiled successfully ]-----"
+ endef
+-- 
+1.7.9.7
+
