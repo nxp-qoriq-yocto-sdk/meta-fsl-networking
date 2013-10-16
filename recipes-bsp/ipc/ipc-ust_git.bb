@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=fa38cd73d71527dc6efb546474f64d10"
 
 DEPENDS = "virtual/kernel"
 
-SRCREV = "f9d9114675e6a30fd51af79dc7b0d2a76e1f2a4f"
+SRCREV = "b7b0e56a27c56b6da34147873c4b82558b5ebf38"
 SRC_URI = " git://git.am.freescale.net/gitolite/sdk/ipc.git \
 "
 
