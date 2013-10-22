@@ -49,6 +49,7 @@ IMAGE_INSTALL_append_e6500-64b += " \
 
 IMAGE_INSTALL_append_c293pcie += " \
        pkc-firmware \
+       skmm-ep \
 "
 
 IMAGE_INSTALL_append_p1023rdb += " \
@@ -61,13 +62,13 @@ IMAGE_INSTALL_append_p1025twr += " \
 
 IMAGE_INSTALL_append_p4080ds += " \
         tcf-qoriqdbg \
-        skmm \
-        skmmhost \
+        skmm-ep \
+        skmm-host \
 "
 
 IMAGE_INSTALL_append_t4240qds += " \
-        skmm \
-        skmmhost \
+        skmm-ep \
+        skmm-host \
 "
 # fsl specific packages
 IMAGE_INSTALL += " \

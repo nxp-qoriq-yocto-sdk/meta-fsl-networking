@@ -65,7 +65,10 @@ SHA-USDPAA = "${AUTOREV}"
 URL-HVTEST = "git://git.am.freescale.net/gitolite/hv/hv-test.git"
 SHA-HVTEST = "2660090f9869b5364362dfb63302f89da03f7b63"
 
-# skmmhost
-URL-SKMMHOST = "git://git.am.freescale.net/gitolite/users/b21284/skmm-host.git"
-SHA-SKMMHOST = "32284e0b3e2307b107f84e31ea8ca864af83972c"
+# skmm-host
+URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git"
+SHA-SKMM-HOST = "${AUTOREV}"
 
+# skmm-ep
+URL-SKMM-EP = "git://git.am.freescale.net/gitolite/sdk/skmm-ep.git"
+SHA-SKMM-EP = "${AUTOREV}"
