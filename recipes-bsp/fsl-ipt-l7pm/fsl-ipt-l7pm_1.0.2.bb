@@ -1,6 +1,5 @@
 DESCRIPTION = "Kernel Module using the layer7 filter for the Pattern Matcher"
 LICENSE = "GPL"
-PR = "r0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=8a71d0475d08eee76d8b6d0c6dbec543"
 
 DEPENDS="virtual/kernel"
