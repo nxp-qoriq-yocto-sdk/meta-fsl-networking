@@ -20,7 +20,7 @@ SRC_URI = " git://git.am.freescale.net/gitolite/hv/hv-test.git;name=hv-test \
 	git://git.am.freescale.net/gitolite/mirrors/dtc.git;name=dtc;destsuffix=git/dtc \
 "
 
-SRCREV_FORMAT="hypervisor"
+SRCREV_FORMAT="hv-test"
 SRCREV = "2660090f9869b5364362dfb63302f89da03f7b63"
 SRCREV_kconfig = "a56025d4da992b856796b0eccac2e410d751dbac"
 SRCREV_libos = "5268371581f3ef3959be2a53235edfa6a8c6aa7c"
