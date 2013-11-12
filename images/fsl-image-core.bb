@@ -8,7 +8,6 @@ PRINC := "${@int(PRINC) + 4}"
 # common opensource packages
 # FIXME: add bridge-utils back
 IMAGE_INSTALL += " \
-    kernel-modules \
     bridge-utils \
     coreutils \
     elfutils \
@@ -23,14 +22,16 @@ IMAGE_INSTALL += " \
     ipsec-tools \
     iptables \
     iputils \
+    kernel-modules \
+    libhugetlbfs \
     lmbench \
+    lmsensors-sensors \
     mdadm \
     netperf \
     pkgconfig \
     procps \
     psmisc \
     tcpdump \
-    libhugetlbfs \
 "
 
 ROOTFS_POSTPROCESS_COMMAND += "find ${IMAGE_ROOTFS} -type f -name uImage* | xargs rm -rf; "
