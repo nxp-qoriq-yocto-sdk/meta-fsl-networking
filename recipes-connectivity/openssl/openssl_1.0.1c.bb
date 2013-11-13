@@ -49,6 +49,7 @@ SRC_URI += "file://configure-targets.patch \
             file://debian/default_bits.patch \
             file://openssl_fix_for_x32.patch \
             file://find.pl \
+            file://openssl-fix-doc-build-issue.patch \
            "
 
 SRC_URI[md5sum] = "ae412727c8c15b67880aef7bd2999b2e"
