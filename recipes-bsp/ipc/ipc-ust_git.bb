@@ -31,6 +31,7 @@ do_install () {
     install -m 755 ${S}/dsp_boot/dsp_bt ${D}/ipc
     install -m 755 ${S}/ipc/ipc_test ${D}/ipc
     install -m 755 ${S}/ipc/ipc_test67 ${D}/ipc
+    install -m 755 ${S}/ipc/l1d_app ${D}/ipc
     install -m 755 ${S}/fsl_shm/app ${D}${bindir}/lg_shm_test
     install -d ${D}/lib
     install -m 755 ${S}/ipc/libipc.so ${D}/lib
