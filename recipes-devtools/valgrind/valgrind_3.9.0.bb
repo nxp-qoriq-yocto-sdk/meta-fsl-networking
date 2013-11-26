@@ -1,7 +1,7 @@
 DESCRIPTION = "Valgrind memory debugger"
 HOMEPAGE = "http://valgrind.org/"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://../${PN}-${PV}/COPYING;md5=c46082167a314d785d012a244748d803"
+LIC_FILES_CHKSUM = "file://../${BPN}-${PV}/COPYING;md5=c46082167a314d785d012a244748d803"
 
 SRC_URI = "file://${BPN}-${PV}.tar.bz2		\
            file://${BPN}-${PV}.PRE1-svn13689-sepbuildfix.patch	\
@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "e6af71a06bc2534541b07743e1d58dc3caf744f38205ca3e5b5a0bdf37
 inherit autotools
 
 do_install_append () {
-    install -m 644 ${B}/default.supp ${D}/${libdir}/${PN}/
+    install -m 644 ${B}/default.supp ${D}/${libdir}/${BPN}/
     find ${D} -type f | xargs sed -i '1s,#!.*perl,#!${USRBINPATH}/env perl,'
 }
 
