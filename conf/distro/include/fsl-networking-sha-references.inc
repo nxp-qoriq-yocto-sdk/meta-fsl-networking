@@ -10,8 +10,8 @@ URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git"
 SHA-FLIB = "${AUTOREV}"
 
 # fmc
-URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
-SHA-FMC = "${AUTOREV}"
+URL-FMC="git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git"
+SHA-FMC="363f8497cf04d242c477b12a21f679b2ec9e3fa4"
 
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git"
