@@ -34,4 +34,4 @@ IMAGE_INSTALL += " \
     tcpdump \
 "
 
-ROOTFS_POSTPROCESS_COMMAND += "find ${IMAGE_ROOTFS} -type f -name uImage* | xargs rm -rf; "
+ROOTFS_POSTPROCESS_COMMAND += "find ${IMAGE_ROOTFS} -name uImage* | xargs rm -rf; "
