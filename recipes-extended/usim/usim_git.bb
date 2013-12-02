@@ -2,14 +2,15 @@ DESCRIPTION = "Library and test program for Freescale IMX SIM Linux driver"
 SECTION = "usim"
 LICENSE = "GPLv2"
 
-PR = "r3"
-
 # no COPYING file in current git tree, need to be fixed
 LIC_FILES_CHKSUM = "file://linux-lib/fsl_sim_interface.h;endline=12;md5=ab296f5b7e2c91638be4c7ce42af1518"
 
 SRCREV = "004d899d08ffbad690de16f25b2635889a393c05"
 SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/usim.git \
 "
+
+PVBASE := "0.0"
+PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE="CROSS_COMPILE=${TARGET_PREFIX}"

@@ -1,13 +1,14 @@
 DESCRIPTION = "Userspace proxy agent for Code Warrrior HyperTrk"
 SECTION = "hyperrelay"
 LICENSE = "Freescale-EULA"
-PR = "r2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=95560debfde180684364319811cc1421"
 
 SRCREV = "040ec85e16e5a127bed83f070373890d238173f5"
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/hyperrelay.git \
 "
 
+PVBASE := "0.0"
+PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 CFLAGS += "\
