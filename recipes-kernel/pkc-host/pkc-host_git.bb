@@ -8,10 +8,11 @@ inherit  module
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git"
 SRCREV = "c5b3a3e621a1a37ec96a7ce8b6ae1b0e1e857fb3"
 
-EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
-
-
+PVBASE := "0.0"
+PV = "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
+
+EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
 
 python () {
         ma = d.getVar("DISTRO_FEATURES", True)
