@@ -11,10 +11,8 @@ DEPENDS = "virtual/kernel"
 
 COMPATIBLE_MACHINE = "(bsc9132qds|bsc9131rdb|b4860qds)"
 
-SRCREV = "b7b0e56a27c56b6da34147873c4b82558b5ebf38"
-SRC_URI = " git://git.am.freescale.net/gitolite/sdk/ipc.git\
-"
-
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
+SRCREV = "cee9afc838693862f1fe8ae413b87bec12bc0423"
 
 S = "${WORKDIR}/git/kernel"
 python () {
