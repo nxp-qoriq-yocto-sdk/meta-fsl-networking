@@ -67,8 +67,4 @@ SHA-HVTEST = "2660090f9869b5364362dfb63302f89da03f7b63"
 
 # skmm-host
 URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git"
-SHA-SKMM-HOST = "${AUTOREV}"
-
-# skmm-ep
-URL-SKMM-EP = "git://git.am.freescale.net/gitolite/sdk/skmm-ep.git"
-SHA-SKMM-EP = "${AUTOREV}"
+SHA-SKMM-HOST = "d7f803bf8680767598b04cceb21a45e886188737"
