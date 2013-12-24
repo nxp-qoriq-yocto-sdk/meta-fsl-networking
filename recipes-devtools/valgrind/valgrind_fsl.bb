@@ -19,6 +19,7 @@ inherit autotools
 
 S = "${WORKDIR}/${BPN}-3.8.1"
 
+EXTRA_OECONF = "--without-mpicc"
 EXTRA_OEMAKE = "-w"
 PARALLEL_MAKE = ""
 

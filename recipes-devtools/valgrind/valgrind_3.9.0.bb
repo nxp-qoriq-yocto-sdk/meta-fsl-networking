@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "e6af71a06bc2534541b07743e1d58dc3caf744f38205ca3e5b5a0bdf37
 
 inherit autotools
 
-EXTRA_OECONF += "--program-suffix=-${TARGET_ARCH}"
+EXTRA_OECONF += "--program-suffix=-${TARGET_ARCH} --without-mpicc"
 
 do_install_append () {
     install -m 644 ${B}/default.supp ${D}/${libdir}/${BPN}/
