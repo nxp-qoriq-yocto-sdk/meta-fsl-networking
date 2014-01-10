@@ -8,8 +8,8 @@ SRC_URI = " file://fsl_tlu-1.0.0-alpha5-2.tar.gz \
 S= "${WORKDIR}/fsl_tlu-1.0.0"
 
 do_install() {
-    mkdir -p ${D}${sbindir}/fsl_tlu
-    cp * ${D}${sbindir}/fsl_tlu
+    install -d ${D}${sbindir}/fsl_tlu
+    find . -type f -exec cp {} ${D}${sbindir}/fsl_tlu/ \;
 }
 
 SRC_URI[md5sum] = "215a8a7f27af6f87afa428472fddbb99"
