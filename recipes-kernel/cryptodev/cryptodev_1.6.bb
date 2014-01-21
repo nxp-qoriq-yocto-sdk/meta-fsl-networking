@@ -7,9 +7,8 @@ RCONFLICTS_${PN} = "ocf-linux"
 
 inherit module
 
-SRCBRANCH = "sdk-v1.5"
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=${SRCBRANCH}"
-SRCREV = "6d595709baaa874684cef09b3296d4a918e10c93"
+SRCREV = "${SHA-CRYPTODEV}"
+SRC_URI = "${URL-CRYPTODEV}"
 
 EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
 

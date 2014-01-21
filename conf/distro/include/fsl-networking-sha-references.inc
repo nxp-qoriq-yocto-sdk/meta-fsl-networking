@@ -17,3 +17,6 @@ SHA-PMETOOLS = "549a22328672ad0ae76835105ad5e95ece2f7b21"
 URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git"
 SHA-SKMM-HOST = "d7f803bf8680767598b04cceb21a45e886188737"
 
+# cryptodev
+URL-CRYPTODEV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
+SHA-CRYPTODEV = "${AUTOREV}"
