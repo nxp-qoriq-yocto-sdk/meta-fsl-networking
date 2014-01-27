@@ -30,6 +30,7 @@ IMAGE_INSTALL += " \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
     packagegroup-core-tools-debug \
+    packagegroup-core-eclipse-debug \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
     ${@multilib_pkg_extend(d, "cpp")} \
