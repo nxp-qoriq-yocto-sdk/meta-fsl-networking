@@ -3,30 +3,90 @@ LICENSE = "MIT"
 
 inherit packagegroup
 
-# packages in oe-core
+PROVIDES = "${PACKAGES}"
+
+PACKAGES = "\
+    packagegroup-fsl-extend \
+    ${@base_contains('DISTRO_FEATURES', 'alsa', 'packagegroup-fsl-extend-alsa', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'perl', 'packagegroup-fsl-extend-perl', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'ppp', 'packagegroup-fsl-extend-ppp', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'python', 'packagegroup-fsl-extend-python', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'usbhost', 'packagegroup-fsl-extend-usbhost', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'virtualization', 'packagegroup-fsl-extend-virtualization', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'db', 'packagegroup-fsl-extend-db', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'benchmark', 'packagegroup-fsl-extend-benchmark', '',d)} \
+    packagegroup-fsl-extend-misc \
+"
+
 RDEPENDS_packagegroup-fsl-extend = "\
-    alsa-lib \
+    ${@base_contains('DISTRO_FEATURES', 'alsa', 'packagegroup-fsl-extend-alsa', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'perl', 'packagegroup-fsl-extend-perl', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'ppp', 'packagegroup-fsl-extend-ppp', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'python', 'packagegroup-fsl-extend-python', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'usbhost', 'packagegroup-fsl-extend-usbhost', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'virtualization', 'packagegroup-fsl-extend-virtualization', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'db', 'packagegroup-fsl-extend-db', '',d)} \
+    ${@base_contains('DISTRO_FEATURES', 'benchmark', 'packagegroup-fsl-extend-benchmark', '',d)} \
+    packagegroup-fsl-extend-misc \
+"
+
+RDEPENDS_packagegroup-fsl-extend-alsa = "\
     alsa-utils \
+"
+
+RDEPENDS_packagegroup-fsl-extend-perl = "\
+    perl \
+    perl-misc \
+    perl-modules \
+    perl-module-re \
+    perl-pod \
+"
+
+RDEPENDS_packagegroup-fsl-extend-ppp = "\
+    ppp \
+    ppp-dialin \
+"
+
+RDEPENDS_packagegroup-fsl-extend-python = "\
+    python \
+    python-misc \
+    python-modules \
+"
+
+RDEPENDS_packagegroup-fsl-extend-usbhost = "\
+    usbutils \
+    usbutils-ids \
+"
+
+RDEPENDS_packagegroup-fsl-extend-virtualization += "\
+    qemu \
+"
+RRECOMMENDS_packagegroup-fsl-extend-virtualization += "\
+    lxc \
+    libvirt \
+    libvirt-libvirtd \
+    libvirt-virsh \
+"
+
+RDEPENDS_packagegroup-fsl-extend-db = "\
+    db \
+    sqlite3 \
+"
+
+RDEPENDS_packagegroup-fsl-extend-misc = "\
     bind \
     bison \
     ccache \
     chkconfig \
     curl \
-    db \
     dhcp-client \
     diffstat \
-    expat \
-    gdbm \
-    genext2fs \
+    dtc \
     gettext-runtime \
     git \
-    groff \
-    hdparm \
     intltool \
-    libaio \
-    libusb1 \
-    libxml2 \
     lsb \
+    lsbinitscripts \
     lsbtest \
     lsof \
     man \
@@ -35,61 +95,35 @@ RDEPENDS_packagegroup-fsl-extend = "\
     oprofile \
     parted \
     perf \
-    perl \
-    perl-misc \
-    perl-module-re \
-    perl-pod \
     portmap \
-    ppp \
-    ppp-dialin \
-    python \
-    python-misc \
-    python-modules \
     quilt \
-    readline \
     rpm \
     rt-tests \
-    sqlite3 \
-    u-boot-mkimage \
+    subversion \
     tcl \
+    u-boot-mkimage \
     unzip \
-    usbutils \
     valgrind \
     watchdog \
     which \
     xinetd \
     zip \
 "
-
-# packages in meta-oe
-RRECOMMENDS_packagegroup-fsl-extend = "\
-    bonnie++ \
-    bridge-utils \
-    dbench \
+RRECOMMENDS_packagegroup-fsl-extend-misc = "\
     debianutils \
-    i2c-tools \
-    inetutils \
-    iozone3 \
-    iperf \
-    ipsec-tools \
     libnfnetlink \
-    lmbench \
-    lmsensors \
-    netperf \
     ptpd \
     rng-tools \
     rp-pppoe \
     samba \
     strongswan \
-    tcpdump \
-    tiobench \
     wget \
 "
 
-# packages in meta-virtualization
-RRECOMMENDS_packagegroup-fsl-extend += "\
-    lxc \
-    libvirt \
-    libvirt-libvirtd \
-    libvirt-virsh \
+RDEPENDS_packagegroup-fsl-extend-benchmark = "\
+"
+RRECOMMENDS_packagegroup-fsl-extend-benchmark = "\
+    bonnie++ \
+    dbench \
+    tiobench \
 "

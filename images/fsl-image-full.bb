@@ -31,6 +31,7 @@ IMAGE_INSTALL += " \
     packagegroup-core-buildessential \
     packagegroup-core-tools-debug \
     packagegroup-core-eclipse-debug \
+    packagegroup-fsl-core \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
     ${@multilib_pkg_extend(d, "cpp")} \
@@ -41,11 +42,7 @@ IMAGE_INSTALL += " \
     ${@multilib_pkg_extend(d, "valgrind")} \
     u-boot-images \
     kernel-image \
-    kernel-modules \
     kernel-devicetree \
-    dtc \
-    qemu \
-    subversion \
     ${CORE_SPECIFIC} \
     ${MACHINE_SPECIFIC} \
 "
