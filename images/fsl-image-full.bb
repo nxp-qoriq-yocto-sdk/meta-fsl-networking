@@ -29,7 +29,7 @@ IMAGE_INSTALL += " \
     packagegroup-core-basic \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
-    packagegroup-self-hosted-debug \
+    packagegroup-core-tools-debug \
     packagegroup-fsl-extend \
     ${@multilib_pkg_extend(d, "gcc")} \
     ${@multilib_pkg_extend(d, "cpp")} \
