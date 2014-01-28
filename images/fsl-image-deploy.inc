@@ -60,10 +60,6 @@ IMAGE_INSTALL_append_p1023rdb = " \
         fm-ucode \
 "
 
-IMAGE_INSTALL_append_mpc8536ds = " diagnostic"
-IMAGE_INSTALL_append_mpc8544ds = " diagnostic"
-IMAGE_INSTALL_append_mpc8572ds = " diagnostic"
-
 IMAGE_INSTALL_append_mpc8536ds = " edink"
 IMAGE_INSTALL_append_mpc8544ds = " edink"
 IMAGE_INSTALL_append_mpc8572ds = " edink"
