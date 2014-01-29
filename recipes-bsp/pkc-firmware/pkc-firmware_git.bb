@@ -8,16 +8,16 @@ DEPENDS = "virtual/${TARGET_PREFIX}gcc libgcc"
 
 inherit deploy
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-firmware.git"
 SRCREV = "0af65b80d56eddfffabb61da2d637a550ae08f89"
 
-PVBASE := "0.0"
-PV = "${PVBASE}+git${SRCPV}"
-S = "${WORKDIR}/git"
+COMPATIBLE_MACHINE = "(c293pcie)"
 
 EXTRA_OEMAKE = 'CROSS_COMPILE=${TARGET_PREFIX} CC="${TARGET_PREFIX}gcc ${TOOLCHAIN_OPTIONS}"'
+
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+S = "${WORKDIR}/git"
 
 do_compile () {
     unset LDFLAGS
@@ -39,5 +39,3 @@ do_deploy(){
 addtask deploy after do_install
 
 FILES_{PN} += "/etc/crypto/pkc-firmware.bin"
-COMPATIBLE_MACHINE = "(c293pcie)"
-
