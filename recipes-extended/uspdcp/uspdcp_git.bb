@@ -3,17 +3,18 @@ SECTION = "uspdcp"
 LICENSE = "BSD GPLv2"
 PR = "r2"
 
-DEPENDS += "virtual/kernel ipc"
+DEPENDS += "flib usdpaa"
 
 # no COPYING file in current git tree, need to be fixed
 LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=83b6209ab517640a7390536a08d33609"
 
-SRCREV = "deb42f075478a7eee0353552a7c6cd809c3955cc"
-SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/uspdcp.git"
+SRCREV = "5712af5e6ae024136fc542aa185e056b2c84892a"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/uspdcp.git;nobranch=1 \
+"
 S = "${WORKDIR}/git"
 
-EXTRA_OEMAKE="CROSS_COMPILE=${TARGET_PREFIX} IPC_DIR=${STAGING_INCDIR}/ipc KERNEL_DIR=${STAGING_KERNEL_DIR}"
+EXTRA_OEMAKE="EXTRA_DEFINE=USDPAA CROSS_COMPILE=${TARGET_PREFIX} SDK_DIR=${STAGING_DIR}/${MACHINE}"
 
-install(){
+do_install(){
     oe_runmake install DESTDIR=${D}
 }
