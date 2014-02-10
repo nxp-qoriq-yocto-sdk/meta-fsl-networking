@@ -36,6 +36,7 @@ IMAGE_INSTALL_append_e5500-64b += " \
 IMAGE_INSTALL_append_e6500 += " \
         fmc \
 	pme-tools \
+        qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
@@ -43,6 +44,7 @@ IMAGE_INSTALL_append_e6500 += " \
 IMAGE_INSTALL_append_e6500-64b += " \
         fmc \
 	pme-tools \
+        qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
