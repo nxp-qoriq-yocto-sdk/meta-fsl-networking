@@ -1,7 +1,9 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages managed by sdk-devel.git (public)========#
-
+# linux
+URL-LINUX =  "git://git.am.freescale.net/gitolite/sdk/linux-devel.git"
+SHA-LINUX = "${AUTOREV}"
 
 #================== FSL packages managed by sdk-devel.git (private)=======#
 # libppc
