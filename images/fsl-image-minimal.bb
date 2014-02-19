@@ -6,10 +6,13 @@ IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
 
-inherit core-image
+inherit core-image fsl-utils
 
 require images/fsl-image-deploy.inc
 
 IMAGE_ROOTFS_SIZE = "8192"
 
 IMAGE_FSTYPES = "tar.gz ext2.gz ext2.gz.u-boot jffs2 ubi"
+
+ROOTFS_POSTPROCESS_COMMAND += "rootfs_append_sdk_version;"
+

@@ -8,12 +8,12 @@ PR = "r1"
 
 LICENSE = "MIT"
 
-inherit core-image
+inherit core-image fsl-utils
 
 IMAGE_ROOTFS_SIZE = "8192"
 
 # copy minimal rootfs image into kvm rootfs
-ROOTFS_POSTPROCESS_COMMAND += " mkdir ${IMAGE_ROOTFS}/images; cp ${DEPLOY_DIR_IMAGE}/fsl-image-minimal-${MACHINE}.ext2.gz ${IMAGE_ROOTFS}/images"
+ROOTFS_POSTPROCESS_COMMAND += "rootfs_copy_minimal_image;"
 
 IMAGE_FSTYPES = "tar.gz ext2.gz.u-boot"
 

@@ -11,4 +11,4 @@ IMAGE_INSTALL += " \
     packagegroup-fsl-core \
 "
 
-ROOTFS_POSTPROCESS_COMMAND += "find ${IMAGE_ROOTFS} -name uImage* | xargs rm -rf; "
+ROOTFS_POSTPROCESS_COMMAND += "rootfs_remove_uImage; "
