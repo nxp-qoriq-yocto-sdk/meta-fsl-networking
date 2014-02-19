@@ -1,4 +1,6 @@
-DEPENDS = "cryptodev"
+RDEPENDS_${PN} += "cryptodev"
+DEPENDS_remove = "ocf-linux"
+DEPENDS += "cryptodev-headers"
 FILESEXTRAPATHS := "${THISDIR}/openssl-${PV}"
 
 SRC_URI += "file://0001-remove-double-initialization-of-cryptodev-engine.patch \

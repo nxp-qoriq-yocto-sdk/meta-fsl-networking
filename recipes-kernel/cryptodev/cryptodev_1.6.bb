@@ -3,7 +3,6 @@ SUMMARY = "Linux Cryptodev KERNEL MODULE"
 DESCRIPTION = "/dev/crypto ioctl interface to Linux kernel crypto operations"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
-RCONFLICTS_${PN} = "ocf-linux"
 
 inherit module
 
@@ -30,6 +29,10 @@ python () {
 	error_qa = d.getVar('ERROR_QA', True)
 	if 'arch' in error_qa:
 		d.setVar('ERROR_QA', error_qa.replace(' arch', ''))
+}
+
+do_install_append () {
+    rm -fr ${D}/usr
 }
 
 FILES_${PN}-dbg += "${bindir}/tests_cryptodev/.debug"
