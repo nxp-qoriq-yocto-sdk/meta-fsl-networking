@@ -14,4 +14,5 @@ do_install () {
 }
 
 do_compile[noexec] = "1"
+ALLOW_EMPTY_${PN} ="1"
 
