@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2012,2013 Freescale Semiconductor Inc.
+# Copyright (C) 2012-2014 Freescale Semiconductor Inc.
 #
 # deploy pkgs for all fsl images
 
@@ -23,7 +23,6 @@ IMAGE_INSTALL_append_e500mc = " \
 
 IMAGE_INSTALL_append_e5500 = " \
         fm-ucode \
-        hv-cfg \
         rcw \
         hypervisor \
         hypervisor-partman \
@@ -31,7 +30,6 @@ IMAGE_INSTALL_append_e5500 = " \
 
 IMAGE_INSTALL_append_e5500-64b = " \
         fm-ucode \
-        hv-cfg \
         rcw \
         hypervisor \
         hypervisor-partman \
@@ -53,6 +51,10 @@ IMAGE_INSTALL_append_b4420qds = " rcw"
 IMAGE_INSTALL_append_b4420qds-64b = " rcw"
 IMAGE_INSTALL_append_b4860qds = " rcw hv-cfg"
 IMAGE_INSTALL_append_b4860qds-64b = " rcw hv-cfg"
+IMAGE_INSTALL_append_p5020ds = " hv-cfg"
+IMAGE_INSTALL_append_p5020ds-64b = " hv-cfg"
+IMAGE_INSTALL_append_p5040ds = " hv-cfg"
+IMAGE_INSTALL_append_p5040ds-64b = " hv-cfg"
 IMAGE_INSTALL_append_t4240qds = " rcw hv-cfg"
 IMAGE_INSTALL_append_t4240qds-64b = " rcw hv-cfg"
 
