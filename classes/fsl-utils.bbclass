@@ -1,10 +1,10 @@
-rootfs_append_sdk_version () {
+rootfs_add_sdk_version () {
     if [ -n "${SDK_VERSION}" ]; then
         echo "${SDK_VERSION}" > ${IMAGE_ROOTFS}/etc/sdk-version
     fi
 }
 
-rootfs_remove_uImage() {
+rootfs_delete_uImage() {
     find ${IMAGE_ROOTFS} -name uImage* | xargs rm -rf
 }
 

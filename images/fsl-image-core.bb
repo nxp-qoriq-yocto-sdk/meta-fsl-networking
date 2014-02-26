@@ -11,4 +11,4 @@ IMAGE_INSTALL += " \
     packagegroup-fsl-core \
 "
 
-ROOTFS_POSTPROCESS_COMMAND += "rootfs_remove_uImage; "
+ROOTFS_POSTPROCESS_COMMAND += "rootfs_delete_uImage; "
