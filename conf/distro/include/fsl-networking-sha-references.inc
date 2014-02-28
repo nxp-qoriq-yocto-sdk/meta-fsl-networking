@@ -5,6 +5,11 @@
 URL-ASF = "git://git.am.freescale.net/gitolite/asf;branch=master"
 SHA-ASF = "${AUTOREV}"
 
+#auto-resp
+URL-AUTO-RESP="git://git.am.freescale.net/gitolite/sdk/auto-resp.git"
+SHA-AUTO-RESP="${AUTOREV}"
+
+
 # boot-format
 URL-BOOT-FORMAT = "git://git.am.freescale.net/gitolite/sdk/boot-format;branch=master"
 SHA-BOOT-FORMAT = "${AUTOREV}"
