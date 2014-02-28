@@ -14,6 +14,10 @@ SHA-AUTO-RESP="${AUTOREV}"
 URL-BOOT-FORMAT = "git://git.am.freescale.net/gitolite/sdk/boot-format;branch=master"
 SHA-BOOT-FORMAT = "${AUTOREV}"
 
+#ceetm
+URL-CEETM="git://git.am.freescale.net/gitolite/sdk/ceetm.git"
+SHA-CEETM="${AUTOREV}"
+
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst;branch=master"
 SHA-CST = "${AUTOREV}"
