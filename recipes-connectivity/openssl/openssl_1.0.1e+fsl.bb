@@ -1,7 +1,9 @@
+require openssl_1.0.1e.inc
+
 RDEPENDS_${PN} += "cryptodev"
 DEPENDS_remove = "ocf-linux"
 DEPENDS += "cryptodev-headers"
-FILESEXTRAPATHS := "${THISDIR}/openssl-${PV}"
+FILESEXTRAPATHS := "${THISDIR}/openssl-1.0.1e-oe"
 
 SRC_URI += "file://0001-remove-double-initialization-of-cryptodev-engine.patch \
 	    file://0002-add-support-for-TLS-algorithms-offload.patch \
@@ -16,4 +18,5 @@ SRC_URI += "file://0001-remove-double-initialization-of-cryptodev-engine.patch \
 # interface gets some rework:
 CFLAG := "${@'${CFLAG}'.replace('-DUSE_CRYPTODEV_DIGESTS', '')}"
 
-BBCLASSEXTEND = ""
+DEFAULT_PREFERENCE = "-1"
+

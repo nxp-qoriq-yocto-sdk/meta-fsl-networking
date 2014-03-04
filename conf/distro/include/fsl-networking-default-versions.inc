@@ -2,4 +2,5 @@
 
 PREFERRED_VERSION_openjdk-6-jre = "6b27-1.12.5"
 PREFERRED_VERSION_icedtea6-native = "1.8.11"
+PREFERRED_VERSION_openssl = "1.0.1e+fsl"
 
