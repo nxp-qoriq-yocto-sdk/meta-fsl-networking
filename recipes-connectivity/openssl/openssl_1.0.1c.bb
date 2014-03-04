@@ -1,4 +1,4 @@
-require openssl.inc
+require recipes-connectivity/openssl/openssl.inc
 
 # For target side versions of openssl enable support for OCF Linux driver
 # if they are available.
@@ -11,7 +11,10 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=f9a8f968107345e0b75aa8c2ecaa7ec8"
 export DIRS = "crypto ssl apps engines"
 export OE_LDFLAGS="${LDFLAGS}"
 
-SRC_URI += "file://configure-targets.patch \
+SRC_URI += " \
+            file://openssl.patch \
+            file://openssl_async_asym.patch \
+            file://configure-targets.patch \
             file://shared-libs.patch \
             file://oe-ldflags.patch \
             file://engines-install-in-libdir-ssl.patch \
