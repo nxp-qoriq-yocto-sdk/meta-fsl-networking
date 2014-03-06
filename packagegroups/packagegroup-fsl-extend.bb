@@ -112,6 +112,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
 RRECOMMENDS_packagegroup-fsl-extend-misc = "\
     debianutils \
     libnfnetlink \
+    nginx \
     ptpd \
     rng-tools \
     rp-pppoe \
