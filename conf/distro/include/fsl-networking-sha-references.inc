@@ -81,8 +81,12 @@ SHA-USPDCP = "${AUTOREV}"
 
 #================== FSL packages out side of sdk-devel.git ================#
 # skmm-host
-URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git"
-SHA-SKMM-HOST = "d7f803bf8680767598b04cceb21a45e886188737"
+URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git;branch=sdk1.6"
+SHA-SKMM-HOST = "${AUTOREV}"
+
+# skmm-ep
+URL-SKMM-EP = "git://git.am.freescale.net/gitolite/sdk/skmm-ep.git;branch=sdk1.6"
+SHA-SKMM-EP = "${AUTOREV}"
 
 # cryptodev
 URL-CRYPTODEV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"

@@ -65,10 +65,12 @@ IMAGE_INSTALL_append_p1025twr += " \
 IMAGE_INSTALL_append_p4080ds += " \
         tcf-qoriqdbg \
         skmm-ep \
+        skmm-host \
 "
 
 IMAGE_INSTALL_append_t4240qds += " \
         skmm-ep \
+        skmm-host \
 "
 # fsl specific packages
 IMAGE_INSTALL += " \
