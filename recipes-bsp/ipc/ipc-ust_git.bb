@@ -1,16 +1,10 @@
 SUMMARY = "Linux IPC Userspace Tool"
 DESCRIPTION = "DSP boot application and ipc test application"
 LICENSE = "BSD"
-
 LIC_FILES_CHKSUM = "file://COPYING;md5=fa38cd73d71527dc6efb546474f64d10"
 
-DEPENDS = "virtual/kernel"
+require ipc.inc
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
-SRCREV = "cee9afc838693862f1fe8ae413b87bec12bc0423"
-
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 # workaround for issue of parallel build, required a actual fix in ipc source
@@ -51,4 +45,3 @@ do_install () {
 FILES_${PN} += "/ipc/*"
 FILES_${PN}-dbg += "/ipc/.debug"
 
-COMPATIBLE_MACHINE = "(bsc9132qds|bsc9131rdb|b4860qds)"
