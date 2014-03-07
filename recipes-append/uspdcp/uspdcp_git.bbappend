@@ -1,0 +1,2 @@
+SRC_URI = "${URL-USPDCP}"
+SRCREV = "${SHA-USPDCP}"
