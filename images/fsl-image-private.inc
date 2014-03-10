@@ -49,6 +49,12 @@ IMAGE_INSTALL_append_e6500-64b += " \
         usdpaa \
 "
 
+IMAGE_INSTALL_append_b4860qds += " \
+       ipc-ust \
+       ipc-modules-single \
+       ipc-modules-multi \
+"
+
 IMAGE_INSTALL_append_c293pcie += " \
        pkc-firmware \
        skmm-ep \
