@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI_append = " \
+SRC_URI_append = " file://fix-qemu-command-${PV}.patch \
     file://qemu.conf \
 "
 
