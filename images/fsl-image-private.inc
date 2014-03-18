@@ -81,15 +81,24 @@ IMAGE_INSTALL_append_p4080ds = " \
 "
 
 IMAGE_INSTALL_append_t1040rdb = " \
+        ar \
         ceetm \
         l2switch \
         uio-seville \
 "
 
 IMAGE_INSTALL_append_t1040rdb-64b = " \
+        ar \
         ceetm \
         l2switch \
         uio-seville \
+"
+
+IMAGE_INSTALL_append_t1042rdb = " \
+        ar \
+"
+IMAGE_INSTALL_append_t1042rdb-64b = " \
+        ar \
 "
 
 IMAGE_INSTALL_append_t4240qds = " \
