@@ -42,6 +42,7 @@ IMAGE_INSTALL_append_e6500 += " \
 "
 
 IMAGE_INSTALL_append_e6500-64b += " \
+	ceetm \
         fmc \
 	pme-tools \
         qoriq-debug \
