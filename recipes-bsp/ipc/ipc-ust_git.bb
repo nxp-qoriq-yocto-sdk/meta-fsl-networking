@@ -38,6 +38,7 @@ do_install () {
     install ${S}/ipc/include/*.h ${STAGING_INCDIR}/ipc/ipc/include
     install ${S}/dsp_boot/*.h ${STAGING_INCDIR}/ipc/ipc/include
     install ${S}/kernel/fsl_ipc_types.h ${STAGING_INCDIR}/ipc/ipc/include
+    install ${S}/kernel/fsl_heterogeneous_common.h ${STAGING_INCDIR}/ipc/ipc/include
     install ${S}/kernel/fsl_heterogeneous_l1_defense.h ${STAGING_INCDIR}/ipc/ipc/include
     install ${S}/fsl_shm/include/*.h ${STAGING_INCDIR}/ipc/ipc/include
     install ${S}/fsl_shm/lib/*.h ${STAGING_INCDIR}/ipc/fsl_shm/lib
