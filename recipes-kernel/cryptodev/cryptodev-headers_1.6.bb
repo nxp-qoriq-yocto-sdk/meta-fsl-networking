@@ -5,8 +5,8 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 RCONFLICTS_${PN} = "ocf-linux"
 
-SRCREV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
-SRC_URI = "c97dcc67379ecb6c41f649eb2d88c0c7b30d75f7"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
+SRCREV = "c97dcc67379ecb6c41f649eb2d88c0c7b30d75f7"
 
 S = "${WORKDIR}/git"
 do_install () {
