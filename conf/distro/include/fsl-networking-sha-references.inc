@@ -97,10 +97,6 @@ SHA-SKMM-HOST = "${AUTOREV}"
 URL-SKMM-EP = "git://git.am.freescale.net/gitolite/sdk/skmm-ep.git;branch=sdk1.6"
 SHA-SKMM-EP = "${AUTOREV}"
 
-# cryptodev
-URL-CRYPTODEV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
-SHA-CRYPTODEV = "${AUTOREV}"
-
 # qoriq-debug
 URL-QORIQ-DEBUG = "git://git.am.freescale.net/gitolite/soc-debug/qoriq-debug.git"
 SHA-QORIQ-DEBUG = "d8f57d15c6a668f502b424ed053d51700a947105"
