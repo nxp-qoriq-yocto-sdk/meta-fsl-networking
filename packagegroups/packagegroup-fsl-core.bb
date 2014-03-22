@@ -52,7 +52,6 @@ RDEPENDS_packagegroup-fsl-core-ext2 = "\
     e2fsprogs-e2fsck \
     e2fsprogs-mke2fs \
     e2fsprogs-tune2fs \
-    genext2fs \
 "
 
 RDEPENDS_packagegroup-fsl-core-mtd = "\
