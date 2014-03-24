@@ -15,7 +15,7 @@ EXTRA_OEMAKE = 'CROSS_COMPILE="${TARGET_PREFIX}" CC="${CC}" AR="${AR}"'
 do_compile () {
     case ${MACHINE} in
         bsc9132qds|bsc9131rdb) SOC=B913x;;
-        b4860qds) SOC=B4860;;
+        b4860qds|b4860qds-64b) SOC=B4860;;
     esac
     oe_runmake ${SOC}=1
 }
