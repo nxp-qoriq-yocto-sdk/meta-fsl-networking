@@ -10,6 +10,8 @@ inherit module
 SRC_URI = "${URL-CEETM}"
 SRCREV =  "${SHA-CEETM}"
 
+S = "${WORKDIR}/git"
+
 EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX}"
 export KERNEL_PATH = "${STAGING_KERNEL_DIR}"
 
