@@ -35,6 +35,7 @@ IMAGE_INSTALL += " \
     ${@multilib_pkg_extend(d, "cpp")} \
     ${@multilib_pkg_extend(d, "g++")} \
     ${@multilib_pkg_extend(d, "binutils")} \
+    ${@multilib_pkg_extend(d, "libgcc")} \
     ${@multilib_pkg_extend(d, "libgcc-dev")} \
     ${@multilib_pkg_extend(d, "eglibc-dev")} \
     ${@multilib_pkg_extend(d, "valgrind")} \
