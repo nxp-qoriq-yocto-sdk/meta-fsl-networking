@@ -57,8 +57,8 @@ SHA-KCONFIG = "a56025d4da992b856796b0eccac2e410d751dbac"
 SHA-LIBOS = "4691387e15be78d140142104f30b3f356281c46a"
 
 # ipc
-URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc;branch=master"
-SHA-IPC = "b7b0e56a27c56b6da34147873c4b82558b5ebf38"
+URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc;branch=sdk_devel"
+SHA-IPC = "${AUTOREV}"
 
 # libppc
 URL-LIBPPC = "git://git.am.freescale.net/gitolite/libppc;branch=master"
