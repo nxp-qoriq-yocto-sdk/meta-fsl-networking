@@ -101,3 +101,6 @@ SHA-SKMM-EP = "${AUTOREV}"
 URL-QORIQ-DEBUG = "git://git.am.freescale.net/gitolite/soc-debug/qoriq-debug.git"
 SHA-QORIQ-DEBUG = "d8f57d15c6a668f502b424ed053d51700a947105"
 
+#T1040 l2switch
+URL-L2SWITCH = "git://git.am.freescale.net/gitolite/sdk/l2switch.git"
+SHA-L2SWITCH = "${AUTOREV}"
