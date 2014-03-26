@@ -1,5 +1,14 @@
 PRINC := "${@int(PRINC) + 9}"
 
+# TODO: add qoriq-debug back when qoriq-debug works
+IMAGE_INSTALL_append_e500mc = " \
+        fmc \
+        fsl-tlu \
+        libppc \
+        pme-tools \
+        usdpaa \
+"
+
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
         fsl-pme \
@@ -7,90 +16,77 @@ IMAGE_INSTALL_append_e500v2 = " \
         testfloat \
 "
 
-IMAGE_INSTALL_append_e500mc += " \
-        fmc \
-        fsl-tlu \
-        libppc \
-	pme-tools \
-        qoriq-debug \
-        usdpaa \
-"
-
-IMAGE_INSTALL_append_e5500 += " \
+IMAGE_INSTALL_append_e5500 = " \
         fmc \
         libppc \
-	pme-tools \
+        pme-tools \
         qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
 
-IMAGE_INSTALL_append_e5500-64b += " \
+IMAGE_INSTALL_append_e5500-64b = " \
         fmc \
-	pme-tools \
-	qoriq-debug \
-        tcf-qoriqdbg \
-        usdpaa \
-"
-
-IMAGE_INSTALL_append_e6500 += " \
-        fmc \
-	pme-tools \
+        pme-tools \
         qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
 
-IMAGE_INSTALL_append_e6500-64b += " \
-	ceetm \
+# TODO: add qoriq-debug back when qoriq-debug works
+IMAGE_INSTALL_append_e6500 = " \
         fmc \
-	pme-tools \
-        qoriq-debug \
+        pme-tools \
         tcf-qoriqdbg \
         usdpaa \
 "
 
-IMAGE_INSTALL_append_b4860qds += " \
-       ipc-ust \
-       ipc-modules-single \
-       ipc-modules-multi \
+# TODO: add qoriq-debug back when qoriq-debug works
+IMAGE_INSTALL_append_e6500-64b = " \
+        ceetm \
+        fmc \
+        pme-tools \
+        tcf-qoriqdbg \
+        usdpaa \
 "
 
-IMAGE_INSTALL_append_c293pcie += " \
-       pkc-firmware \
-       skmm-ep \
+IMAGE_INSTALL_append_b4860qds = " \
+        ipc-modules-multi \
+        ipc-modules-single \
+        ipc-ust \
 "
 
-IMAGE_INSTALL_append_p1023rdb += " \
+IMAGE_INSTALL_append_c293pcie = " \
+        pkc-firmware \
+        skmm-ep \
+"
+
+IMAGE_INSTALL_append_p1023rdb = " \
         fmc \
 "
 
-IMAGE_INSTALL_append_p1025twr += " \
+IMAGE_INSTALL_append_p1025twr = " \
         ixxat-stack-ptp \
 "
 
-IMAGE_INSTALL_append_p4080ds += " \
-        tcf-qoriqdbg \
+IMAGE_INSTALL_append_p4080ds = " \
         skmm-ep \
         skmm-host \
+        tcf-qoriqdbg \
 "
 
-IMAGE_INSTALL_append_t4240qds += " \
+IMAGE_INSTALL_append_t4240qds = " \
         skmm-ep \
         skmm-host \
 "
 # fsl specific packages
 IMAGE_INSTALL += " \
-        mux-server \
-        merge-files \
+        asf \
         eth-config \
-	asf \
+        merge-files \
+        mux-server \
 "
+
 IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)}'
 IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)}'
-
-# TODO: need to enable this in kernel
-# IMAGE_INSTALL_append_asfoverride += " \
-#         asf \
-#"
 
