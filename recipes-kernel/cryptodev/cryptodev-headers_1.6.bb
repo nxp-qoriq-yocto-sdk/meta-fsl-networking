@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 RCONFLICTS_${PN} = "ocf-linux"
 
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
-SRCREV = "c97dcc67379ecb6c41f649eb2d88c0c7b30d75f7"
+SRCREV = "330a7faac655d1d0a94f3b95be8939f8b68d0a66"
 
 S = "${WORKDIR}/git"
 do_install () {
