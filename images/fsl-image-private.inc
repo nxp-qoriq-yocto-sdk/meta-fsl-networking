@@ -70,12 +70,14 @@ IMAGE_INSTALL_append_p1025twr = " \
 "
 
 IMAGE_INSTALL_append_p4080ds = " \
+	pkc-host \
         skmm-ep \
         skmm-host \
         tcf-qoriqdbg \
 "
 
 IMAGE_INSTALL_append_t4240qds = " \
+	pkc-host \
         skmm-ep \
         skmm-host \
 "

@@ -5,8 +5,8 @@ LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=6a26ed8e76a8ea2e019c525369ed0
 
 inherit  module
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git"
-SRCREV = "c5b3a3e621a1a37ec96a7ce8b6ae1b0e1e857fb3"
+SRC_URI = "${URL-PKC-HOST}"
+SRCREV = "${SHA-PKC-HOST}"
 
 PVBASE := "0.0"
 PV := "${PVBASE}+git${SRCPV}"
