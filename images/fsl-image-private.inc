@@ -69,17 +69,17 @@ IMAGE_INSTALL_append_p1025twr = " \
         ixxat-stack-ptp \
 "
 
+# TODO: add skmm-host back when it can build
 IMAGE_INSTALL_append_p4080ds = " \
-	pkc-host \
+        pkc-host \
         skmm-ep \
-        skmm-host \
         tcf-qoriqdbg \
 "
 
+# TODO: add skmm-host back when it can build
 IMAGE_INSTALL_append_t4240qds = " \
-	pkc-host \
+        pkc-host \
         skmm-ep \
-        skmm-host \
 "
 # fsl specific packages
 IMAGE_INSTALL += " \
