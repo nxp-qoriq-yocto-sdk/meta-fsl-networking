@@ -37,7 +37,7 @@ do_install() {
         install -d ${D}/lib/modules/c2x0
         install -d ${D}/etc/crypto
         install -d ${D}/${bindir}
-        cp ${S}/fsl_crypto_offload_drv.ko ${D}/lib/modules/c2x0
+        cp ${S}/*.ko ${D}/lib/modules/c2x0
         cp ${S}/crypto.cfg ${D}/etc/crypto
         cp ${S}/images/pkc-firmware.bin ${D}/etc/crypto
         cp ${S}/mini_calc ${D}/${bindir}
