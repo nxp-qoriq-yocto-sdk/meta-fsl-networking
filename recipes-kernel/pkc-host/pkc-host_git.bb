@@ -40,8 +40,8 @@ do_install() {
         cp ${S}/*.ko ${D}/lib/modules/c2x0
         cp ${S}/crypto.cfg ${D}/etc/crypto
         cp ${S}/images/pkc-firmware.bin ${D}/etc/crypto
-        cp ${S}/mini_calc ${D}/${bindir}
-        cp ${S}/cli ${D}/${bindir}
+        cp ${S}/perf/mini_calc/mini_calc ${D}/${bindir}
+        cp ${S}/apps/cli/cli ${D}/${bindir}
         cp ${S}/perf/c29x_driver_perf_profile.sh ${D}/${bindir}
 }
 
