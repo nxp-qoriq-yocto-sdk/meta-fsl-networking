@@ -7,23 +7,23 @@ PROVIDES = "${PACKAGES}"
 
 PACKAGES = "\
     packagegroup-fsl-core \
+    packagegroup-fsl-core-misc \
     packagegroup-fsl-distro \
     packagegroup-fsl-machine \
     ${@base_contains('DISTRO_FEATURES', 'benchmark', 'packagegroup-fsl-core-benchmark', '',d)} \
-    ${@base_contains('DISTRO_FEATURES', 'vfat', 'packagegroup-fsl-core-vfat', '',d)} \
     ${@base_contains('DISTRO_FEATURES', 'ext2', 'packagegroup-fsl-core-ext2', '',d)} \
     ${@base_contains('DISTRO_FEATURES', 'mtd', 'packagegroup-fsl-core-mtd', '',d)} \
-    packagegroup-fsl-core-misc \
+    ${@base_contains('DISTRO_FEATURES', 'vfat', 'packagegroup-fsl-core-vfat', '',d)} \
 "
 
 RDEPENDS_packagegroup-fsl-core = "\
+    packagegroup-fsl-core-misc \
     packagegroup-fsl-distro \
     packagegroup-fsl-machine \
     ${@base_contains('DISTRO_FEATURES', 'benchmark', 'packagegroup-fsl-core-benchmark', '',d)} \
-    ${@base_contains('DISTRO_FEATURES', 'vfat', 'packagegroup-fsl-core-vfat', '',d)} \
     ${@base_contains('DISTRO_FEATURES', 'ext2', 'packagegroup-fsl-core-ext2', '',d)} \
     ${@base_contains('DISTRO_FEATURES', 'mtd', 'packagegroup-fsl-core-mtd', '',d)} \
-    packagegroup-fsl-core-misc \
+    ${@base_contains('DISTRO_FEATURES', 'vfat', 'packagegroup-fsl-core-vfat', '',d)} \
 "
 
 DEPENDS_packagegroup-fsl-distro = "${DISTRO_EXTRA_DEPENDS}"
@@ -31,19 +31,6 @@ RDEPENDS_packagegroup-fsl-distro = "${DISTRO_EXTRA_RDEPENDS}"
 RRECOMMENDS_packagegroup-fsl-distro = "${DISTRO_EXTRA_RRECOMMENDS}"
 RDEPENDS_packagegroup-fsl-machine = "${MACHINE_EXTRA_RDEPENDS}"
 RRECOMMENDS_packagegroup-fsl-machine = "${MACHINE_EXTRA_RRECOMMENDS}"
-
-RDEPENDS_packagegroup-fsl-core-benchmark = "\
-"
-RRECOMMENDS_packagegroup-fsl-core-benchmark = "\
-    iperf \
-    iozone3 \
-    lmbench \
-    netperf \
-"
-
-RRECOMMENDS_packagegroup-fsl-core-vfat = "\
-    dosfstools \
-"
 
 RDEPENDS_packagegroup-fsl-core-ext2 = "\
     hdparm \
@@ -54,12 +41,6 @@ RDEPENDS_packagegroup-fsl-core-ext2 = "\
     e2fsprogs-tune2fs \
 "
 
-RDEPENDS_packagegroup-fsl-core-mtd = "\
-    mtd-utils \
-    mtd-utils-jffs2 \
-    mtd-utils-ubifs \
-"
-
 RDEPENDS_packagegroup-fsl-core-misc = "\
     bash \
     coreutils \
@@ -67,6 +48,7 @@ RDEPENDS_packagegroup-fsl-core-misc = "\
     ethtool \
     file \
     iproute2 \
+    iproute2-tc \
     iptables \
     iputils \
     kernel-modules \
@@ -82,6 +64,19 @@ RDEPENDS_packagegroup-fsl-core-misc = "\
     util-linux \
 "
 
+RDEPENDS_packagegroup-fsl-core-mtd = "\
+    mtd-utils \
+    mtd-utils-jffs2 \
+    mtd-utils-ubifs \
+"
+
+RRECOMMENDS_packagegroup-fsl-core-benchmark = "\
+    iperf \
+    iozone3 \
+    lmbench \
+    netperf \
+"
+
 RRECOMMENDS_packagegroup-fsl-core-misc = "\
     bridge-utils \
     i2c-tools \
@@ -90,4 +85,8 @@ RRECOMMENDS_packagegroup-fsl-core-misc = "\
     libhugetlbfs \
     lmsensors-sensors \
     tcpdump \
+"
+
+RRECOMMENDS_packagegroup-fsl-core-vfat = "\
+    dosfstools \
 "
