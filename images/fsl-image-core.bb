@@ -3,10 +3,7 @@
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 4}"
-
 # common opensource packages
-# FIXME: add bridge-utils back
 IMAGE_INSTALL += " \
     packagegroup-fsl-core \
 "

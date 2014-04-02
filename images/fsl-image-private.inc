@@ -1,5 +1,3 @@
-PRINC := "${@int(PRINC) + 9}"
-
 # TODO: add qoriq-debug back when qoriq-debug works
 IMAGE_INSTALL_append_e500mc = " \
         fmc \

@@ -3,8 +3,6 @@ PRIVATE_FULL = "yes"
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
-PRINC := "${@int(PRINC) + 6}"
-
 CORE_SPECIFIC = " \
     fm-ucode-image \
     rcw-image \

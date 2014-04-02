@@ -3,8 +3,6 @@
 #
 # deploy pkgs for all fsl images
 
-PRINC := "${@int(PRINC) + 5}"
-
 IMAGE_INSTALL_append_p1020mbg = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1021rdb = " vsc7385-firmware qe-ucode"

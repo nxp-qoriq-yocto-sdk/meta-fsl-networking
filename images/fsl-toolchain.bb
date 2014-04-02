@@ -1,7 +1,5 @@
 require recipes-core/meta/meta-toolchain.bb
 
-PRINC := "${@int(PRINC) + 4}"
-
 MULTILIBS_pn-${PN} = ""
 TOOLCHAIN_NEED_CONFIGSITE_CACHE += "zlib"
 TOOLCHAIN_TARGET_TASK += " \

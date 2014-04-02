@@ -6,8 +6,6 @@
 # usb stick, hard drive.
 require images/fsl-image-minimal.bb
 
-PRINC := "${@int(PRINC) + 2}"
-
 IMAGE_INSTALL += " \
         packagegroup-core-ssh-dropbear \
         bash \
