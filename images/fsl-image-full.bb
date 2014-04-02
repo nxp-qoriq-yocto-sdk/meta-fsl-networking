@@ -24,7 +24,7 @@ MACHINE_SPECIFIC_t4240qds = " rcw-image"
 MACHINE_SPECIFIC_t4240qds-64b = " rcw-image"
 
 IMAGE_INSTALL += " \
-    packagegroup-core-basic \
+    packagegroup-core-full-cmdline \
     packagegroup-core-nfs-server \
     packagegroup-core-buildessential \
     packagegroup-core-tools-debug \
