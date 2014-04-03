@@ -1,9 +1,9 @@
-# TODO: add qoriq-debug back when qoriq-debug works
 IMAGE_INSTALL_append_e500mc = " \
         fmc \
         fsl-tlu \
         libppc \
         pme-tools \
+        qoriq-debug \
         usdpaa \
 "
 
@@ -31,19 +31,19 @@ IMAGE_INSTALL_append_e5500-64b = " \
         usdpaa \
 "
 
-# TODO: add qoriq-debug back when qoriq-debug works
 IMAGE_INSTALL_append_e6500 = " \
         fmc \
         pme-tools \
+        qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
 
-# TODO: add qoriq-debug back when qoriq-debug works
 IMAGE_INSTALL_append_e6500-64b = " \
         ceetm \
         fmc \
         pme-tools \
+        qoriq-debug \
         tcf-qoriqdbg \
         usdpaa \
 "
