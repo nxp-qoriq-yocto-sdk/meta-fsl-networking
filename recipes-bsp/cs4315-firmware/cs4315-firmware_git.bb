@@ -1,12 +1,11 @@
 DESCRIPTION = "Firmware image for the Cortina CS4315 PHY"
-## no license file, need to be fixed
-LICENSE = "Freescale-EULA"
-LIC_FILES_CHKSUM = "file://${COREBASE}/../meta-fsl-ppc/custom-licenses/Freescale-EULA;md5=bf20d39b348e1b0ed964c91a97638bbb"
+LICENSE = "Cortina"
+LIC_FILES_CHKSUM = "file://Cortina-EULA;md5=ef3a0b9eaf40547d263a4f67040dc56e"
 
 inherit deploy
 
 SRC_URI = "git://git.am.freescale.net/gitolite/users/r63061/firmware.git"
-SRCREV = "fd8b71334c14f3246654dd004f06116560f3e358"
+SRCREV = "ad5a3108f9ede39ea41fde18d4ac0cc7680cf650"
 
 S = "${WORKDIR}/git"
 
