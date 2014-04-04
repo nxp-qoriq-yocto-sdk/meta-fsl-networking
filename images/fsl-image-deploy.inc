@@ -65,6 +65,8 @@ IMAGE_INSTALL_append_t1040rdb = " hv-cfg"
 IMAGE_INSTALL_append_t1040rdb-64b = " hv-cfg"
 IMAGE_INSTALL_append_t2080qds = " rcw hv-cfg"
 IMAGE_INSTALL_append_t2080qds-64b = " rcw hv-cfg"
+IMAGE_INSTALL_append_t2080rdb = " rcw"
+IMAGE_INSTALL_append_t2080rdb-64b = " rcw"
 IMAGE_INSTALL_append_t4240qds = " rcw hv-cfg"
 IMAGE_INSTALL_append_t4240qds-64b = " rcw hv-cfg"
 
