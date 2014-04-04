@@ -1,5 +1,9 @@
 PRIVATE_FULL = "yes"
 
+# copy the manifest and the license text for each package to image
+COPY_LIC_MANIFEST = "1"
+COPY_LIC_DIRS = "1"
+
 require images/fsl-image-flash.bb
 require images/fsl-image-private.inc
 
