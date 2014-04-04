@@ -1,12 +1,12 @@
 DESCRIPTION = "qe microcode binary"
 SECTION = "qe-ucode"
 LICENSE = "Freescale-EULA"
-LIC_FILES_CHKSUM = "file://${COREBASE}/../meta-fsl-ppc/custom-licenses/Freescale-EULA;md5=bf20d39b348e1b0ed964c91a97638bbb"
+LIC_FILES_CHKSUM = "file://EULA;md5=60037ccba533a5995e8d1a838d85799c"
 
 inherit deploy
 
 SRC_URI = "git://git.am.freescale.net/gitolite/users/r63061/qe-ucode.git"
-SRCREV= "35aeff0daa55988dd98e32913c28f61923d0b100"
+SRCREV= "10bef345397ba303cca0e900ec1acc09cf05928e"
 
 PVBASE := "0.0"
 PV := "${PVBASE}+git${SRCPV}"
