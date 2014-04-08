@@ -11,6 +11,7 @@ SRCREV = "a1e00773883ad434839eb705797509166199397c"
 SRC_URI += " file://find.pl \
 	file://openssl-fix-doc.patch \
 	file://engines-install-in-libdir-ssl.patch \
+	file://CVE-2014-0160.patch \
 	"
 # Digest offloading through cryptodev is not recommended because of the
 # performance penalty of the Openssl engine interface. Openssl generates a huge
