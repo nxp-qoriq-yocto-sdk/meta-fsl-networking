@@ -28,10 +28,10 @@ do_install () {
     install -m 755 ${S}/ipc/ipc_test67 ${D}/ipc
     install -m 755 ${S}/ipc/l1d_app ${D}/ipc
     install -m 755 ${S}/fsl_shm/app ${D}${bindir}/lg_shm_test
-    install -d ${D}/lib
-    install -m 755 ${S}/ipc/libipc.so ${D}/lib
-    install -m 755 ${S}/ipc/libmem.so ${D}/lib
-    install -m 755 ${S}/ipc/libdspboot.so  ${D}/lib
+    install -d ${D}${base_libdir}
+    install -m 755 ${S}/ipc/libipc.so ${D}${base_libdir}
+    install -m 755 ${S}/ipc/libmem.so ${D}${base_libdir}
+    install -m 755 ${S}/ipc/libdspboot.so  ${D}${base_libdir}
     install -d ${STAGING_INCDIR}/ipc
     install -d ${STAGING_INCDIR}/ipc/ipc/include
     install -d ${STAGING_INCDIR}/ipc/fsl_shm/lib
