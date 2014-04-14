@@ -8,11 +8,12 @@ DEPENDS="virtual/kernel"
 inherit module
 
 SRC_URI = "${URL-CEETM}"
+SRC_URI += "file://0001-Fix-compile-issue.patch"
 SRCREV =  "${SHA-CEETM}"
 
 S = "${WORKDIR}/git"
 
-EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX}"
+EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX} SYSROOT=${STAGING_DIR_TARGET}"
 export KERNEL_PATH = "${STAGING_KERNEL_DIR}"
 
 python () {
