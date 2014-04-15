@@ -24,6 +24,8 @@ MACHINE_SPECIFIC_b4420qds = " rcw-image"
 MACHINE_SPECIFIC_b4420qds-64b = " rcw-image"
 MACHINE_SPECIFIC_b4860qds = " rcw-image"
 MACHINE_SPECIFIC_b4860qds-64b = " rcw-image"
+MACHINE_SPECIFIC_t1042rdb = " packagegroup-fsl-x11"
+MACHINE_SPECIFIC_t1042rdb-64b = " packagegroup-fsl-x11"
 MACHINE_SPECIFIC_t4240qds = " rcw-image"
 MACHINE_SPECIFIC_t4240qds-64b = " rcw-image"
 
