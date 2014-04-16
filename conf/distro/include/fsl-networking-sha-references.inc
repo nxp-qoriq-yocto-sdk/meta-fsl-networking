@@ -89,6 +89,10 @@ URL-USPDCP = "git://git.am.freescale.net/gitolite/sdk/uspdcp;branch=sdk-1.4"
 SHA-USPDCP = "${AUTOREV}"
 
 #================== FSL packages out side of sdk-devel.git ================#
+# pkc-firmware
+URL-PKC-FIRMWARE = "git://git.am.freescale.net/gitolite/sdk/pkc-firmware.git"
+SHA-PKC-FIRMWARE = "${AUTOREV}"
+
 # pkc-host
 URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git"
 SHA-PKC-HOST = "${AUTOREV}"

@@ -10,8 +10,8 @@ inherit deploy
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/pkc-firmware.git"
-SRCREV = "0af65b80d56eddfffabb61da2d637a550ae08f89"
+SRC_URI = "${URL-PKC-FIRMWARE}"
+SRCREV = "${SHA-PKC-FIRMWARE}"
 
 PVBASE := "0.0"
 PV := "${PVBASE}+git${SRCPV}"
