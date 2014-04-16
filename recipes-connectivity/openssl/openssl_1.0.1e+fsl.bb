@@ -6,7 +6,7 @@ DEPENDS += "cryptodev-headers"
 FILESEXTRAPATHS := "${THISDIR}/openssl-1.0.1e-oe"
 
 SRC_URI = " git://git.am.freescale.net/gitolite/sdk/openssl.git;branch=sdk-v1.6 "
-SRCREV = "a6bb00402a2035ba1d58ebb9f82ab10e7127409e"
+SRCREV = "215a2564882653b64b83031ec64c21c938caaf03"
 
 SRC_URI += " file://find.pl \
 	file://openssl-fix-doc.patch \
