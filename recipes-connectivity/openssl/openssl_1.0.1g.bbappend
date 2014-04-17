@@ -1,17 +1,14 @@
-require openssl.inc
+# cryptodev-linux is replaced with FSL cryptodev-headers
+# The native package does not require cryptodev kernel module at runtime so we
+# set the dependency only for class-target
+DEPENDS_remove="cryptodev-linux"
+DEPENDS +="cryptodev-headers"
+RDEPENDS_${PN}_class-target="cryptodev"
 
-# For target side versions of openssl enable support for OCF Linux driver
-# if they are available.
-DEPENDS += "ocf-linux"
-
-CFLAG += "-DHAVE_CRYPTODEV -DUSE_CRYPTODEV_DIGESTS"
-
-PR = "${INC_PR}.0"
-
-LIC_FILES_CHKSUM = "file://LICENSE;md5=f9a8f968107345e0b75aa8c2ecaa7ec8"
-
-export DIRS = "crypto ssl apps engines"
-export OE_LDFLAGS="${LDFLAGS}"
+# the same patches are used for both class-native and class-target but the
+# base package is taken from Freescale repository
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/openssl.git;nobranch=1"
+SRCREV = "7a6848210c3b2f42aed4de60646e0e63c0e35fcb"
 
 SRC_URI += "file://configure-targets.patch \
             file://shared-libs.patch \
@@ -35,23 +32,6 @@ SRC_URI += "file://configure-targets.patch \
             file://openssl-avoid-NULL-pointer-dereference-in-dh_pub_encode.patch \
             file://initial-aarch64-bits.patch \
             file://find.pl \
-            file://CVE-2014-0160.patch \
+            file://openssl-fix-des.pod-error.patch \
            "
-
-SRC_URI[md5sum] = "66bf6f10f060d561929de96f9dfe5b8c"
-SRC_URI[sha256sum] = "f74f15e8c8ff11aa3d5bb5f276d202ec18d7246e95f961db76054199c69c1ae3"
-
-PACKAGES =+ " \
-	${PN}-engines \
-	${PN}-engines-dbg \
-	"
-
-FILES_${PN}-engines = "${libdir}/ssl/engines/*.so ${libdir}/engines"
-FILES_${PN}-engines-dbg = "${libdir}/ssl/engines/.debug"
-
-PARALLEL_MAKE = ""
-PARALLEL_MAKEINST = ""
-
-do_configure_prepend() {
-  cp ${WORKDIR}/find.pl ${S}/util/find.pl
-}
+S = "${WORKDIR}/git"
