@@ -5,8 +5,8 @@ DEPENDS_remove = "ocf-linux"
 DEPENDS += "cryptodev-headers"
 FILESEXTRAPATHS := "${THISDIR}/openssl-1.0.1e-oe"
 
-SRC_URI = " git://git.am.freescale.net/gitolite/sdk/openssl.git;branch=sdk-v1.6 "
-SRCREV = "215a2564882653b64b83031ec64c21c938caaf03"
+SRC_URI = " git://git.am.freescale.net/gitolite/sdk/openssl.git;nobranch=1 "
+SRCREV = "8138bc1ebaf9c37bd0e412747e864d3242a3ea26"
 
 SRC_URI += " file://find.pl \
 	file://openssl-fix-doc.patch \

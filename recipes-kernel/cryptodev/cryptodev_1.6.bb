@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 inherit module
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.6"
-SRCREV = "6a38d39ccc38ede9eb5fecd8d79b68a9416ebb08"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;nobranch=1"
+SRCREV = "c9baf0623bdc55e8adfc91bf675e8148826d57d1"
 
 EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
 
