@@ -10,10 +10,9 @@ SRCREV = "c9baf0623bdc55e8adfc91bf675e8148826d57d1"
 
 S = "${WORKDIR}/git"
 do_install () {
-    install -D crypto/cryptodev.h ${D}/usr/include/crypto/cryptodev.h
+    install -D ${S}/crypto/cryptodev.h ${D}/${includedir}/crypto/cryptodev.h
 }
 
 do_compile[noexec] = "1"
-ALLOW_EMPTY_${PN} ="1"
 BBCLASSEXTEND = "native nativesdk"
 
