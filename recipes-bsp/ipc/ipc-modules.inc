@@ -32,7 +32,7 @@ python () {
 do_compile_prepend () {
     case ${MACHINE} in
         bsc9132qds|bsc9131rdb) SOC=B913x;;
-        b4860qds) SOC=B4860;;
+        b4860qds|b4420qds) SOC=B4860;;
     esac
 }
 
