@@ -52,6 +52,7 @@ IMAGE_INSTALL_append_b4420qds = " \
         ipc-modules-multi \
         ipc-modules-single \
         ipc-ust \
+"
 
 IMAGE_INSTALL_append_b4860qds = " \
         ipc-modules-multi \
