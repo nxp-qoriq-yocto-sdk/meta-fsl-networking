@@ -1,9 +1,10 @@
 # cryptodev-linux is replaced with FSL cryptodev-headers
 # The native package does not require cryptodev kernel module at runtime so we
 # set the dependency only for class-target
-DEPENDS_remove="cryptodev-linux"
-DEPENDS +="cryptodev-headers"
-RDEPENDS_${PN}_class-target="cryptodev"
+DEPENDS_remove = "cryptodev-linux"
+DEPENDS_remove_class-native = "cryptodev-linux-native"
+DEPENDS += "cryptodev-headers"
+RDEPENDS_class-target = "cryptodev"
 
 # the same patches are used for both class-native and class-target but the
 # base package is taken from Freescale repository
