@@ -81,6 +81,22 @@ RRECOMMENDS_packagegroup-fsl-core-misc = "\
     bridge-utils \
     i2c-tools \
     inetutils \
+    inetutils-ping \
+    inetutils-ping6 \
+    inetutils-hostname \
+    inetutils-ifconfig \
+    inetutils-logger \
+    inetutils-traceroute \
+    inetutils-syslogd \
+    inetutils-ftp \
+    inetutils-ftpd \
+    inetutils-tftp \
+    inetutils-tftpd \
+    inetutils-telnet \
+    inetutils-telnetd \
+    inetutils-inetd \
+    inetutils-rsh \
+    inetutils-rshd \
     ipsec-tools \
     libhugetlbfs \
     lmsensors-sensors \
