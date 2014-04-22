@@ -7,28 +7,17 @@ LIC_FILES_CHKSUM = "file://src/Freescale_Software_License.txt;md5=abef45971875a1
 
 inherit cmake
 
-SRC_URI = "${URL-L2SWITCH}"
-SRCREV = "${SHA-L2SWITCH}"
+SRC_URI = "${URL-L2SWITCH-UTIL}"
+SRCREV = "${SHA-L2SWITCH-UTIL}"
 
-COMPATIBLE_MACHINE = "(t1040qds|t1040rdb)"
+COMPATIBLE_MACHINE = "(t1040qds|t1040rdb|t1040rdb-64b)"
 
 S = "${WORKDIR}/git"
 
 OECMAKE_BUILDPATH  = "${S}/build"
 OECMAKE_SOURCEPATH = "${S}"
 EXTRA_OEMAKE       = "-C ${OECMAKE_BUILDPATH}"
-
-do_patch_append() {
-    os.system("rm -rf ${S}/uio-driver")
-}
-
-do_compile () {
-    oe_runmake
-}
-
-do_install () {
-    oe_runmake DESTDIR=${D} install
-}
+export SYSROOT     = "${STAGING_DIR_TARGET}"
 
 PACKAGES = "${PN} ${PN}-lib vtss-api"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
