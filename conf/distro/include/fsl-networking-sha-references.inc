@@ -109,6 +109,6 @@ SHA-SKMM-EP = "${AUTOREV}"
 URL-QORIQ-DEBUG = "git://git.am.freescale.net/gitolite/soc-debug/qoriq-debug.git"
 SHA-QORIQ-DEBUG = "20615c1ea332102635f8314cee5787c48c1a4254"
 
-#T1040 l2switch
-URL-L2SWITCH = "git://git.am.freescale.net/gitolite/sdk/l2switch.git"
-SHA-L2SWITCH = "${AUTOREV}"
+#T1040 l2switch UIO driver
+URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git"
+SHA-L2SWITCH-UIO = "${AUTOREV}"
