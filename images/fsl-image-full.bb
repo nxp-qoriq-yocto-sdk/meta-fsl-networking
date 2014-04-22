@@ -44,6 +44,7 @@ IMAGE_INSTALL += " \
     ${@multilib_pkg_extend(d, "libgcc")} \
     ${@multilib_pkg_extend(d, "libgcc-dev")} \
     ${@multilib_pkg_extend(d, "eglibc-dev")} \
+    ${@multilib_pkg_extend(d, "eglibc-utils")} \
     ${@multilib_pkg_extend(d, "valgrind")} \
     u-boot-images \
     kernel-image \
