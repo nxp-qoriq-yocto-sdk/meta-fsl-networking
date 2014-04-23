@@ -3,78 +3,102 @@
 #
 # deploy pkgs for all fsl images
 
-IMAGE_INSTALL_append_p1020mbg = " vsc7385-firmware"
-IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
-IMAGE_INSTALL_append_p1021rdb = " vsc7385-firmware qe-ucode"
-IMAGE_INSTALL_append_p1024rdb = " vsc7385-firmware"
-IMAGE_INSTALL_append_p1025rdb = " vsc7385-firmware qe-ucode"
-IMAGE_INSTALL_append_p1025twr = " qe-ucode"
-IMAGE_INSTALL_append_p2020rdb = " vsc7385-firmware"
-IMAGE_INSTALL_append_t1040rdb = " qe-ucode"
-IMAGE_INSTALL_append_t1040rdb-64b = " qe-ucode"
-IMAGE_INSTALL_append_t2080rdb = " cs4315-firmware-image"
-IMAGE_INSTALL_append_t2080rdb-64b = " cs4315-firmware-image"
-IMAGE_INSTALL_append_t4240rdb = " cs4315-firmware-image"
-IMAGE_INSTALL_append_t4240rdb-64b = " cs4315-firmware-image"
-
 IMAGE_INSTALL_append_e500mc = " \
-        fm-ucode \
-        hv-cfg \
-        rcw \
-        hypervisor \
-        hypervisor-partman \
+    fm-ucode \
+    hv-cfg \
+    rcw \
+    hypervisor \
+    hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_e5500 = " \
-        fm-ucode \
-        rcw \
-        hypervisor \
-        hypervisor-partman \
+    fm-ucode \
+    rcw \
+    hypervisor \
+    hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_e5500-64b = " \
-        fm-ucode \
-        rcw \
-        hypervisor \
-        hypervisor-partman \
+    fm-ucode \
+    rcw \
+    hypervisor \
+    hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_e6500 = " \
-        fm-ucode \
-        ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
-        ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
+    fm-ucode \
+    ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
+    ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
 "
 
 IMAGE_INSTALL_append_e6500-64b = " \
-        fm-ucode \
-        hypervisor \
-        hypervisor-partman \
+    fm-ucode \
+    hypervisor \
+    hypervisor-partman \
 "
 
 IMAGE_INSTALL_append_b4420qds = " rcw"
 IMAGE_INSTALL_append_b4420qds-64b = " rcw"
-IMAGE_INSTALL_append_b4860qds = " rcw hv-cfg"
-IMAGE_INSTALL_append_b4860qds-64b = " rcw hv-cfg"
+IMAGE_INSTALL_append_b4860qds = " \
+    rcw \
+    hv-cfg \
+"
+IMAGE_INSTALL_append_b4860qds-64b = " \
+    rcw \
+    hv-cfg \
+"
+IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
+IMAGE_INSTALL_append_p1021rdb = " \
+    vsc7385-firmware \
+    qe-ucode \
+"
+IMAGE_INSTALL_append_p1022ds = " edink"
+IMAGE_INSTALL_append_p1023rdb = " fm-ucode"
+IMAGE_INSTALL_append_p1025twr = " qe-ucode"
+IMAGE_INSTALL_append_p2020rdb = " vsc7385-firmware"
 IMAGE_INSTALL_append_p5020ds = " hv-cfg"
 IMAGE_INSTALL_append_p5020ds-64b = " hv-cfg"
 IMAGE_INSTALL_append_p5040ds = " hv-cfg"
 IMAGE_INSTALL_append_p5040ds-64b = " hv-cfg"
 IMAGE_INSTALL_append_t1040qds = " hv-cfg"
 IMAGE_INSTALL_append_t1040qds-64b = " hv-cfg"
-IMAGE_INSTALL_append_t1040rdb = " hv-cfg"
-IMAGE_INSTALL_append_t1040rdb-64b = " hv-cfg"
-IMAGE_INSTALL_append_t2080qds = " rcw hv-cfg"
-IMAGE_INSTALL_append_t2080qds-64b = " rcw hv-cfg"
-IMAGE_INSTALL_append_t2080rdb = " rcw"
-IMAGE_INSTALL_append_t2080rdb-64b = " rcw"
-IMAGE_INSTALL_append_t4240qds = " rcw hv-cfg"
-IMAGE_INSTALL_append_t4240qds-64b = " rcw hv-cfg"
-
-IMAGE_INSTALL_append_p1023rdb = " \
-        fm-ucode \
+IMAGE_INSTALL_append_t1040rdb = " \
+    hv-cfg \
+    qe-ucode \
 "
-
-IMAGE_INSTALL_append_mpc8536ds = " edink"
-IMAGE_INSTALL_append_mpc8544ds = " edink"
-IMAGE_INSTALL_append_mpc8572ds = " edink"
-IMAGE_INSTALL_append_p1022ds = " edink"
+IMAGE_INSTALL_append_t1040rdb-64b = " \
+    hv-cfg \
+    qe-ucode \
+"
+IMAGE_INSTALL_append_t2080qds = " \
+    hv-cfg \
+    rcw \
+"
+IMAGE_INSTALL_append_t2080qds-64b = " \
+    hv-cfg \
+    rcw \
+"
+IMAGE_INSTALL_append_t2080rdb = " \
+    cs4315-firmware-image \
+    rcw \
+"
+IMAGE_INSTALL_append_t2080rdb-64b = " \
+    cs4315-firmware-image \
+    rcw \
+"
+IMAGE_INSTALL_append_t4240qds = " \
+    rcw \
+    hv-cfg \
+"
+IMAGE_INSTALL_append_t4240qds-64b = " \
+    rcw \
+    hv-cfg \
+"
+IMAGE_INSTALL_append_t4240rdb = " \
+    cs4315-firmware-image \
+    rcw \
+"
+IMAGE_INSTALL_append_t4240rdb-64b = " \
+    cs4315-firmware-image \
+    rcw \
+"
