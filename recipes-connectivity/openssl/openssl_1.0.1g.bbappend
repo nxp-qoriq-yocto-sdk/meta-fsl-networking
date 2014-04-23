@@ -9,7 +9,7 @@ RDEPENDS-${PN}_class-target = "cryptodev"
 # the same patches are used for both class-native and class-target but the
 # base package is taken from Freescale repository
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/openssl.git;nobranch=1"
-SRCREV = "7a6848210c3b2f42aed4de60646e0e63c0e35fcb"
+SRCREV = "8b1ed323d08dce8b6e303ce63a82337543e9187f"
 
 SRC_URI += "file://configure-targets.patch \
             file://shared-libs.patch \
