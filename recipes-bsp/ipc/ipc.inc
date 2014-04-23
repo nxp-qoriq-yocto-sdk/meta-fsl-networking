@@ -1,7 +1,7 @@
 DEPENDS = "virtual/kernel"
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
-SRCREV = "cd730ccba14f591c19ae4fef0e73b7bbcfc9262d"
+SRC_URI = "${URL-IPC}"
+SRCREV = "${SHA-IPC}"
 
 PVBASE := "0.0"
 PV := "${PVBASE}+git${SRCPV}"
