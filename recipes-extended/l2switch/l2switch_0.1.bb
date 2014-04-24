@@ -14,9 +14,6 @@ COMPATIBLE_MACHINE = "(t1040qds|t1040rdb|t1040rdb-64b)"
 
 S = "${WORKDIR}/git"
 
-OECMAKE_BUILDPATH  = "${S}/build"
-OECMAKE_SOURCEPATH = "${S}"
-EXTRA_OEMAKE       = "-C ${OECMAKE_BUILDPATH}"
 export SYSROOT     = "${STAGING_DIR_TARGET}"
 
 PACKAGES = "${PN} ${PN}-lib vtss-api"
