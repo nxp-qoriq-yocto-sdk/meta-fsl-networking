@@ -8,7 +8,6 @@ DEPENDS="virtual/kernel"
 inherit module
 
 SRC_URI = "${URL-CEETM}"
-SRC_URI += "file://0001-Fix-compile-issue.patch"
 SRCREV =  "${SHA-CEETM}"
 
 S = "${WORKDIR}/git"
