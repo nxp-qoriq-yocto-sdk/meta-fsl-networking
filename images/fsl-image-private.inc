@@ -80,6 +80,18 @@ IMAGE_INSTALL_append_p4080ds = " \
         tcf-qoriqdbg \
 "
 
+IMAGE_INSTALL_append_t1040rdb = " \
+        ceetm \
+        l2switch \
+        uio-seville \
+"
+
+IMAGE_INSTALL_append_t1040rdb-64b = " \
+        ceetm \
+        l2switch \
+        uio-seville \
+"
+
 IMAGE_INSTALL_append_t4240qds = " \
         pkc-host \
         skmm-ep \
