@@ -4,7 +4,7 @@
 DEPENDS_remove = "cryptodev-linux"
 DEPENDS_remove_class-native = "cryptodev-linux-native"
 DEPENDS += "cryptodev-headers"
-RDEPENDS-${PN}_class-target = "cryptodev"
+RDEPENDS_${PN}_class-target = "cryptodev"
 
 # the same patches are used for both class-native and class-target but the
 # base package is taken from Freescale repository
