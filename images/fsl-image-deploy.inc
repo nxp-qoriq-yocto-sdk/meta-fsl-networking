@@ -97,8 +97,10 @@ IMAGE_INSTALL_append_t4240qds-64b = " \
 IMAGE_INSTALL_append_t4240rdb = " \
     cs4315-firmware-image \
     rcw \
+    hv-cfg \
 "
 IMAGE_INSTALL_append_t4240rdb-64b = " \
     cs4315-firmware-image \
     rcw \
+    hv-cfg \
 "
