@@ -95,7 +95,6 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     oprofile \
     parted \
     perf \
-    portmap \
     quilt \
     rpm \
     rt-tests \
