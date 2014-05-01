@@ -3,13 +3,13 @@ DESCRIPTION = "DSP boot application and ipc test application"
 LICENSE = "BSD"
 
 # no COPYING file in current git tree, need to be fixed
-LIC_FILES_CHKSUM = "file://../COPYING;md5=fa38cd73d71527dc6efb546474f64d10"
-
-inherit  module
+LIC_FILES_CHKSUM = "file://COPYING;md5=fa38cd73d71527dc6efb546474f64d10"
 
 require ipc.inc
 
-S = "${WORKDIR}/git/kernel"
+inherit  module
+
+S = "${WORKDIR}/git"
 python () {
         ma = d.getVar("DISTRO_FEATURES", True)
         arch = d.getVar("OVERRIDES", True)
@@ -30,6 +30,7 @@ python () {
 }
 
 do_compile_prepend () {
+    cd ${S}/kernel
     case ${MACHINE} in
         bsc9132qds|bsc9131rdb) SOC=B913x;;
         b4860qds|b4420qds) SOC=B4860;;
