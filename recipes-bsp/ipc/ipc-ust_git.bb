@@ -22,6 +22,7 @@ do_compile () {
 
 do_install () {
     install -d ${D}${bindir}
+    install -d ${D}${includedir}
     install -d ${D}/ipc
     install -m 755 ${S}/dsp_boot/dsp_bt ${D}/ipc
     install -m 755 ${S}/ipc/ipc_test ${D}/ipc
@@ -32,16 +33,16 @@ do_install () {
     install -m 755 ${S}/ipc/libipc.so ${D}${base_libdir}
     install -m 755 ${S}/ipc/libmem.so ${D}${base_libdir}
     install -m 755 ${S}/ipc/libdspboot.so  ${D}${base_libdir}
-    install -d ${STAGING_INCDIR}/ipc
-    install -d ${STAGING_INCDIR}/ipc/ipc/include
-    install -d ${STAGING_INCDIR}/ipc/fsl_shm/lib
-    install ${S}/ipc/include/*.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/dsp_boot/*.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/kernel/fsl_ipc_types.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/kernel/fsl_heterogeneous_common.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/kernel/fsl_heterogeneous_l1_defense.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/fsl_shm/include/*.h ${STAGING_INCDIR}/ipc/ipc/include
-    install ${S}/fsl_shm/lib/*.h ${STAGING_INCDIR}/ipc/fsl_shm/lib
+    install -d ${D}${includedir}/ipc
+    install -d ${D}${includedir}/ipc/ipc/include
+    install -d ${D}${includedir}/ipc/fsl_shm/lib
+    install ${S}/ipc/include/*.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/dsp_boot/*.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/kernel/fsl_ipc_types.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/kernel/fsl_heterogeneous_common.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/kernel/fsl_heterogeneous_l1_defense.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/fsl_shm/include/*.h ${D}${includedir}/ipc/ipc/include
+    install ${S}/fsl_shm/lib/*.h ${D}${includedir}/ipc/fsl_shm/lib
 }
 
 FILES_${PN} += "/ipc/*"
