@@ -43,41 +43,27 @@ IMAGE_INSTALL_append_e6500-64b = " \
     hypervisor-partman \
 "
 
+# pkgs to be installed for specific board
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
-IMAGE_INSTALL_append_p1021rdb = " \
-    vsc7385-firmware \
-    qe-ucode \
-"
+IMAGE_INSTALL_append_p1021rdb = " vsc7385-firmware qe-ucode"
 IMAGE_INSTALL_append_p1022ds = " edink"
 IMAGE_INSTALL_append_p1023rdb = " fm-ucode"
 IMAGE_INSTALL_append_p1025twr = " qe-ucode"
 IMAGE_INSTALL_append_p2020rdb = " vsc7385-firmware"
+IMAGE_INSTALL_append_t1040rdb = " qe-ucode"
+IMAGE_INSTALL_append_t1040rdb-64b = " qe-ucode"
+IMAGE_INSTALL_append_t2080rdb = " cs4315-firmware-image"
+IMAGE_INSTALL_append_t2080rdb-64b = " cs4315-firmware-image"
+IMAGE_INSTALL_append_t4240rdb = " cs4315-firmware-image"
+IMAGE_INSTALL_append_t4240rdb-64b = " cs4315-firmware-image"
 
+# pkgs to be excluded for specific board
+IMAGE_INSTALL_remove_b4420qds = "hv-cfg"
+IMAGE_INSTALL_remove_b4420qds-64b = "hv-cfg"
 IMAGE_INSTALL_remove_t1042rdb = "hv-cfg"
 IMAGE_INSTALL_remove_t1042rdb-64b = "hv-cfg"
 IMAGE_INSTALL_remove_t4160qds = "hv-cfg rcw"
 IMAGE_INSTALL_remove_t4160qds-64b = "hv-cfg rcw"
 IMAGE_INSTALL_remove_t2080rdb = "hv-cfg"
 IMAGE_INSTALL_remove_t2080rdb-64b = "hv-cfg"
-IMAGE_INSTALL_remove_b4420qds = "hv-cfg"
-IMAGE_INSTALL_remove_b4420qds-64b = "hv-cfg"
 
-IMAGE_INSTALL_append_t1040rdb = " \
-    qe-ucode \
-"
-IMAGE_INSTALL_append_t1040rdb-64b = " \
-    qe-ucode \
-"
-
-IMAGE_INSTALL_append_t2080rdb = " \
-    cs4315-firmware-image \
-"
-IMAGE_INSTALL_append_t2080rdb-64b = " \
-    cs4315-firmware-image \
-"
-IMAGE_INSTALL_append_t4240rdb = " \
-    cs4315-firmware-image \
-"
-IMAGE_INSTALL_append_t4240rdb-64b = " \
-    cs4315-firmware-image \
-"
