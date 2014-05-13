@@ -13,6 +13,7 @@ IMAGE_INSTALL_append_e500mc = " \
 
 IMAGE_INSTALL_append_e5500 = " \
     fm-ucode \
+    hv-cfg \
     rcw \
     hypervisor \
     hypervisor-partman \
@@ -20,6 +21,7 @@ IMAGE_INSTALL_append_e5500 = " \
 
 IMAGE_INSTALL_append_e5500-64b = " \
     fm-ucode \
+    hv-cfg \
     rcw \
     hypervisor \
     hypervisor-partman \
@@ -56,16 +58,13 @@ IMAGE_INSTALL_append_p1022ds = " edink"
 IMAGE_INSTALL_append_p1023rdb = " fm-ucode"
 IMAGE_INSTALL_append_p1025twr = " qe-ucode"
 IMAGE_INSTALL_append_p2020rdb = " vsc7385-firmware"
-IMAGE_INSTALL_append_p5020ds = " hv-cfg"
-IMAGE_INSTALL_append_p5020ds-64b = " hv-cfg"
-IMAGE_INSTALL_append_p5040ds = " hv-cfg"
-IMAGE_INSTALL_append_p5040ds-64b = " hv-cfg"
+IMAGE_INSTALL_remove_t1042rdb = "hv-cfg"
+IMAGE_INSTALL_remove_t1042rdb-64b = "hv-cfg"
+
 IMAGE_INSTALL_append_t1040rdb = " \
-    hv-cfg \
     qe-ucode \
 "
 IMAGE_INSTALL_append_t1040rdb-64b = " \
-    hv-cfg \
     qe-ucode \
 "
 IMAGE_INSTALL_append_t2080qds = " \
