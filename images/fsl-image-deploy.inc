@@ -3,45 +3,16 @@
 #
 # deploy pkgs for all fsl images
 
-IMAGE_INSTALL_append_e500mc = " \
+DEPLOY_PKGS = " \
     fm-ucode \
     hv-cfg \
     rcw \
     hypervisor \
     hypervisor-partman \
 "
+DEPLOY_PKGS_e500v2 = ""
 
-IMAGE_INSTALL_append_e5500 = " \
-    fm-ucode \
-    hv-cfg \
-    rcw \
-    hypervisor \
-    hypervisor-partman \
-"
-
-IMAGE_INSTALL_append_e5500-64b = " \
-    fm-ucode \
-    hv-cfg \
-    rcw \
-    hypervisor \
-    hypervisor-partman \
-"
-
-IMAGE_INSTALL_append_e6500 = " \
-    fm-ucode \
-    hv-cfg \
-    rcw \
-    ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
-    ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
-"
-
-IMAGE_INSTALL_append_e6500-64b = " \
-    fm-ucode \
-    hv-cfg \
-    rcw \
-    hypervisor \
-    hypervisor-partman \
-"
+IMAGE_INSTALL_append = " ${DEPLOY_PKGS}"
 
 # pkgs to be installed for specific board
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
@@ -66,4 +37,14 @@ IMAGE_INSTALL_remove_t4160qds = "hv-cfg rcw"
 IMAGE_INSTALL_remove_t4160qds-64b = "hv-cfg rcw"
 IMAGE_INSTALL_remove_t2080rdb = "hv-cfg"
 IMAGE_INSTALL_remove_t2080rdb-64b = "hv-cfg"
+
+# special trick for e6500 to include 64bit hypervisor
+IMAGE_INSTALL_remove_e6500 = " \
+    ${@base_conditional("TCMODE", "external-fsl", "", "hypervisor", d)} \
+    ${@base_conditional("TCMODE", "external-fsl", "", "hypervisor-partman", d)} \
+"
+IMAGE_INSTALL_append_e6500 = " \
+    ${@base_conditional("TCMODE", "external-fsl", "", "lib64-hypervisor", d)} \
+    ${@base_conditional("TCMODE", "external-fsl", "", "lib64-hypervisor-partman", d)} \
+"
 
