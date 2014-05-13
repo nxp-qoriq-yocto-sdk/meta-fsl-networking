@@ -1,12 +1,23 @@
-IMAGE_INSTALL_append_e500mc = " \
+PRIVATE_PKGS = " \
         fmc \
-        fsl-tlu \
-        libppc \
         pme-tools \
         qoriq-debug \
         usdpaa \
 "
+PRIVATE_PKGS_e500v2 = ""
 
+# common packages
+IMAGE_INSTALL += " \
+        ${PRIVATE_PKGS} \
+        asf \
+        eth-config \
+        merge-files \
+        mux-server \
+        ${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)} \
+        ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
+"
+
+# pkgs to be installed for each core
 IMAGE_INSTALL_append_e500v2 = " \
         cantest \
         fsl-pme \
@@ -14,40 +25,30 @@ IMAGE_INSTALL_append_e500v2 = " \
         testfloat \
 "
 
-IMAGE_INSTALL_append_e5500 = " \
-        fmc \
+IMAGE_INSTALL_append_e500mc = " \
+        fsl-tlu \
         libppc \
-        pme-tools \
-        qoriq-debug \
+"
+
+IMAGE_INSTALL_append_e5500 = " \
+        libppc \
         tcf-qoriqdbg \
-        usdpaa \
 "
 
 IMAGE_INSTALL_append_e5500-64b = " \
-        fmc \
-        pme-tools \
-        qoriq-debug \
         tcf-qoriqdbg \
-        usdpaa \
 "
 
 IMAGE_INSTALL_append_e6500 = " \
-        fmc \
-        pme-tools \
-        qoriq-debug \
         tcf-qoriqdbg \
-        usdpaa \
 "
 
 IMAGE_INSTALL_append_e6500-64b = " \
         ceetm \
-        fmc \
-        pme-tools \
-        qoriq-debug \
         tcf-qoriqdbg \
-        usdpaa \
 "
 
+# pkgs to be installed for each board
 IMAGE_INSTALL_append_b4420qds = " \
         ipc-modules-multi \
         ipc-modules-single \
@@ -106,14 +107,4 @@ IMAGE_INSTALL_append_t4240qds = " \
         skmm-ep \
         skmm-host \
 "
-# fsl specific packages
-IMAGE_INSTALL += " \
-        asf \
-        eth-config \
-        merge-files \
-        mux-server \
-"
-
-IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)}'
-IMAGE_INSTALL += '${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)}'
 
