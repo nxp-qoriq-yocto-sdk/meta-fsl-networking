@@ -6,7 +6,7 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://src/Freescale_Software_License.txt;md5=abef45971875a174b40d565215cdf4d9 \
 		file://include/COPYING;md5=d116128d49d9015ae61a9a5263dc475d"
 
-inherit cmake
+inherit cmake update-rc.d
 
 SRC_URI = "${URL-L2SWITCH-UTIL}"
 SRCREV = "${SHA-L2SWITCH-UTIL}"
@@ -29,3 +29,6 @@ FILES_${PN} = "${bindir}/l2sw_bin \
 FILES_${PN}-lib = "${libdir}/*"
 
 FILES_vtss-api = "${includedir}/*"
+
+INITSCRIPT_NAME = "l2switch"
+INITSCRIPT_PARAMS = "defaults 10 85"
