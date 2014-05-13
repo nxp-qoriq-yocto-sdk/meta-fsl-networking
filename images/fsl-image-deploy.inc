@@ -60,8 +60,6 @@ IMAGE_INSTALL_append_p5020ds = " hv-cfg"
 IMAGE_INSTALL_append_p5020ds-64b = " hv-cfg"
 IMAGE_INSTALL_append_p5040ds = " hv-cfg"
 IMAGE_INSTALL_append_p5040ds-64b = " hv-cfg"
-IMAGE_INSTALL_append_t1040qds = " hv-cfg"
-IMAGE_INSTALL_append_t1040qds-64b = " hv-cfg"
 IMAGE_INSTALL_append_t1040rdb = " \
     hv-cfg \
     qe-ucode \
