@@ -11,7 +11,7 @@ inherit cmake update-rc.d
 SRC_URI = "${URL-L2SWITCH-UTIL}"
 SRCREV = "${SHA-L2SWITCH-UTIL}"
 
-COMPATIBLE_MACHINE = "(t1040qds|t1040rdb|t1040rdb-64b)"
+COMPATIBLE_MACHINE = "(t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b)"
 
 S = "${WORKDIR}/git"
 
