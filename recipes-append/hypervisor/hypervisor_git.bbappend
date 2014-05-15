@@ -1,5 +1,5 @@
 SRC_URI = " \
-    ${URL-HV};name=hypervisor \
+    ${URL-HYPERVISOR};name=hypervisor \
     ${URL-KCONFIG};name=kconfig;destsuffix=git/kconfig \
     ${URL-LIBOS};name=libos;destsuffix=git/libos \
     ${URL-DTC};name=dtc;destsuffix=dtc \
@@ -8,7 +8,7 @@ SRC_URI = " \
       "
 
 SRCREV_FORMAT="hypervisor"
-SRCREV = "${SHA-HV}"
+SRCREV = "${SHA-HYPERVISOR}"
 SRCREV_kconfig = "${SHA-KCONFIG}"
 SRCREV_libos = "${SHA-LIBOS}"
 SRCREV_dtc = "${SHA-DTC}"
