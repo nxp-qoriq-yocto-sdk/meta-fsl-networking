@@ -8,8 +8,6 @@ inherit deploy
 SRC_URI = "git://git.am.freescale.net/gitolite/users/r63061/qe-ucode.git"
 SRCREV= "10bef345397ba303cca0e900ec1acc09cf05928e"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 do_install () {

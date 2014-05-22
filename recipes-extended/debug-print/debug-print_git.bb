@@ -11,8 +11,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRCREV = "106dac87c20849e7e0996a3dabbf5be12d00dd02"
 SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/debug_print.git"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE="CROSS_COMPILE=${TARGET_PREFIX} CC='${CC} ${LDFLAGS}' \

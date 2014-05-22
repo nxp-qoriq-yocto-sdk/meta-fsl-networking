@@ -6,8 +6,6 @@ LIC_FILES_CHKSUM = "file://Makefile;endline=21;md5=45d81c6e015ed7c8917e766ff1fd4
 SRCREV = "${SHA-LIBPPC}"
 SRC_URI = "${URL-LIBPPC}"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git/fsl_opt_lib"
 
 do_configure_prepend () {

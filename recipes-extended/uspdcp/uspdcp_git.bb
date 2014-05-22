@@ -10,8 +10,6 @@ LIC_FILES_CHKSUM = "file://Makefile;endline=30;md5=83b6209ab517640a7390536a08d33
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/uspdcp.git;nobranch=1"
 SRCREV = "30016cdf36553c14f7143ef005a4925edd901fb0"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE="ARCH=${TARGET_ARCH} EXTRA_DEFINE='USDPAA CONFIG_PHYS_64BIT' CROSS_COMPILE=${TARGET_PREFIX} SDK_DIR=${STAGING_DIR}/${MACHINE}"

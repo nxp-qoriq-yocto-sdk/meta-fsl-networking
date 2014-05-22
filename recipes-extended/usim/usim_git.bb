@@ -9,8 +9,6 @@ SRCREV = "004d899d08ffbad690de16f25b2635889a393c05"
 SRC_URI = "git://git.am.freescale.net/gitolite/psc913x/usim.git \
 "
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE="CROSS_COMPILE=${TARGET_PREFIX}"

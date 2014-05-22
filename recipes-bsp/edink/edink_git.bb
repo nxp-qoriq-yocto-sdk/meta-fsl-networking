@@ -8,8 +8,6 @@ inherit deploy
 SRC_URI = "git://git.am.freescale.net/gitolite/users/b28495/edink.git"
 SRCREV= "f51b9cefb13e21baddf4209316e11b178e76db4c"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EDINK_INSTALL_FILE = "edink"

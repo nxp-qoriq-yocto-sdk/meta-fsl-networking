@@ -8,8 +8,6 @@ DEPENDS = "elfutils"
 SRC_URI = "git://git.am.freescale.net/gitolite/sdk/apptrk.git"
 SRCREV = "cbed10997c5e2a4aaa004fb0e1efec858bf1bbe1"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 CFLAGS += " -I${STAGING_INCDIR} -ISource/Linux -ISource/Portable \

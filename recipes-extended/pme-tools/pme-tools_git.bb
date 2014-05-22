@@ -8,8 +8,6 @@ EXCLUDE_FROM_WORLD_pn-pme-tools = "1"
 SRCREV = "${SHA-PME-TOOLS}"
 SRC_URI = "${URL-PME-TOOLS}"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 PARALLEL_MAKE = ""

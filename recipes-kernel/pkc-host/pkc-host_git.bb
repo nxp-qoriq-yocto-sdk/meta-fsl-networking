@@ -8,8 +8,6 @@ inherit  module
 SRC_URI = "${URL-PKC-HOST}"
 SRCREV = "${SHA-PKC-HOST}"
 
-PVBASE := "0.0"
-PV := "${PVBASE}+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE='KERNEL_DIR="${STAGING_KERNEL_DIR}" PREFIX="${D}"'
