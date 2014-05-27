@@ -35,8 +35,6 @@ IMAGE_INSTALL_remove_t1042rdb = "hv-cfg"
 IMAGE_INSTALL_remove_t1042rdb-64b = "hv-cfg"
 IMAGE_INSTALL_remove_t4160qds = "hv-cfg rcw"
 IMAGE_INSTALL_remove_t4160qds-64b = "hv-cfg rcw"
-IMAGE_INSTALL_remove_t2080rdb = "hv-cfg"
-IMAGE_INSTALL_remove_t2080rdb-64b = "hv-cfg"
 
 # special trick for e6500 to include 64bit hypervisor
 IMAGE_INSTALL_remove_e6500 = " \
