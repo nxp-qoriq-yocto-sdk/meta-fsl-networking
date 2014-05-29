@@ -115,9 +115,9 @@ URL-QORIQ-DEBUG = "git://git.am.freescale.net/gitolite/soc-debug/qoriq-debug.git
 SHA-QORIQ-DEBUG = "20615c1ea332102635f8314cee5787c48c1a4254"
 
 #T1040 l2switch UIO driver
-URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git"
+URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
 SHA-L2SWITCH-UIO = "${AUTOREV}"
 
 #T1040 l2switch utils
-URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git"
+URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
 SHA-L2SWITCH-UTIL = "${AUTOREV}"
