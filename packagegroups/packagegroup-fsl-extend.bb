@@ -106,6 +106,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     watchdog \
     which \
     xinetd \
+    xz  \
     zip \
 "
 RRECOMMENDS_packagegroup-fsl-extend-misc = "\
