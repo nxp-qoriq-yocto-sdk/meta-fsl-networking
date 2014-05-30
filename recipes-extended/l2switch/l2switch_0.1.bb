@@ -4,7 +4,7 @@ RCONFLICTS_${PN} = "smbstax"
 LICENSE = "Proprietary"
 
 LIC_FILES_CHKSUM = "file://src/Freescale_Software_License.txt;md5=abef45971875a174b40d565215cdf4d9 \
-		file://include/COPYING;md5=d116128d49d9015ae61a9a5263dc475d"
+		file://include/COPYING;md5=04c382b7d8326a7796e752d35bba76f7"
 
 inherit cmake update-rc.d
 
