@@ -9,7 +9,7 @@ IMAGE_FSTYPES = "tar.gz ext2.gz ext2.gz.u-boot"
 # build issues. to fix later
 IMAGE_INSTALL += " \
     packagegroup-fsl-core \
-    lxc hv-test libvirt libvirt-libvirtd libvirt-virsh \
+    lxc libvirt libvirt-libvirtd libvirt-virsh \
     libhugetlbfs \
     pkgconfig qemu kernel-image"
 
