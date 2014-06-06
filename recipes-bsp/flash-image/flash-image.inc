@@ -1,5 +1,4 @@
 DESCRIPTION = "Generate flash images"
-SECTION = "flash-image"
 LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://COPYING;md5=457d7f1ad0c73c7102bc0563e8cb9aac"
 
@@ -10,13 +9,13 @@ inherit deploy
 S = "${WORKDIR}/git"
 
 SRC_URI = "git://git.am.freescale.net/gitolite/users/b28495/flash-image-tool.git"
-SRCREV = "20949ff9aabd68f40e755b425769c72deaf38c45"
+SRCREV = "dfb75537fe88142d73badc7d6c26cc11126b7d80"
 
 FLASH_MAP ?= "flashmap.cfg"
 UBOOT_ENV ?= "uboot_env.txt"
 ROOTFS_TYPE ?= "fsl-image-flash"
 
-IMAGE_TAG ?= "QorIQ_SDK_V1.3"
+IMAGE_TAG ?= "QorIQ_SDK_V1.6"
 IMAGE_NAME ?= "${IMAGE_TAG}_${MACHINE}_${DATE}_FLASH.bin"
 
 SCRIPT_NAME ?= "gen_flash_image.pl"
@@ -47,6 +46,7 @@ do_deploy_mpc8544ds () {
     install -d ${DEPLOYDIR}/
     install -m 644 ${S}/${IMAGE_NAME} ${DEPLOYDIR}/
 }
+
 
 ALLOW_EMPTY_${PN} = "1"
 
