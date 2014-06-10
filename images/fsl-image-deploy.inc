@@ -38,11 +38,11 @@ IMAGE_INSTALL_remove_t4160qds-64b = "hv-cfg rcw"
 
 # special trick for e6500 to include 64bit hypervisor
 IMAGE_INSTALL_remove_e6500 = " \
-    ${@base_conditional("TCMODE", "external-fsl", "", "hypervisor", d)} \
-    ${@base_conditional("TCMODE", "external-fsl", "", "hypervisor-partman", d)} \
+    hypervisor \
+    hypervisor-partman \
 "
 IMAGE_INSTALL_append_e6500 = " \
-    ${@base_conditional("TCMODE", "external-fsl", "", "lib64-hypervisor", d)} \
-    ${@base_conditional("TCMODE", "external-fsl", "", "lib64-hypervisor-partman", d)} \
+    ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
+    ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
 "
 
