@@ -3,7 +3,7 @@ SECTION = "libppc"
 LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://Makefile;endline=21;md5=45d81c6e015ed7c8917e766ff1fd4499"
 
-SRC_URI = "http://git.am.freescale.net/gitolite/gitweb.cgi/libppc.git"
+SRC_URI = "git://git.am.freescale.net/gitolite/libppc.git"
 SRCREV = "fd5d8798663f7a55ff249c5d0a41cf80a02534a2"
 
 S = "${WORKDIR}/git/fsl_opt_lib"
