@@ -1,2 +1,0 @@
-SRC_URI = "${URL-SKMM-EP}"
-SRCREV = "${SHA-SKMM-EP}"
