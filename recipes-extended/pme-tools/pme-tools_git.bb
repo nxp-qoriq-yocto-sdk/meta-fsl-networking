@@ -5,8 +5,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=f6bc49903590148d5df43337785b67cd"
 
 EXCLUDE_FROM_WORLD_pn-pme-tools = "1"
 
-SRCREV = "git://git.am.freescale.net/gitolite/pme_tools.git"
-SRC_URI = "549a22328672ad0ae76835105ad5e95ece2f7b21"
+SRC_URI = "git://git.am.freescale.net/gitolite/pme_tools.git"
+SRCREV = "549a22328672ad0ae76835105ad5e95ece2f7b21"
 
 S = "${WORKDIR}/git"
 
