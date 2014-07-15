@@ -11,6 +11,14 @@ SRC_URI = "file://${BPN}-${PV}.tar.bz2 \
 SRC_URI[md5sum] = "f11b99b489030d9f35573e91c4404e03"
 SRC_URI[sha256sum] = "3250e2951c3b57bfc3dc9e1174e38555e75682ad90831720a7c882093c119f2b"
 
-inherit autotools
 
-EXTRA_OEMAKE += "CXX='${CXX}'"
+EXTRA_OEMAKE = "CXX='${CXX}'"
+
+do_compile() {
+    oe_runmake all
+}
+
+do_install() {
+    oe_runmake DESTDIR=${D} install
+}
+
