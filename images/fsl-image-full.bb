@@ -42,7 +42,7 @@ IMAGE_INSTALL += " \
     packagegroup-fsl-core \
     packagegroup-fsl-extend \
     packagegroup-fsl-monitor \
-    u-boot-images \
+    u-boot-qoriq-images \
     ${@multilib_pkg_extend(d, "binutils")} \
     ${@multilib_pkg_extend(d, "cpp")} \
     ${@multilib_pkg_extend(d, "eglibc-dev")} \
