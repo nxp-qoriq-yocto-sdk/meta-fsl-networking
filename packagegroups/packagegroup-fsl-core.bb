@@ -98,6 +98,7 @@ RRECOMMENDS_packagegroup-fsl-core-misc = "\
     inetutils-rsh \
     inetutils-rshd \
     ipsec-tools \
+    ipsec-demo \
     libhugetlbfs \
     lmsensors-sensors \
     tcpdump \
