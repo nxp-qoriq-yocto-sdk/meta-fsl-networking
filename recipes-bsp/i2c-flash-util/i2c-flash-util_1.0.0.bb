@@ -1,14 +1,11 @@
 DESCRIPTION = "Support for writing file to devices connected on I2C bus"
-SECTION = "i2c-flash-util"
 LICENSE = "Freescale-EULA"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-SRC_URI = "file://i2c_flash_util-1.0.0.tar.bz2 \
-"
-SRC_URI[md5sum] = "f5ebb922bbcf118184fb5c6a443463db"
-SRC_URI[sha256sum] = "c9edb7da9d3cbd985dafe411c3ad0674db1c489dd625fe00b48248f43f042f51"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/i2c-flash-util.git"
+SRCREV = "baa50fecb0ef46cdb073c26bbd0df30066fb2520"
 
-S= "${WORKDIR}/i2c_flash_util-1.0.0"
+S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE = 'CC="${CC}" LD="${CC}"'
 
