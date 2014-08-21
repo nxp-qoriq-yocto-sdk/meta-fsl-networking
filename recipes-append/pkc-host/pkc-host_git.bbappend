@@ -1,0 +1,2 @@
+SRC_URI = "${URL-PKC-HOST}"
+SRCREV = "${SHA-PKC-HOST}"

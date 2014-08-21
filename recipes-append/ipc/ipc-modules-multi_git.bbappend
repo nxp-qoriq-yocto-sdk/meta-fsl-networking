@@ -1,0 +1,2 @@
+SRC_URI = "${URL-IPC}"
+SRCREV = "${SHA-IPC}"

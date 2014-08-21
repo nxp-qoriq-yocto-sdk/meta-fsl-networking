@@ -1,0 +1,2 @@
+SRC_URI = "${URL-CEETM}"
+SRCREV =  "${SHA-CEETM}"
