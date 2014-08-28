@@ -1,2 +1,0 @@
-SRC_URI = "${URL-U-BOOT}"
-SRCREV = "${SHA-U-BOOT}"

@@ -1,2 +1,0 @@
-SRC_URI = "${URL-FM-UCODE}"
-SRCREV = "${SHA-FM-UCODE}"
