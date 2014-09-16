@@ -12,6 +12,11 @@ DEPLOY_PKGS = " \
 "
 DEPLOY_PKGS_e500v2 = ""
 
+DEPLOY_PKGS_ls102xa = " \
+    cst \
+    rcw \
+"
+
 IMAGE_INSTALL_append = " ${DEPLOY_PKGS}"
 
 # pkgs to be installed for specific board
