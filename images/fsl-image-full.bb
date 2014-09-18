@@ -31,7 +31,10 @@ MACHINE_SPECIFIC_t1042rdb-64b = " packagegroup-fsl-x11"
 MACHINE_SPECIFIC_t4240qds = " rcw-image"
 MACHINE_SPECIFIC_t4240qds-64b = " rcw-image"
 
-SOC_SPECIFIC_ls102xa = " rcw-image"
+SOC_SPECIFIC_ls102xa = " \
+    rcw-image \
+    u-boot-ls1 \
+"
 
 IMAGE_INSTALL += " \
     kernel-devicetree \
@@ -58,6 +61,10 @@ IMAGE_INSTALL += " \
     ${CORE_SPECIFIC} \
     ${MACHINE_SPECIFIC} \
     ${SOC_SPECIFIC} \
+"
+
+IMAGE_INSTALL_remove_ls102xa = " \
+     u-boot-qoriq-images \
 "
 
 IMAGE_FSTYPES = "tar.gz"
