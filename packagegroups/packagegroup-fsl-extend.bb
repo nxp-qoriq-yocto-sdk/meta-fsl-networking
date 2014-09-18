@@ -120,6 +120,9 @@ RRECOMMENDS_packagegroup-fsl-extend-misc = "\
     strongswan \
     wget \
 "
+RRECOMMENDS_packagegroup-fsl-extend-misc_remove_ls102xa = "\
+    nginx \
+"
 
 RDEPENDS_packagegroup-fsl-extend-benchmark = "\
 "
