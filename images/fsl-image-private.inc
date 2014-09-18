@@ -5,6 +5,7 @@ PRIVATE_PKGS = " \
         usdpaa \
 "
 PRIVATE_PKGS_e500v2 = ""
+PRIVATE_PKGS_ls102xa = ""
 
 # common packages
 IMAGE_INSTALL += " \
@@ -14,6 +15,13 @@ IMAGE_INSTALL += " \
         merge-files \
         mux-server \
         ${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)} \
+        ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
+"
+
+IMAGE_INSTALL_remove_ls102xa = " \
+        asf \
+        eth-config \
+        mux-server \
         ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
 "
 
