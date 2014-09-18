@@ -104,6 +104,8 @@ RRECOMMENDS_packagegroup-fsl-core-misc = "\
     tcpdump \
 "
 
+RRECOMMENDS_packagegroup-fsl-core-misc_remove_ls102xa  = " ipsec-demo"
+
 RRECOMMENDS_packagegroup-fsl-core-vfat = "\
     dosfstools \
 "
