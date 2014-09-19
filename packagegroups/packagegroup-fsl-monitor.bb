@@ -21,5 +21,3 @@ RDEPENDS_packagegroup-fsl-monitor = "\
 RDEPENDS_packagegroup-fsl-monitor_remove_ls102xa = "\
     web-sysmon \
 "
-~
-
