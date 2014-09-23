@@ -18,6 +18,7 @@ CORE_SPECIFIC_e6500 = " fm-ucode-image"
 CORE_SPECIFIC_e6500-64b = " fm-ucode-image"
 CORE_SPECIFIC_remove_t1042rdb = "hv-cfg-image"
 CORE_SPECIFIC_remove_t1042rdb-64b = "hv-cfg-image"
+CORE_SPECIFIC_ls102xa = ""
 
 MACHINE_SPECIFIC = ""
 MACHINE_SPECIFIC_b4420qds = " rcw-image"
