@@ -105,8 +105,22 @@ IMAGE_INSTALL_append_t1040rdb-64b = " \
 
 IMAGE_INSTALL_append_t1042rdb = " \
         ar \
+        ceetm \
+        l2switch \
+        uio-seville \
 "
+
 IMAGE_INSTALL_append_t1042rdb-64b = " \
+        ar \
+        ceetm \
+        l2switch \
+        uio-seville \
+"
+
+IMAGE_INSTALL_append_t1042rdb-pi = " \
+        ar \
+"
+IMAGE_INSTALL_append_t1042rdb-pi-64b = " \
         ar \
 "
 
