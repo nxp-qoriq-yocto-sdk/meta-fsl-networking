@@ -21,6 +21,11 @@ TOOLCHAIN_HOST_TASK += " \
 	nativesdk-pme-regex-analyzer \
 "
 
+TOOLCHAIN_HOST_TASK_remove_ls102xa = " \
+    nativesdk-mux-server \
+    nativesdk-pme-regex-analyzer \
+"
+
 TOOLCHAIN_HOST_TASK_append_e500v2 = " \
     nativesdk-boot-format \
     nativesdk-boot-format-config \
