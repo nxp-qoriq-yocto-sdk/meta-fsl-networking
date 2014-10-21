@@ -8,8 +8,8 @@ RCONFLICTS_${PN} = "smbstax"
 
 inherit cmake update-rc.d
 
-SRC_URI = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;nobranch=1"
-SRCREV = "23dc48bdda2f5c200852c5451223231cb030da33"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
+SRCREV = "a88e6da575df8172a6577450a058c64ab92835c5"
 
 S = "${WORKDIR}/git"
 
