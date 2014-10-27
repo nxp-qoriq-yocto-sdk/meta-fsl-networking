@@ -4,7 +4,7 @@ require images/fsl-image-deploy.inc
 
 inherit core-image  distro_features_check
 
-IMAGE_FEATURES += "splash package-management x11-base ssh-server-openssh"
+IMAGE_FEATURES += "splash x11-base ssh-server-openssh"
 
 LICENSE = "MIT"
 
