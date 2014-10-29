@@ -1,7 +1,7 @@
 SUMMARY = "T1040 L2 Switch"
 DESCRIPTION = "Control application sample, headers and library"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://src/Freescale_Software_License.txt;md5=abef45971875a174b40d565215cdf4d9 \
+LIC_FILES_CHKSUM = "file://Freescale_Software_License.txt;md5=704b1b597270faff2faf4fafb308c947 \
 		file://include/COPYING;md5=7018bb7bacb48a72a2acbf999cf7d25a"
 
 RCONFLICTS_${PN} = "smbstax"
