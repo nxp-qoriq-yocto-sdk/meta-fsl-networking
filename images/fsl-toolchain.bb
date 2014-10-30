@@ -13,18 +13,21 @@ TOOLCHAIN_TARGET_TASK += " \
 	${TCLIBC}-staticdev \
 	"
 
-TOOLCHAIN_HOST_TASK += " \
-	nativesdk-dtc \
-	nativesdk-u-boot-mkimage \
-	nativesdk-mux-server \
-	nativesdk-cst \
-	nativesdk-pme-regex-analyzer \
-"
-
-TOOLCHAIN_HOST_TASK_remove_ls102xa = " \
+CORE_SPECIFIC = " \
     nativesdk-mux-server \
     nativesdk-pme-regex-analyzer \
 "
+
+CORE_SPECIFIC_ls102xa = ""
+
+
+TOOLCHAIN_HOST_TASK += " \
+	nativesdk-dtc \
+	nativesdk-u-boot-mkimage \
+	nativesdk-cst \
+    ${CORE_SPECIFIC} \
+"
+
 
 TOOLCHAIN_HOST_TASK_append_e500v2 = " \
     nativesdk-boot-format \
