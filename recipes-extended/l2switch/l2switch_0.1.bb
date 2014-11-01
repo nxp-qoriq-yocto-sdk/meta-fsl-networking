@@ -30,4 +30,4 @@ INITSCRIPT_PARAMS = "defaults 10 85"
 
 INSANE_SKIP_${PN} = 'already-stripped'
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
-COMPATIBLE_MACHINE = "(t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b)"
+COMPATIBLE_MACHINE = "(t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b|t1042rdb|t1042rdb-64b)"
