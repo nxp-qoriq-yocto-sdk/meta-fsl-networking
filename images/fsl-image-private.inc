@@ -67,6 +67,11 @@ IMAGE_INSTALL_append_b4860qds = " \
         ipc-modules-multi \
         ipc-modules-single \
         ipc-ust \
+        ixxat-stack-ptp \
+"
+
+IMAGE_INSTALL_append_bsc9131rdb = " \
+        ixxat-stack-ptp \
 "
 
 IMAGE_INSTALL_append_c293pcie = " \
@@ -76,10 +81,6 @@ IMAGE_INSTALL_append_c293pcie = " \
 
 IMAGE_INSTALL_append_p1023rdb = " \
         fmc \
-"
-
-IMAGE_INSTALL_append_p1025twr = " \
-        ixxat-stack-ptp \
 "
 
 IMAGE_INSTALL_append_p4080ds = " \
@@ -122,6 +123,10 @@ IMAGE_INSTALL_append_t1042rdb-pi = " \
 "
 IMAGE_INSTALL_append_t1042rdb-pi-64b = " \
         ar \
+"
+
+IMAGE_INSTALL_append_t2080rdb = " \
+        ixxat-stack-ptp \
 "
 
 IMAGE_INSTALL_append_t4240qds = " \
