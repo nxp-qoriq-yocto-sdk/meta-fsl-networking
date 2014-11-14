@@ -18,6 +18,10 @@ IMAGE_INSTALL += " \
         ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
 "
 
+IMAGE_INSTALL_append_ls102xa = " \
+        ls-debug \
+"
+
 IMAGE_INSTALL_remove_ls102xa = " \
         asf \
         eth-config \
