@@ -5,5 +5,6 @@ IMAGE_INSTALL += "\
     merge-files \
     mariadb \
     mysql-python \
+    openstack-demo \
     "
 
