@@ -3,7 +3,7 @@
 #================== FSL packages inside of sdk-devel.git ================#
 # asf
 URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
-SHA-ASF = "0b91539bb48935bdaa9810e45815d34199e73297"
+SHA-ASF = "afa62a69bf6a4584db799cb4deaef4816a53012a"
 # auto-resp
 URL-AUTO-RESP = "git://git.am.freescale.net/gitolite/sdk/auto-resp.git;branch=master"
 SHA-AUTO-RESP = "6b68d2d29b680dcf7d5a7939de1ca270dd1bec83"
@@ -42,16 +42,16 @@ URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
 SHA-IPC = "c9c92ac6a7a31c9d878096eb7d135c22a38f20ff"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
-SHA-LINUX = "1ff23d7b1d7e5d7802a66d1744b25249c51e0625"
+SHA-LINUX = "6b009e78abbad036a7398e227146a90c46c932f5"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "af0327da76bc875d85fdecb66b34f4946e32e324"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "00ff2af5b47e8c6604dfa556cd3b3b9b0f727447"
+SHA-U-BOOT = "a23798f40720aa93c9106efdaafeede53bab33a2"
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.7.x"
-SHA-USDPAA = "cb0309b90da0a0b5fbdff8703d03153283bfaf2d"
+SHA-USDPAA = "e1f556aa7a2cb3cd2ba80f013f3b40a2a8548f40"
 #================== FSL packages outside of sdk-devel.git ================#
 # T1040 l2switch UIO driver
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
