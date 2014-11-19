@@ -13,7 +13,6 @@ DEPLOY_PKGS = " \
 DEPLOY_PKGS_e500v2 = ""
 
 DEPLOY_PKGS_ls102xa = " \
-    cst \
     rcw \
 "
 
