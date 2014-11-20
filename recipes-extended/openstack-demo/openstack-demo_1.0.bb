@@ -13,3 +13,4 @@ do_install () {
 	install -m 0755 ${WORKDIR}/openstack_deploy_T4.sh ${D}${ROOT_HOME}
 }
 
+FILES_${PN} += "${ROOT_HOME}"
