@@ -3,13 +3,13 @@
 #================== FSL packages inside of sdk-devel.git ================#
 # asf
 URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
-SHA-ASF = "afa62a69bf6a4584db799cb4deaef4816a53012a"
+SHA-ASF = "d5d7012b1131e01ebf0fa864191512c66335a95d"
 # auto-resp
 URL-AUTO-RESP = "git://git.am.freescale.net/gitolite/sdk/auto-resp.git;branch=master"
 SHA-AUTO-RESP = "6b68d2d29b680dcf7d5a7939de1ca270dd1bec83"
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
-SHA-CST = "293471945aaf6b397e17aad9225f0526ed0c9321"
+SHA-CST = "39a4b89b7964d408de2815247abace6c68e1a296"
 # dtc
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git;branch=expressions"
 SHA-DTC = "a6d55e039fd22048687fe061b4609e2807efe764"
@@ -21,7 +21,7 @@ URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;br
 SHA-FM-UCODE = "c5006bf146fbe9c0d2576aec76c9063d394a4256"
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
-SHA-FMC = "284a506dba32a70ec05781dad399a957150f779a"
+SHA-FMC = "2fb5b1c2c1da82a1aab993017d20563e76242f91"
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git;branch=master"
 SHA-FMLIB = "b3a7bc7e45184e67012f96512c4c00308dd7664b"
@@ -42,16 +42,16 @@ URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
 SHA-IPC = "c9c92ac6a7a31c9d878096eb7d135c22a38f20ff"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
-SHA-LINUX = "6b009e78abbad036a7398e227146a90c46c932f5"
+SHA-LINUX = "ca451d9f536905790fc672c0573edac0d67537b3"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
-SHA-RCW = "af0327da76bc875d85fdecb66b34f4946e32e324"
+SHA-RCW = "b628abc35ed0a4d3370df0e0a11e750247254de9"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "a23798f40720aa93c9106efdaafeede53bab33a2"
+SHA-U-BOOT = "25bb8e8694dd82cdaafcb7532b0006b5b7ed8b77"
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.7.x"
-SHA-USDPAA = "e1f556aa7a2cb3cd2ba80f013f3b40a2a8548f40"
+SHA-USDPAA = "08b7d2e758562147af55f7d14fac3010adb85ba0"
 #================== FSL packages outside of sdk-devel.git ================#
 # T1040 l2switch UIO driver
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
