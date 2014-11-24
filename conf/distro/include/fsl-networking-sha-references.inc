@@ -56,3 +56,6 @@ SHA-USDPAA = "08b7d2e758562147af55f7d14fac3010adb85ba0"
 # T1040 l2switch UIO driver
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
 SHA-L2SWITCH-UIO = "00c8040f2439ac58cf8274b1c411b14256e295c9"
+# qemu for both arm and ppc targets
+URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.7"
+SHA-QEMU = "6ac4597c059d35e2737b234747243e56d340f4db"
