@@ -42,16 +42,16 @@ URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
 SHA-IPC = "c9c92ac6a7a31c9d878096eb7d135c22a38f20ff"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
-SHA-LINUX = "ca451d9f536905790fc672c0573edac0d67537b3"
+SHA-LINUX = "f7a9d0e17c112531af64c6836195ed14d83d2f4e"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "b628abc35ed0a4d3370df0e0a11e750247254de9"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "25bb8e8694dd82cdaafcb7532b0006b5b7ed8b77"
+SHA-U-BOOT = "16111c445de257ba1068471902d2aeb17dee839a"
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.7.x"
-SHA-USDPAA = "08b7d2e758562147af55f7d14fac3010adb85ba0"
+SHA-USDPAA = "33a6026556bd3c72b1c2b21068b4f4ad30befb43"
 #================== FSL packages outside of sdk-devel.git ================#
 # T1040 l2switch UIO driver
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
