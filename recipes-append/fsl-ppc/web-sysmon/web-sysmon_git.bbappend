@@ -1,5 +1,5 @@
 SRC_URI = "git://git.am.freescale.net/gitolite/users/b38951/web-sysmon-dev.git"
-SRCREV = "a77aa8484a4fc2c6d460ad796228fd1d29f45dea"
+SRCREV = "0a2ab29cc7799eb7aeb72e26130289ee95dddaff"
 
 inherit update-rc.d
 
