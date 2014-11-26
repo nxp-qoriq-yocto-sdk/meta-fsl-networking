@@ -9,7 +9,7 @@ URL-AUTO-RESP = "git://git.am.freescale.net/gitolite/sdk/auto-resp.git;branch=ma
 SHA-AUTO-RESP = "6b68d2d29b680dcf7d5a7939de1ca270dd1bec83"
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
-SHA-CST = "39a4b89b7964d408de2815247abace6c68e1a296"
+SHA-CST = "6d30fc3585fd26911f9c6062b1654fda49987769"
 # dtc
 URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git;branch=expressions"
 SHA-DTC = "a6d55e039fd22048687fe061b4609e2807efe764"
@@ -21,7 +21,7 @@ URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;br
 SHA-FM-UCODE = "c5006bf146fbe9c0d2576aec76c9063d394a4256"
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
-SHA-FMC = "2fb5b1c2c1da82a1aab993017d20563e76242f91"
+SHA-FMC = "e6fee7f4279349b9aa9da3e09173035a058b2b62"
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git;branch=master"
 SHA-FMLIB = "b3a7bc7e45184e67012f96512c4c00308dd7664b"
@@ -42,16 +42,16 @@ URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
 SHA-IPC = "c9c92ac6a7a31c9d878096eb7d135c22a38f20ff"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
-SHA-LINUX = "f7a9d0e17c112531af64c6836195ed14d83d2f4e"
+SHA-LINUX = "5b71b18560baac11ba0b4a2df04d6e642098baba"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "b628abc35ed0a4d3370df0e0a11e750247254de9"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "16111c445de257ba1068471902d2aeb17dee839a"
+SHA-U-BOOT = "8d67539ece48e96661d0ac8bbf4cbc0ea20f4ff1"
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.7.x"
-SHA-USDPAA = "33a6026556bd3c72b1c2b21068b4f4ad30befb43"
+SHA-USDPAA = "072b0c5c6050a3df72b29f7e28fe718fd55ade2e"
 #================== FSL packages outside of sdk-devel.git ================#
 # T1040 l2switch UIO driver
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
