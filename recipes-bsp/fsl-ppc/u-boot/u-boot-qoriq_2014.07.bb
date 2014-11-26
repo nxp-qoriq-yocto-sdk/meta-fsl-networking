@@ -90,7 +90,7 @@ do_compile () {
 
         # deal with sd/spi/nand/srio image
         UBOOT_SOURCE=u-boot
-        if [ "x${UBOOT_TARGET}" != "x" ]; then
+        if [ "x${UBOOT_TARGET}" != "x" ] && echo $board |egrep -qiv "SECBOOT|SECURE"; then
             # some boards' nand image was named as u-boot-with-spl
             if [ "${UBOOT_TARGET}" = "u-boot-nand" ];then
                 if echo $board |egrep -q "(P1010RDB|P1020RDB|P1021RDB|P2020RDB|P1022DS|BSC913|C293)";then
