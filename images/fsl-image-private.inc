@@ -23,7 +23,6 @@ IMAGE_INSTALL_append_ls102xa = " \
 "
 
 IMAGE_INSTALL_remove_ls102xa = " \
-        asf \
         eth-config \
         mux-server \
         ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
