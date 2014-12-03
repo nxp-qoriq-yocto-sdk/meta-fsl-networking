@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=94263f12f9416f9fd0493c8f9e8085a3"
 inherit module autotools
 
 SRCBRANCH = "master"
-SRC_URI = "git://git.am.freescale.net:8181/users/b46904/ls-dbg;protocol=http;branch=${SRCBRANCH}"
-SRCREV = "700122c593cfe61ffc1415666edb88c5ac63fa73"
+SRC_URI = "git://git.am.freescale.net:8181/users/rat063/ls-dbg;protocol=http;branch=${SRCBRANCH}"
+SRCREV = "777a7daad5e804a0b9046068967b76ece07a6af0"
 
 COMPATIBLE_MACHINE = "(ls1021aqds|ls1021atwr)"
 
