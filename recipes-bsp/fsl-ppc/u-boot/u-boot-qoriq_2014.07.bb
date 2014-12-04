@@ -89,23 +89,35 @@ do_compile () {
         esac
 
         # deal with sd/spi/nand/srio image
-        UBOOT_SOURCE=u-boot
+        UBOOT_SOURCE=u-boot.bin
         if [ "x${UBOOT_TARGET}" != "x" ] && echo $board |egrep -qiv "SECBOOT|SECURE"; then
-            # some boards' nand image was named as u-boot-with-spl
+            # some boards' final binary was not named as u-boot.bin
             if [ "${UBOOT_TARGET}" = "u-boot-nand" ];then
-                if echo $board |egrep -q "(P1010RDB|P1020RDB|P1021RDB|P2020RDB|P1022DS|BSC913|C293)";then
-                    UBOOT_SOURCE=u-boot-with-spl
+                if echo $board |egrep -q "^(BSC|C29|P10|P2020RDB)";then
+                    UBOOT_SOURCE=u-boot-with-spl.bin
+                elif echo $board |egrep -q "^(B4|T1|T2|T4)";then
+                    UBOOT_SOURCE=u-boot-with-spl-pbl.bin
+                elif echo $board |egrep -q "^(P2041|P3|P4|P5)";then
+                    UBOOT_SOURCE=u-boot.pbl
                 fi
             elif [ "${UBOOT_TARGET}" = "u-boot-spi" ];then
-                if echo $board |egrep -q "(P1010RDB|P1020RDB|P1021RDB|P2020RDB|P1022DS)";then
-                    UBOOT_SOURCE=u-boot-with-spl
+                if echo $board |egrep -q "^(BSC|C29|P10|P2020RDB)";then
+                    UBOOT_SOURCE=u-boot-with-spl.bin
+                elif echo $board |egrep -q "^(T1|T2)";then
+                    UBOOT_SOURCE=u-boot-with-spl-pbl.bin
+                elif echo $board |egrep -q "^(B4|P2041|P3|P4|P5|T4)";then
+                    UBOOT_SOURCE=u-boot.pbl
                 fi
             elif [ "${UBOOT_TARGET}" = "u-boot-sd" ];then
-                if echo $board |egrep -q "(P1010RDB|P1020RDB|P1021RDB|P2020RDB|P1022DS)";then
-                    UBOOT_SOURCE=u-boot-with-spl
+                if echo $board |egrep -q "^(BSC|C29|P10|P2020RDB)";then
+                    UBOOT_SOURCE=u-boot-with-spl.bin
+                elif echo $board |egrep -q "^(B4|T1|T2|T4)";then
+                    UBOOT_SOURCE=u-boot-with-spl-pbl.bin
+                elif echo $board |egrep -q "^(P2041|P3|P4|P5)";then
+                    UBOOT_SOURCE=u-boot.pbl
                 fi
             fi
-            cp ${S}/${board}/${UBOOT_SOURCE}.bin  ${S}/${board}/${UBOOT_TARGET}.bin
+            cp ${S}/${board}/${UBOOT_SOURCE}  ${S}/${board}/${UBOOT_TARGET}.bin
 
             # use boot-format to regenerate spi image if BOOTFORMAT_CONFIG is not empty
             if [ "${UBOOT_TARGET}" = "u-boot-spi" ] && [ -n "${BOOTFORMAT_CONFIG}" ];then
