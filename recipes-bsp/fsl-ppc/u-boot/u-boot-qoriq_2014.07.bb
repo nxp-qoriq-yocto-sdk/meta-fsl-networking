@@ -123,7 +123,7 @@ do_compile () {
             if [ "${UBOOT_TARGET}" = "u-boot-spi" ] && [ -n "${BOOTFORMAT_CONFIG}" ];then
                 ${STAGING_BINDIR_NATIVE}/boot_format \
                 ${STAGING_DATADIR_NATIVE}/boot_format/${BOOTFORMAT_CONFIG} \
-                ${S}/${board}/${UBOOT_SOURCE}.bin -spi ${S}/${board}/${UBOOT_TARGET}.bin
+                ${S}/${board}/${UBOOT_SOURCE} -spi ${S}/${board}/${UBOOT_TARGET}.bin
             fi
         fi
     done
