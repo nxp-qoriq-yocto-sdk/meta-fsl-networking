@@ -101,7 +101,7 @@ do_compile () {
                     UBOOT_SOURCE=u-boot.pbl
                 fi
             elif [ "${UBOOT_TARGET}" = "u-boot-spi" ];then
-                if echo $board |egrep -q "^(BSC|C29|P10|P2020RDB)";then
+                if echo $board |egrep -q "^(P10|P2020RDB)";then
                     UBOOT_SOURCE=u-boot-with-spl.bin
                 elif echo $board |egrep -q "^(T1|T2)";then
                     UBOOT_SOURCE=u-boot-with-spl-pbl.bin
@@ -109,7 +109,7 @@ do_compile () {
                     UBOOT_SOURCE=u-boot.pbl
                 fi
             elif [ "${UBOOT_TARGET}" = "u-boot-sd" ];then
-                if echo $board |egrep -q "^(BSC|C29|P10|P2020RDB)";then
+                if echo $board |egrep -q "^(P10|P2020RDB)";then
                     UBOOT_SOURCE=u-boot-with-spl.bin
                 elif echo $board |egrep -q "^(B4|T1|T2|T4)";then
                     UBOOT_SOURCE=u-boot-with-spl-pbl.bin
