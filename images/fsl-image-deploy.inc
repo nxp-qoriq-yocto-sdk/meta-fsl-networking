@@ -19,6 +19,8 @@ DEPLOY_PKGS_ls102xa = " \
 IMAGE_INSTALL_append = " ${DEPLOY_PKGS}"
 
 # pkgs to be installed for specific board
+IMAGE_INSTALL_append_ls1021aqds = " qe-ucode"
+IMAGE_INSTALL_append_ls1021atwr = " qe-ucode"
 IMAGE_INSTALL_append_p1020rdb = " vsc7385-firmware"
 IMAGE_INSTALL_append_p1021rdb = " vsc7385-firmware qe-ucode"
 IMAGE_INSTALL_append_p1022ds = " edink"
