@@ -7,7 +7,7 @@ inherit module autotools
 
 SRCBRANCH = "master"
 SRC_URI = "git://git.am.freescale.net:8181/users/rat063/ls-dbg;protocol=http;branch=${SRCBRANCH}"
-SRCREV = "777a7daad5e804a0b9046068967b76ece07a6af0"
+SRCREV = "40501f6659e880d38508cdd34a4df2d348d1c68e"
 
 COMPATIBLE_MACHINE = "(ls1021aqds|ls1021atwr)"
 
