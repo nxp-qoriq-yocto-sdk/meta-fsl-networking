@@ -86,8 +86,10 @@ IMAGE_INSTALL_append_p1023rdb = " \
         fmc \
 "
 
+# NOTE: Remove the conditional pkc-host inclusion and all traces of c29x_pkc
+# DISTRO_FEATURE if pkc-host no longer requires customized cryptodev patches
 IMAGE_INSTALL_append_p4080ds = " \
-        pkc-host \
+        ${@base_contains('DISTRO_FEATURES', 'c29x_pkc', 'pkc-host', '', d)} \
         skmm-ep \
         skmm-host \
         tcf-qoriqdbg \
@@ -133,7 +135,7 @@ IMAGE_INSTALL_append_t2080rdb = " \
 "
 
 IMAGE_INSTALL_append_t4240qds = " \
-        pkc-host \
+        ${@base_contains('DISTRO_FEATURES', 'c29x_pkc', 'pkc-host', '', d)} \
         skmm-ep \
         skmm-host \
 "
