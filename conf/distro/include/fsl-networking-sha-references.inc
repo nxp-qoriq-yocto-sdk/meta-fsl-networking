@@ -15,7 +15,7 @@ URL-DTC = "git://git.am.freescale.net/gitolite/mirrors/dtc.git;branch=expression
 SHA-DTC = "a6d55e039fd22048687fe061b4609e2807efe764"
 # flib
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.7.x"
-SHA-FLIB = "2477bd9dcb649c72186ad916e633b0c1ce5d359f"
+SHA-FLIB = "4bd48d4d6dbb1bd57c3c608fe66e97f4eb8e05b9"
 # fm-ucode
 URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;branch=master"
 SHA-FM-UCODE = "4cda2e3f36408ded79022cf599260add07769786"
