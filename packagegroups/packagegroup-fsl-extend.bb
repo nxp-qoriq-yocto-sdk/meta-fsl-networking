@@ -84,6 +84,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     dtc \
     gettext-runtime \
     git \
+    git-perltools \
     intltool \
     lsb \
     lsbinitscripts \
