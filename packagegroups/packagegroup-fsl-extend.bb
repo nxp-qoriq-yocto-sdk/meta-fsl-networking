@@ -78,6 +78,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     bison \
     ccache \
     chkconfig \
+    chrpath \
     curl \
     dhcp-client \
     diffstat \
@@ -101,6 +102,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     rt-tests \
     subversion \
     tcl \
+    texinfo \
     u-boot-mkimage \
     unzip \
     valgrind \
