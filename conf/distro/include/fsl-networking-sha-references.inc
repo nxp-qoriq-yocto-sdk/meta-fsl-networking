@@ -42,13 +42,13 @@ URL-IPC = "git://git.am.freescale.net/gitolite/sdk/ipc.git;branch=sdk_devel"
 SHA-IPC = "c9c92ac6a7a31c9d878096eb7d135c22a38f20ff"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
-SHA-LINUX = "bdb722ff2c4af6f524c201b36baa5b72442a481d"
+SHA-LINUX = "6619b8b55796cdf0cec04b66a71288edd3057229"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "3e89f378ed70e9b856756de8c3dbdfccb045fa0c"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "e9805c30de003410e59355c742c1de230290775f"
+SHA-U-BOOT = "659b6a23a8b1f3026200bc6352dbacef53f4dcb1"
 # usdpaa
 URL-USDPAA = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.7.x"
 SHA-USDPAA = "c46b01f1d4aad4443e29d923d83c63ac23928dbf"
