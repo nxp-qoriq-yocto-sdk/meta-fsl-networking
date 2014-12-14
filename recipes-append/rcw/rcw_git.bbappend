@@ -1,2 +1,0 @@
-SRC_URI = "${URL-RCW}"
-SRCREV = "${SHA-RCW}"

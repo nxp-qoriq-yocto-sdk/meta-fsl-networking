@@ -1,2 +1,0 @@
-SRC_URI = "${URL-FMC}"
-SRCREV = "${SHA-FMC}"
