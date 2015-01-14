@@ -10,7 +10,6 @@ require images/fsl-image-private.inc
 CORE_SPECIFIC = " \
     fm-ucode-image \
     rcw-image \
-    hypervisor-image \
     hv-cfg-image \
 "
 CORE_SPECIFIC_e500v2 = ""
