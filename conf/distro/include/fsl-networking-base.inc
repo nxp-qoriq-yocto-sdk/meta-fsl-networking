@@ -9,3 +9,15 @@ PREFERRED_VERSION_virtual/kernel_ls102xa = "3.12"
 
 EXTRA_IMAGEDEPENDS += "cst-native"
 
+# use xz to compress sstate
+SSTATE_PKG_SUFFIX = "txz"
+SSTATE_PKG_TARZIPPROG = "xz"
+
+# whiteliste restricted license
+LICENSE_FLAGS_WHITELIST = "non-commercial_netperf \
+    commercial_libav commercial_x264 \
+"
+
+# copy the license.manifest to the image
+COPY_LIC_MANIFEST = "1"
+
