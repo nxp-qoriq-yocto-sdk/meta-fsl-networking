@@ -98,6 +98,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     parted \
     perf \
     quilt \
+    resolvconf \
     rpm \
     rt-tests \
     subversion \
