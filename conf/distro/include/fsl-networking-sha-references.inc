@@ -5,6 +5,10 @@
 URL-USDPAA-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
 SHA-USDPAA-DRIVERS = "0c95b1f4b02f34a75f17da4fffa53be0caae45e6"
 
+# DPAA Offloading Drivers
+URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
+SHA-DPA-OFFLOAD = "fcef16e854e59fb12595500467272b31133ab604"
+
 #================== FSL packages outside of sdk-devel.git ================#
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"

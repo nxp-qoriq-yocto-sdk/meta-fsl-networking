@@ -1,4 +1,6 @@
 PRIVATE_PKGS = " \
+        dpa-offload-dev \
+        dpa-offload-staticdev \
         fmc \
         pme-tools \
         qoriq-debug \
