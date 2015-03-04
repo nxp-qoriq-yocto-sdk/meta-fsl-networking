@@ -7,6 +7,8 @@ PRIVATE_PKGS = " \
         usdpaa \
         usdpaa-dev \
         usdpaa-staticdev \
+        usdpaa-apps \
+	usdpaa-apps-staticdev \
 "
 PRIVATE_PKGS_e500v2 = ""
 PRIVATE_PKGS_ls102xa = ""
