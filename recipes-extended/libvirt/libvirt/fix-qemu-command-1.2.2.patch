@@ -1,0 +1,71 @@
+From 78853a6dab57aeda12f565f4bd2261a3081aade5 Mon Sep 17 00:00:00 2001
+From: Olivia Yin <r63875@freescale.com>
+Date: Wed, 12 Mar 2014 17:38:48 +0800
+Subject: [PATCH] fix qemu command 1.2.2
+
+---
+ src/qemu/qemu_capabilities.c | 7 +++++++
+ src/qemu/qemu_command.c      | 4 +++-
+ src/qemu/qemu_process.c      | 6 ++++++
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/src/qemu/qemu_capabilities.c b/src/qemu/qemu_capabilities.c
+index d618b3f..89be6d1 100644
+--- a/src/qemu/qemu_capabilities.c
++++ b/src/qemu/qemu_capabilities.c
+@@ -2386,6 +2386,10 @@ virQEMUCapsInitHelp(virQEMUCapsPtr qemuCaps, uid_t runUid, gid_t runGid)
+         virQEMUCapsClear(qemuCaps, QEMU_CAPS_NO_ACPI);
+     }
+ 
++    if (qemuCaps->arch == VIR_ARCH_PPC || qemuCaps->arch == VIR_ARCH_PPC64)
++        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
++
++
+     /* virQEMUCapsExtractDeviceStr will only set additional caps if qemu
+      * understands the 0.13.0+ notion of "-device driver,".  */
+     if (virQEMUCapsGet(qemuCaps, QEMU_CAPS_DEVICE) &&
+@@ -2513,6 +2517,9 @@ virQEMUCapsInitArchQMPBasic(virQEMUCapsPtr qemuCaps,
+         virQEMUCapsSet(qemuCaps, QEMU_CAPS_NO_KVM_PIT);
+     }
+ 
++    if (qemuCaps->arch == VIR_ARCH_PPC || qemuCaps->arch == VIR_ARCH_PPC64)
++        virQEMUCapsSet(qemuCaps, QEMU_CAPS_PCI_MULTIBUS);
++
+     ret = 0;
+ 
+ cleanup:
+diff --git a/src/qemu/qemu_command.c b/src/qemu/qemu_command.c
+index 9ee84a0..cfaea2a 100644
+--- a/src/qemu/qemu_command.c
++++ b/src/qemu/qemu_command.c
+@@ -8852,7 +8852,9 @@ qemuBuildCommandLine(virConnectPtr conn,
+             continue;
+ 
+         /* Use -chardev with -device if they are available */
+-        if (virQEMUCapsSupportsChardev(def, qemuCaps, serial)) {
++        if (virQEMUCapsSupportsChardev(def, qemuCaps, serial) &&
++            def->os.arch != VIR_ARCH_PPC64 &&
++            def->os.arch != VIR_ARCH_PPC) {
+             virCommandAddArg(cmd, "-chardev");
+             if (!(devstr = qemuBuildChrChardevStr(&serial->source,
+                                                   serial->info.alias,
+diff --git a/src/qemu/qemu_process.c b/src/qemu/qemu_process.c
+index ffa939a..e873248 100644
+--- a/src/qemu/qemu_process.c
++++ b/src/qemu/qemu_process.c
+@@ -1693,6 +1693,12 @@ qemuProcessLookupPTYs(virDomainDefPtr def,
+         virDomainChrDefPtr chr = devices[i];
+         bool chardevfmt = virQEMUCapsSupportsChardev(def, qemuCaps, chr);
+ 
++        /* right now on PPC QEMU_CAPS_CHARDEV is a problem...it is
++         * needed for the monitor, but not supported for the serial
++         * console, so clear the value
++         */
++        chardevfmt = 0;  // we don't support chardev for console
++
+         if (chr->source.type == VIR_DOMAIN_CHR_TYPE_PTY) {
+             char id[32];
+             const char *path;
+-- 
+1.8.5
+
