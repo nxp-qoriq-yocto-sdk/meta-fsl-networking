@@ -3,6 +3,8 @@ PRIVATE_PKGS = " \
         pme-tools \
         qoriq-debug \
         usdpaa \
+        usdpaa-dev \
+        usdpaa-staticdev \
 "
 PRIVATE_PKGS_e500v2 = ""
 PRIVATE_PKGS_ls102xa = ""
