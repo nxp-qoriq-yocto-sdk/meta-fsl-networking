@@ -10,9 +10,9 @@ URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=maste
 SHA-FMC = "${AUTOREV}"
 
 # hypervisor
-URL-HV = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
+URL-HV = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor;branch=master"
 SHA-HV = "${AUTOREV}"
-URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
+URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos;branch=master"
 SHA-LIBOS = "${AUTOREV}"
 
 # hv-cfg
