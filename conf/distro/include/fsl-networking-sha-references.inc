@@ -1,6 +1,10 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages inside of sdk-devel.git ================#
+# asf
+URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
+SHA-ASF = "${AUTOREV}"
+
 # flib 
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
 SHA-FLIB = "${AUTOREV}"
