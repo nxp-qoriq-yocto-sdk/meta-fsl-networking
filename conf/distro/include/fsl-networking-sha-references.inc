@@ -1,17 +1,47 @@
 # Freescale networking BSP git url/commit for FSL private packages
 
 #================== FSL packages inside of sdk-devel.git ================#
+# flib 
+URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
+SHA-FLIB = "${AUTOREV}"
+
+# fmc
+URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
+SHA-FMC = "${AUTOREV}"
+
+# hypervisor
+URL-HV = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
+SHA-HV = "${AUTOREV}"
+URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
+SHA-LIBOS = "${AUTOREV}"
+
+# hv-cfg
+URL-HV-CFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git;branch=master"
+SHA-HV-CFG = "${AUTOREV}"
+
+# linux
+URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
+SHA-LINUX = "${AUTOREV}"
+
+# rcw
+URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
+SHA-RCW = "${AUTOREV}"
+
+# u-boot
+URL-UBOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
+SHA-UBOOT = "${AUTOREV}"
+
 # USDPAA Drivers
 URL-USDPAA-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
-SHA-USDPAA-DRIVERS = "0c95b1f4b02f34a75f17da4fffa53be0caae45e6"
+SHA-USDPAA-DRIVERS = "${AUTOREV}"
 
 # USDPAA Applications
 URL-USDPAA-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-USDPAA-APPS = "a4878df6c056185bed18b1455e36f76a8063b8a7"
+SHA-USDPAA-APPS = "${AUTOREV}"
 
 # DPAA Offloading Drivers
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
-SHA-DPA-OFFLOAD = "fcef16e854e59fb12595500467272b31133ab604"
+SHA-DPA-OFFLOAD = "${AUTOREV}"
 
 #================== FSL packages outside of sdk-devel.git ================#
 # eth-config
