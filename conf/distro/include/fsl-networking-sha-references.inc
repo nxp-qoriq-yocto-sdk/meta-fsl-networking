@@ -14,6 +14,10 @@ URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.g
 SHA-DPA-OFFLOAD = "fcef16e854e59fb12595500467272b31133ab604"
 
 #================== FSL packages outside of sdk-devel.git ================#
+# eth-config
+URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
+SHA-ETH-CONFIG = "10b5f51c5198485c2cb80f97e774ed33e9aab048"
+
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
 SHA-QEMU = "ee367e46072c37c90f9964db8c2a295f140ff6b6"
