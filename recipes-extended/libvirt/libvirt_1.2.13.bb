@@ -35,7 +35,9 @@ SRC_URI = "http://libvirt.org/sources/libvirt-${PV}.tar.gz;name=libvirt \
 SRC_URI[libvirt.md5sum] = "237e0d9c7f8a31ec3cf0df9a41da2137"
 SRC_URI[libvirt.sha256sum] = "944163d93949db61f49eace85838b1bd55ce855e88b014df16c50fd2102bdaf6"
 
-inherit autotools gettext update-rc.d pkgconfig ptest
+inherit autotools gettext update-rc.d pkgconfig ptest useradd
+USERADD_PACKAGES = "${PN}"
+GROUPADD_PARAM_${PN} = "--system libvirt"
 
 CACHED_CONFIGUREVARS += "\
 ac_cv_path_XMLLINT=/usr/bin/xmllint \
@@ -137,7 +139,7 @@ PRIVATE_LIBS_${PN}-ptest = " \
 
 # full config
 PACKAGECONFIG ??= "qemu yajl uml openvz vmware vbox esx iproute2 lxc test \
-                   remote macvtap libvirtd netcf udev python ebtables \
+                   remote macvtap libvirtd netcf udev python ebtables sanlock \
                    ${@base_contains('DISTRO_FEATURES', 'selinux', 'selinux audit libcap-ng', '', d)} \
                    ${@base_contains('DISTRO_FEATURES', 'xen', 'xen libxl xen-inotify', '', d)} \
                    ${@base_contains('DISTRO_FEATURES', 'x11', 'polkit', '', d)} \
@@ -195,6 +197,10 @@ do_install_append() {
 	# are wiped out in volatile, we need to create these at boot.
 	rm -rf ${D}${localstatedir}/run
 	install -d ${D}${sysconfdir}/default/volatiles
+
+	sed -e "s:^#unix_sock_group =:unix_sock_group =:g" -i ${D}/etc/libvirt/libvirtd.conf
+	sed -e "s:^#unix_sock_rw_perms =:unix_sock_rw_perms =:g" -i ${D}/etc/libvirt/libvirtd.conf
+
 	echo "d root root 0755 ${localstatedir}/run/libvirt none" \
 	     > ${D}${sysconfdir}/default/volatiles/99_libvirt
 	echo "d root root 0755 ${localstatedir}/run/libvirt/lockd none" \
