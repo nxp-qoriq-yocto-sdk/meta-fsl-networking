@@ -13,6 +13,10 @@ SHA-FLIB = "${AUTOREV}"
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
 SHA-FMC = "${AUTOREV}"
 
+# fmlib
+URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git;branch=master"
+SHA-FMLIB = "${AUTOREV}"
+
 # hypervisor
 URL-HV = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor;branch=master"
 SHA-HV = "${AUTOREV}"
