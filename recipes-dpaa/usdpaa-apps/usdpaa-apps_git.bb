@@ -6,7 +6,7 @@ inherit pkgconfig
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-DEPENDS = "libxml2 libedit ncurses readline fmc usdpaa dpa-offload"
+DEPENDS = "libxml2 libedit ncurses readline fmc usdpaa dpa-offload libnl"
 DEPENDS_append_b4860qds = " ipc-ust"
 DEPENDS_append_b4420qds = " ipc-ust"
 
@@ -50,6 +50,8 @@ do_compile_prepend () {
         -D$FMAN_VARIANT"
     export USDPAA_EXTRA_CFLAGS="-I ${STAGING_INCDIR}/usdpaa"
     export DPAOFFLOAD_EXTRA_CFLAGS="-I ${STAGING_INCDIR}/dpa-offload"
+    export LIBNL_EXTRA_CFLAGS="-I ${STAGING_INCDIR}/libnl3"
+    export LIBNL_EXTRA_LDFLAGS="-lnl-3 -lnl-route-3"
     export LIBXML2_CFLAGS="$(pkg-config --cflags libxml-2.0)"
     export LIBXML2_LDFLAGS="$(pkg-config --libs --static libxml-2.0)"
     export LIBEDIT_CFLAGS="$(pkg-config --cflags libedit)"
