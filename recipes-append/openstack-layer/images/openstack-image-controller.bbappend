@@ -5,6 +5,9 @@ IMAGE_INSTALL += "\
     merge-files \
     mariadb \
     mysql-python \
+    rsync \
+    xfsprogs \
+    iscsi-initiator-utils \
     openstack-demo \
     "
 
