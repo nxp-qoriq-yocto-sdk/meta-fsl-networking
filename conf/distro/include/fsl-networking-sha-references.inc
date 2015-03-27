@@ -56,6 +56,14 @@ SHA-DPA-OFFLOAD = "${AUTOREV}"
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
 SHA-ETH-CONFIG = "10b5f51c5198485c2cb80f97e774ed33e9aab048"
 
+# l2switch-uio
+URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=dev_fixes"
+SHA-L2SWITCH-UIO = "7b2ccbaaf7ca09ba8952aa2135a8bcf390438fbc"
+
+# l2switch-util
+URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
+SHA-L2SWITCH-UTIL = "44a5b029696d1310f37d9a6145d098fd9bfb0fca"
+
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
 SHA-QEMU = "ee367e46072c37c90f9964db8c2a295f140ff6b6"
