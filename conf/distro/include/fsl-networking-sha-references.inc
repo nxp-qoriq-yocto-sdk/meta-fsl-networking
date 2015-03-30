@@ -66,4 +66,4 @@ SHA-L2SWITCH-UTIL = "f41c26565c3d97dfb9e64064ff4e5591bc1b8455"
 
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
-SHA-QEMU = "ee367e46072c37c90f9964db8c2a295f140ff6b6"
+SHA-QEMU = "00ac004143e9fe46944a1885b04268fcd3a95a3a"
