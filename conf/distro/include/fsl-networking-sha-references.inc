@@ -62,7 +62,7 @@ SHA-L2SWITCH-UIO = "7b2ccbaaf7ca09ba8952aa2135a8bcf390438fbc"
 
 # l2switch-util
 URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
-SHA-L2SWITCH-UTIL = "44a5b029696d1310f37d9a6145d098fd9bfb0fca"
+SHA-L2SWITCH-UTIL = "f41c26565c3d97dfb9e64064ff4e5591bc1b8455"
 
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
