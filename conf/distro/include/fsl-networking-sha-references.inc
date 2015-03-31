@@ -4,53 +4,42 @@
 # asf
 URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
 SHA-ASF = "${AUTOREV}"
-
 # flib 
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
 SHA-FLIB = "${AUTOREV}"
-
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
 SHA-FMC = "${AUTOREV}"
-
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git;branch=master"
 SHA-FMLIB = "${AUTOREV}"
-
-# hypervisor
-URL-HV = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;name=hypervisor;branch=master"
-SHA-HV = "${AUTOREV}"
-URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;name=libos;destsuffix=git/libos;branch=master"
-SHA-LIBOS = "${AUTOREV}"
-
 # hv-cfg
 URL-HV-CFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git;branch=master"
 SHA-HV-CFG = "${AUTOREV}"
-
+# hypervisor
+URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
+SHA-HYPERVISOR = "${AUTOREV}"
+# libos
+URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
+SHA-LIBOS = "${AUTOREV}"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=master"
 SHA-LINUX = "${AUTOREV}"
-
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "${AUTOREV}"
-
 # u-boot
-URL-UBOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-UBOOT = "${AUTOREV}"
-
-# USDPAA Drivers
-URL-USDPAA-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
-SHA-USDPAA-DRIVERS = "${AUTOREV}"
-
-# USDPAA Applications
-URL-USDPAA-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-USDPAA-APPS = "${AUTOREV}"
-
-# DPAA Offloading Drivers
+URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
+SHA-U-BOOT = "${AUTOREV}"
+# demo-apps
+URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
+SHA-DEMO-APPS = "${AUTOREV}"
+# dpa-ffload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
 SHA-DPA-OFFLOAD = "${AUTOREV}"
-
+# drivers
+URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
+SHA-DRIVERS = "${AUTOREV}"
 #================== FSL packages outside of sdk-devel.git ================#
 # eth-config
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"

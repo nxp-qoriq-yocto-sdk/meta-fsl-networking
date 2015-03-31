@@ -13,8 +13,8 @@ DEPENDS_append_b4420qds = " ipc-ust"
 
 RDEPENDS_${PN} = "libgcc bash"
 
-SRC_URI = "${URL-USDPAA-DRIVERS}"
-SRCREV = "${SHA-USDPAA-DRIVERS}"
+SRC_URI = "${URL-DRIVERS}"
+SRCREV = "${SHA-DRIVERS}"
 
 S = "${WORKDIR}/git"
 

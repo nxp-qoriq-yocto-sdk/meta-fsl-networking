@@ -12,8 +12,8 @@ DEPENDS_append_b4420qds = " ipc-ust"
 
 RDEPENDS_${PN} = "libgcc bash"
 
-SRC_URI = "${URL-USDPAA-APPS}"
-SRCREV = "${SHA-USDPAA-APPS}"
+SRC_URI = "${URL-DEMO-APPS}"
+SRCREV = "${SHA-DEMO-APPS}"
 
 S = "${WORKDIR}/git"
 
