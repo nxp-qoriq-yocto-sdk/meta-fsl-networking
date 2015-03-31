@@ -25,13 +25,13 @@ PARALLEL_MAKE_pn-${PN} = ""
 do_compile_prepend () {
     case ${MACHINE} in
         b4420qds|b4420qds-64b|b4860qds|b4860qds-64b)
-            FMAN_VARIANT=B4860;;
+            FMAN_VARIANT=FMAN_V3H;;
         t1024qds|t1024qds-64b|t1024rdb|t1024rdb-64b|t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b|t1042rdb|t1042rdb-64b|t1042rdb-pi|t1042rdb-pi-64b)
-            FMAN_VARIANT=B4860;;
+            FMAN_VARIANT=FMAN_V3L;;
         t2080qds|t2080qds-64b|t2080rdb|t2080rdb-64b)
-            FMAN_VARIANT=B4860;;
+            FMAN_VARIANT=FMAN_V3H;;
         t4240qds|t4240qds-64b|t4240rdb|t4240rdb-64b|t4160qds|t4160qds-64b)
-            FMAN_VARIANT=B4860;;
+            FMAN_VARIANT=FMAN_V3H;;
         p1023rdb)
             FMAN_VARIANT=P1023;;
         *)
