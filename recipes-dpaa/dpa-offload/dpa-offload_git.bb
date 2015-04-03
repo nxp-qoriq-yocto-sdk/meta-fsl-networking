@@ -26,7 +26,7 @@ do_compile_prepend () {
     case ${MACHINE} in
         b4420qds|b4420qds-64b|b4860qds|b4860qds-64b)
             FMAN_VARIANT=FMAN_V3H;;
-        t1024qds|t1024qds-64b|t1024rdb|t1024rdb-64b|t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b|t1042rdb|t1042rdb-64b|t1042rdb-pi|t1042rdb-pi-64b)
+        t1040d4rdb|t1040d4rdb-64b|t1042d4rdb|t1042d4rdb-64b|t1024qds|t1024qds-64b|t1024rdb|t1024rdb-64b|t1040qds|t1040qds-64b|t1040rdb|t1040rdb-64b|t1042rdb|t1042rdb-64b|t1042rdb-pi|t1042rdb-pi-64b)
             FMAN_VARIANT=FMAN_V3L;;
         t2080qds|t2080qds-64b|t2080rdb|t2080rdb-64b)
             FMAN_VARIANT=FMAN_V3H;;
