@@ -101,6 +101,30 @@ IMAGE_INSTALL_append_p4080ds = " \
         tcf-qoriqdbg \
 "
 
+IMAGE_INSTALL_append_t1040d4rdb = " \
+        ar \
+        ceetm \
+        l2switch \
+        uio-seville \
+"
+
+IMAGE_INSTALL_append_t1040d4rdb-64b = " \
+        ar \
+        ceetm \
+        l2switch \
+        uio-seville \
+"
+
+IMAGE_INSTALL_append_t1042d4rdb = " \
+        ar \
+        ceetm \
+"
+
+IMAGE_INSTALL_append_t1042d4rdb-64b = " \
+        ar \
+        ceetm \
+"
+
 IMAGE_INSTALL_append_t1040rdb = " \
         ar \
         ceetm \
