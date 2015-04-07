@@ -41,6 +41,10 @@ SHA-DPA-OFFLOAD = "${AUTOREV}"
 URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
 SHA-DRIVERS = "${AUTOREV}"
 #================== FSL packages outside of sdk-devel.git ================#
+# cryptodev
+URL-CRYPTODEV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.8"
+SHA-CRYPTODEV = "8361f99c940fbe270fca2112dae3d97c9a5776d6"
+
 # eth-config
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
 SHA-ETH-CONFIG = "10b5f51c5198485c2cb80f97e774ed33e9aab048"
@@ -52,6 +56,14 @@ SHA-L2SWITCH-UIO = "7b2ccbaaf7ca09ba8952aa2135a8bcf390438fbc"
 # l2switch-util
 URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
 SHA-L2SWITCH-UTIL = "f41c26565c3d97dfb9e64064ff4e5591bc1b8455"
+
+# openssl
+URL-OPENSSL = "git://git.am.freescale.net/gitolite/sdk/openssl.git;branch=sdk-v1.8"
+SHA-OPENSSL = "1f29d90d4de7818b34af1bebaa971218c503c956"
+
+# pkc-host
+URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git;branch=sdk-v1.8"
+SHA-PKC-HOST = "6d9eac63283cde6138c74d7431a3db3bf9081d1c"
 
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
