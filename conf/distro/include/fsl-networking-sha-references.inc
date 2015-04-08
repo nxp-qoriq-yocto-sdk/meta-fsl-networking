@@ -51,11 +51,11 @@ SHA-ETH-CONFIG = "10b5f51c5198485c2cb80f97e774ed33e9aab048"
 
 # l2switch-uio
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=dev_fixes"
-SHA-L2SWITCH-UIO = "7b2ccbaaf7ca09ba8952aa2135a8bcf390438fbc"
+SHA-L2SWITCH-UIO = "53de57167e1d15b5e2f3ca9abc11d005818d370f"
 
 # l2switch-util
 URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
-SHA-L2SWITCH-UTIL = "f41c26565c3d97dfb9e64064ff4e5591bc1b8455"
+SHA-L2SWITCH-UTIL = "1f5e41c4b311f01c208496520ee731765d76ef32"
 
 # openssl
 URL-OPENSSL = "git://git.am.freescale.net/gitolite/sdk/openssl.git;branch=sdk-v1.8"
