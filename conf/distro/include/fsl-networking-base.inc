@@ -9,6 +9,7 @@ PREFERRED_VERSION_libvirt = "1.2.13"
 PREFERRED_VERSION_virtual/kernel_ls102xa = "3.12"
 
 EXTRA_IMAGEDEPENDS += "cst-native"
+EXTRA_IMAGEDEPENDS_append_qoriq-ppc = " mux-server-native"
 
 # use xz to compress sstate
 SSTATE_PKG_SUFFIX = "txz"

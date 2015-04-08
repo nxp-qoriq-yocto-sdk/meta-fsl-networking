@@ -19,7 +19,6 @@ IMAGE_INSTALL += " \
         asf \
         eth-config \
         merge-files \
-        mux-server \
         ${@base_conditional("PRIVATE_FULL", "yes", "apptrk", "", d)} \
         ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
 "
@@ -30,7 +29,6 @@ IMAGE_INSTALL_append_ls102xa = " \
 
 IMAGE_INSTALL_remove_ls102xa = " \
         eth-config \
-        mux-server \
         ${@base_conditional("PRIVATE_FULL", "yes", "hyperrelay", "", d)} \
 "
 
