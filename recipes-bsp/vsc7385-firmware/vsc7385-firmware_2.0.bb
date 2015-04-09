@@ -15,4 +15,3 @@ do_deploy() {
 }
 addtask deploy before do_build after do_install
 
-ALLOW_EMPTY_${PN} = "1"

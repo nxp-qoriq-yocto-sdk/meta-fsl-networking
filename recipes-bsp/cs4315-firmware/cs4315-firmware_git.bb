@@ -23,4 +23,3 @@ addtask deploy before do_build after do_install
 PACKAGES += "${PN}-image"
 FILES_${PN}-image += "/boot"
 COMPATIBLE_MACHINE = "(t2080rdb|t2080rdb-64b|t4240rdb|t4240rdb-64b)"
-ALLOW_EMPTY_${PN} = "1"

@@ -29,6 +29,5 @@ addtask deploy before do_build after do_install
 
 PACKAGES += "${PN}-image"
 FILES_${PN}-image += "/boot"
-ALLOW_EMPTY_${PN} = "1"
 COMPATIBLE_MACHINE = "(p1022ds|mpc8572ds|mpc8544ds|mpc8536ds)"
 
