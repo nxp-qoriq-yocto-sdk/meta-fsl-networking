@@ -8,7 +8,6 @@ DEPLOY_PKGS = " \
     hv-cfg \
     rcw \
     hypervisor \
-    hypervisor-partman \
 "
 DEPLOY_PKGS_e500v2 = ""
 
@@ -43,10 +42,8 @@ EXTRA_IMAGEDEPENDS_remove_t4160 = "hv-cfg rcw"
 # special trick for e6500 to include 64bit hypervisor
 EXTRA_IMAGEDEPENDS_remove_e6500 = " \
     hypervisor \
-    hypervisor-partman \
 "
 EXTRA_IMAGEDEPENDS_append_e6500 = " \
     lib64-hypervisor \
-    lib64-hypervisor-partman \
 "
 

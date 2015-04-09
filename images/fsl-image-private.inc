@@ -4,14 +4,17 @@ PRIVATE_PKGS = " \
         fmc \
         pme-tools \
         qoriq-debug \
+        hypervisor-partman \
         usdpaa \
         usdpaa-dev \
         usdpaa-staticdev \
         usdpaa-apps \
-	usdpaa-apps-staticdev \
+        usdpaa-apps-staticdev \
 "
 PRIVATE_PKGS_e500v2 = ""
 PRIVATE_PKGS_ls102xa = ""
+PRIVATE_PKGS_remove_e6500 = "hypervisor-partman"
+PRIVATE_PKGS_append_e6500 = " hypervisor-partman"
 
 # common packages
 IMAGE_INSTALL += " \
