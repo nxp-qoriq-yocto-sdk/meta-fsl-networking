@@ -64,7 +64,7 @@ IMAGE_INSTALL_remove_e6500 = " \
     hypervisor-partman \
 "
 IMAGE_INSTALL_append_e6500 = " \
-    ${@base_conditional("TCMODE", "external-fsl", "hypervisor", "lib64-hypervisor", d)} \
-    ${@base_conditional("TCMODE", "external-fsl", "hypervisor-partman", "lib64-hypervisor-partman", d)} \
+    lib64-hypervisor \
+    lib64-hypervisor-partman \
 "
 
