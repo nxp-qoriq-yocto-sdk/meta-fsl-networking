@@ -4,9 +4,15 @@
 # asf
 URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
 SHA-ASF = "${AUTOREV}"
-# flib 
+# cst
+URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
+SHA-CST = "${AUTOREV}"
+# flib
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
 SHA-FLIB = "${AUTOREV}"
+# fm-ucode
+URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;branch=master"
+SHA-FM-UCODE = "${AUTOREV}"
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
 SHA-FMC = "${AUTOREV}"
@@ -34,7 +40,7 @@ SHA-U-BOOT = "${AUTOREV}"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "${AUTOREV}"
-# dpa-ffload
+# dpa-offload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
 SHA-DPA-OFFLOAD = "${AUTOREV}"
 # drivers
