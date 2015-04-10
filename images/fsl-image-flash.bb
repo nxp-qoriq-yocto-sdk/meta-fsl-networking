@@ -7,7 +7,7 @@
 require images/fsl-image-minimal.bb
 
 IMAGE_INSTALL += " \
-        packagegroup-core-ssh-dropbear \
+        packagegroup-core-ssh-openssh \
         bash \
         util-linux \
         e2fsprogs \
