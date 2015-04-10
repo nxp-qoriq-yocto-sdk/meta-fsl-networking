@@ -14,7 +14,7 @@ PRIVATE_PKGS = " \
 PRIVATE_PKGS_e500v2 = ""
 PRIVATE_PKGS_ls102xa = ""
 PRIVATE_PKGS_remove_e6500 = "hypervisor-partman"
-PRIVATE_PKGS_append_e6500 = " hypervisor-partman"
+PRIVATE_PKGS_append_e6500 = " lib64-hypervisor-partman"
 
 # common packages
 IMAGE_INSTALL += " \
