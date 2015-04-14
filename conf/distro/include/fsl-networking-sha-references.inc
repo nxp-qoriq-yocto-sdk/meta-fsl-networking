@@ -30,16 +30,16 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "e0fa2c07abb6bd3f2eb45b23376c56b3de75babe"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "4bd58c4b2eb41d4450ef08222d01af45b37a5633"
+SHA-LINUX = "eba037730dfa5ae63be4f733b79f4746686ea5e3"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "14d9d27c783fa56e693e14422ce36a0a138a8a1a"
+SHA-U-BOOT = "8f425d11c7a5d117e6d2d59009334c3a342dca1d"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-DEMO-APPS = "eaf1fc7b99e96224c479165f9a26c50e6d0d48c2"
+SHA-DEMO-APPS = "0769ec888159c11a9e50b4e9bc68bad91c402888"
 # dpa-offload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
 SHA-DPA-OFFLOAD = "ff3b2b9c64680cbf9ba38dd7f5c9ca8d528a35c8"
