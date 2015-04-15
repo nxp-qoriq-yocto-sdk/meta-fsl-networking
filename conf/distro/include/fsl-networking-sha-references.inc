@@ -6,7 +6,7 @@ URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
 SHA-ASF = "ddf9678258fb6d5988606efb8a917819f1c2d42c"
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
-SHA-CST = "5aa79ec289f00374add056fd7be5e7204067aea2"
+SHA-CST = "327932dd9cffdbeb86e91b05ceab5b8354ce7ed2"
 # flib
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
 SHA-FLIB = "2206af990f76d784f4aab4308872d78f4f44e52c"
@@ -36,7 +36,7 @@ URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "8f425d11c7a5d117e6d2d59009334c3a342dca1d"
+SHA-U-BOOT = "37c695e3d0fd6b1051adfed09b197c4484df4608"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "0769ec888159c11a9e50b4e9bc68bad91c402888"
