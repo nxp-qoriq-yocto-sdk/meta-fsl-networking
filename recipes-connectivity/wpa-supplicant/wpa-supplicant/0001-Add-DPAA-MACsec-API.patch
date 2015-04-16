@@ -1,4 +1,4 @@
-From a51724269f684dcaa7080bc32269eeb5260113a1 Mon Sep 17 00:00:00 2001
+From b5a2973550cccf9c0b6cef10d50d585cb0c7da43 Mon Sep 17 00:00:00 2001
 From: Cristian Sovaiala <cristian.sovaiala@freescale.com>
 Date: Mon, 30 Mar 2015 15:44:28 +0300
 Subject: [PATCH 1/2] Add DPAA MACsec API
@@ -11,11 +11,11 @@ Signed-off-by: Iulia Manda <manda.iulia@freescale.com>
 Signed-off-by: Cristian Sovaiala <cristian.sovaiala@freescale.com>
 ---
  hostapd/dpaa_macsec_defconfig        | 319 ++++++++++++++
- src/drivers/dpaa_utils_macsec.c      | 829 +++++++++++++++++++++++++++++++++++
- src/drivers/dpaa_utils_macsec.h      | 279 ++++++++++++
+ src/drivers/dpaa_utils_macsec.c      | 815 +++++++++++++++++++++++++++++++++++
+ src/drivers/dpaa_utils_macsec.h      | 269 ++++++++++++
  src/drivers/drivers.mak              |   4 +
  wpa_supplicant/dpaa_macsec_defconfig | 500 +++++++++++++++++++++
- 5 files changed, 1931 insertions(+)
+ 5 files changed, 1907 insertions(+)
  create mode 100644 hostapd/dpaa_macsec_defconfig
  create mode 100644 src/drivers/dpaa_utils_macsec.c
  create mode 100644 src/drivers/dpaa_utils_macsec.h
@@ -348,10 +348,10 @@ index 0000000..9404e81
 +CONFIG_DPAA_UTILS_MACSEC=y
 diff --git a/src/drivers/dpaa_utils_macsec.c b/src/drivers/dpaa_utils_macsec.c
 new file mode 100644
-index 0000000..96d3657
+index 0000000..84be3b9
 --- /dev/null
 +++ b/src/drivers/dpaa_utils_macsec.c
-@@ -0,0 +1,829 @@
+@@ -0,0 +1,815 @@
 +/*
 + * DPAA MACsec API
 + * Copyright (c) 2015, Freescale Semiconductor Inc.
@@ -441,7 +441,6 @@ index 0000000..96d3657
 +	int msg_size;
 +	int rv;
 +	int revision;
-+	get_revision_t get_revision;
 +
 +	rv = dpa_connect();
 +	if(rv != 0) {
@@ -450,10 +449,8 @@ index 0000000..96d3657
 +
 +	nlh->nlmsg_seq = GET_REVISION;
 +
-+	get_revision.macsec_id = macsec_id;
-+
 +	gen.chf = GET_REVISION;
-+	gen.payload.get_revision = get_revision;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +	memcpy(NLMSG_DATA(nlh), &gen, msg_size);
@@ -573,7 +570,7 @@ index 0000000..96d3657
 +	nlh->nlmsg_seq = GET_TXSC_PHYS_ID;
 +
 +	gen.chf = GET_TXSC_PHYS_ID;
-+	gen.payload.get_txsc_id.macsec_id = macsec_id;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +	memcpy(NLMSG_DATA(nlh), &gen, msg_size);
@@ -740,7 +737,7 @@ index 0000000..96d3657
 +	nlh->nlmsg_seq = GET_TXSA_AN;
 +
 +	gen.chf = GET_TXSA_AN;
-+	gen.payload.get_txsa_an.macsec_id = macsec_id;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +	memcpy(NLMSG_DATA(nlh), &gen, msg_size);
@@ -1096,12 +1093,8 @@ index 0000000..96d3657
 +
 +	nlh->nlmsg_seq = DISABLE_SECY;
 +
-+	disable_secy_t disable_secy;
-+
-+	disable_secy.macsec_id = macsec_id;
-+
 +	gen.chf = DISABLE_SECY;
-+	gen.payload.disable_secy = disable_secy;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +
@@ -1129,11 +1122,8 @@ index 0000000..96d3657
 +
 +	nlh->nlmsg_seq = DISABLE_MACSEC;
 +
-+	disable_macsec_t dis;
-+	dis.macsec_id = macsec_id;
-+
 +	gen.chf = DISABLE_MACSEC;
-+	gen.payload.dis_macsec = dis;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +
@@ -1161,12 +1151,8 @@ index 0000000..96d3657
 +
 +	nlh->nlmsg_seq = DISABLE_ALL;
 +
-+	disable_all_t disable_all;
-+
-+	disable_all.macsec_id = macsec_id;
-+
 +	gen.chf = DISABLE_ALL;
-+	gen.payload.disable_all = disable_all;
++	gen.payload.macsec_id = macsec_id;
 +
 +	msg_size = sizeof(gen);
 +
@@ -1183,10 +1169,10 @@ index 0000000..96d3657
 +}
 diff --git a/src/drivers/dpaa_utils_macsec.h b/src/drivers/dpaa_utils_macsec.h
 new file mode 100644
-index 0000000..393eafe
+index 0000000..97c0a9f
 --- /dev/null
 +++ b/src/drivers/dpaa_utils_macsec.h
-@@ -0,0 +1,279 @@
+@@ -0,0 +1,269 @@
 +
 +/*
 + * DPAA MACsec API
@@ -1316,11 +1302,6 @@ index 0000000..393eafe
 +	macsec_secy_event event;
 +} enable_secy_t;
 +
-+typedef struct get_txsc_id {
-+	int macsec_id;
-+} get_revision_t, disable_secy_t, disable_macsec_t, get_txsc_id_t,
-+get_txsa_an_t, disable_all_t;
-+
 +typedef struct get_rxsc_id {
 +	int macsec_id;
 +	u32 rx_sc_id;
@@ -1412,10 +1393,9 @@ index 0000000..393eafe
 +typedef struct generic {
 +	msg_type chf;
 +	union {
++		int macsec_id;
 +		enable_macsec_t en_macsec;
 +		enable_secy_t enable_secy;
-+		get_revision_t get_revision;
-+		get_txsc_id_t get_txsc_id;
 +		create_tx_sa_t c_tx_sa;
 +		activate_tx_sa_t a_tx_sa;
 +		create_rx_sc_t c_rx_sc;
@@ -1426,12 +1406,8 @@ index 0000000..393eafe
 +		delete_rx_sa_t del_rx_sa;
 +		delete_rx_sc_t del_rx_sc;
 +		delete_tx_sa_t del_tx_sa;
-+		disable_secy_t disable_secy;
-+		disable_macsec_t dis_macsec;
-+		disable_all_t disable_all;
 +		update_npn_t update_npn;
 +		update_lpn_t update_lpn;
-+		get_txsa_an_t get_txsa_an;
 +		modify_txsa_key_t modify_txsa_key;
 +		modify_rxsa_key_t modify_rxsa_key;
 +		set_macsec_exception_t set_ex;
@@ -1473,7 +1449,7 @@ index 9434078..e3b0f0d 100644
 @@ -22,6 +22,10 @@ DRV_CFLAGS += -DCONFIG_DRIVER_MACSEC_QCA
  DRV_OBJS += ../src/drivers/driver_macsec_qca.o
  endif
- 
+
 +ifdef CONFIG_DPAA_UTILS_MACSEC
 +DRV_OBJS += ../src/drivers/dpaa_utils_macsec.o
 +endif
@@ -1987,6 +1963,6 @@ index 0000000..3fd4675
 +#
 +# DPAA MACsec API
 +CONFIG_DPAA_UTILS_MACSEC=y
--- 
+--
 1.9.1
 
