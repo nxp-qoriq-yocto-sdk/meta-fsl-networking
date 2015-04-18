@@ -8,7 +8,7 @@ SHA-ASF = "ddf9678258fb6d5988606efb8a917819f1c2d42c"
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
 SHA-CST = "327932dd9cffdbeb86e91b05ceab5b8354ce7ed2"
 # flib
-URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=sdk-v1.8.x"
+URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=extra-v1.8.x"
 SHA-FLIB = "2206af990f76d784f4aab4308872d78f4f44e52c"
 # fm-ucode
 URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;branch=master"
@@ -30,13 +30,13 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "e0fa2c07abb6bd3f2eb45b23376c56b3de75babe"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "eba037730dfa5ae63be4f733b79f4746686ea5e3"
+SHA-LINUX = "0f5712e52378a0bb3e8ff4aa3906d7bcff78e639"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "37c695e3d0fd6b1051adfed09b197c4484df4608"
+SHA-U-BOOT = "6c3b324d3628ddf663381bfbf132c6dbe44083bf"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "0769ec888159c11a9e50b4e9bc68bad91c402888"
