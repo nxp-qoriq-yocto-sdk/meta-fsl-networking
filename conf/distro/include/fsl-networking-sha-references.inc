@@ -30,7 +30,7 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "e0fa2c07abb6bd3f2eb45b23376c56b3de75babe"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "0f5712e52378a0bb3e8ff4aa3906d7bcff78e639"
+SHA-LINUX = "856a3c2212c07740a84774dd01b8d68b751b4f67"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
