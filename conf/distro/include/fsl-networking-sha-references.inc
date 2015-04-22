@@ -15,13 +15,13 @@ URL-FM-UCODE = "git://git.am.freescale.net/gitolite/dpaa-modules/fm-ucode.git;br
 SHA-FM-UCODE = "2827f0054e125b634fb1701719ca31c7d068e335"
 # fmc
 URL-FMC = "git://git.am.freescale.net/gitolite/dpaa-modules/fmc.git;branch=master"
-SHA-FMC = "92494f0f928ef20febf4c643080474f0fc443660"
+SHA-FMC = "555ae4cd50d50d7feeb92d806c456258a5e4edd2"
 # fmlib
 URL-FMLIB = "git://git.am.freescale.net/gitolite/dpaa-modules/fmlib.git;branch=master"
 SHA-FMLIB = "549d77efd38962de8b0b9067e2ebf670a2b5b018"
 # hv-cfg
 URL-HV-CFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git;branch=master"
-SHA-HV-CFG = "c41b33b24e73451b3ab22e6cb072b4df241dc39e"
+SHA-HV-CFG = "b9287b07390d17bfba936a806a72b91b89507c22"
 # hypervisor
 URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
 SHA-HYPERVISOR = "b5fc4dabb55cd22087f7b14f6f8c5c4a96c76b3a"
@@ -30,7 +30,7 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "e0fa2c07abb6bd3f2eb45b23376c56b3de75babe"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "1d8aace4799a7d3be1ce3ca1c4e80c0dfecb6d1f"
+SHA-LINUX = "fd562906f55f84c0b0494c08f77f73f153dd3297"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
@@ -39,7 +39,7 @@ URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=ma
 SHA-U-BOOT = "cb362dce19d89a95646fed8def275d51e8d2e67a"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-DEMO-APPS = "0769ec888159c11a9e50b4e9bc68bad91c402888"
+SHA-DEMO-APPS = "a8ff470f93a25d4bee05623c0e6b2a76a208fac7"
 # dpa-offload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
 SHA-DPA-OFFLOAD = "ff3b2b9c64680cbf9ba38dd7f5c9ca8d528a35c8"
