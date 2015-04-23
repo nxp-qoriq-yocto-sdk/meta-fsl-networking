@@ -36,7 +36,6 @@ EXTRA_IMAGEDEPENDS_remove_b4420 = "hv-cfg"
 EXTRA_IMAGEDEPENDS_remove_t1042rdb-pi = "hv-cfg qe-ucode"
 EXTRA_IMAGEDEPENDS_remove_t1042rdb-pi-64b = "hv-cfg qe-ucode"
 EXTRA_IMAGEDEPENDS_remove_t1023 = "hv-cfg qe-ucode"
-EXTRA_IMAGEDEPENDS_remove_t1024 = "hv-cfg"
 EXTRA_IMAGEDEPENDS_remove_t4160 = "hv-cfg rcw"
 
 # special trick for e6500 to include 64bit hypervisor
