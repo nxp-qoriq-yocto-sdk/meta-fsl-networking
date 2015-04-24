@@ -36,7 +36,7 @@ URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "cb362dce19d89a95646fed8def275d51e8d2e67a"
+SHA-U-BOOT = "9961bb6ea88a143d205890d135aafc7b9a52410d"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "5b4d9b38ec0ced66f13f2d2a9d7f08b19f8ec6aa"
