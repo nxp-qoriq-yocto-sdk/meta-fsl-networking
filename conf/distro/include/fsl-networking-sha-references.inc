@@ -39,7 +39,7 @@ URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=ma
 SHA-U-BOOT = "9961bb6ea88a143d205890d135aafc7b9a52410d"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-DEMO-APPS = "5b4d9b38ec0ced66f13f2d2a9d7f08b19f8ec6aa"
+SHA-DEMO-APPS = "64923ae671bfccbc08e18785db1ca9dd3006c0fb"
 # dpa-offload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
 SHA-DPA-OFFLOAD = "ff3b2b9c64680cbf9ba38dd7f5c9ca8d528a35c8"
