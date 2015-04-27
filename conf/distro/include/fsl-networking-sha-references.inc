@@ -59,10 +59,6 @@ SHA-L2SWITCH-UIO = "53de57167e1d15b5e2f3ca9abc11d005818d370f"
 URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
 SHA-L2SWITCH-UTIL = "1f5e41c4b311f01c208496520ee731765d76ef32"
 
-# openssl
-URL-OPENSSL = "git://git.am.freescale.net/gitolite/sdk/openssl.git;branch=sdk-v1.8"
-SHA-OPENSSL = "1f29d90d4de7818b34af1bebaa971218c503c956"
-
 # pkc-host
 URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git;branch=sdk-v1.8"
 SHA-PKC-HOST = "6d9eac63283cde6138c74d7431a3db3bf9081d1c"
