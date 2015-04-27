@@ -47,10 +47,6 @@ SHA-DPA-OFFLOAD = "ff3b2b9c64680cbf9ba38dd7f5c9ca8d528a35c8"
 URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
 SHA-DRIVERS = "26eb74a94dbaa94d0622a02ea6ad2eb1ee9d65b4"
 #================== FSL packages outside of sdk-devel.git ================#
-# cryptodev
-URL-CRYPTODEV = "git://git.am.freescale.net/gitolite/sdk/cryptodev-linux.git;branch=sdk-v1.8"
-SHA-CRYPTODEV = "8361f99c940fbe270fca2112dae3d97c9a5776d6"
-
 # eth-config
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
 SHA-ETH-CONFIG = "1d6ad160fda9123e93c65141aa1578b6253ff7bc"
