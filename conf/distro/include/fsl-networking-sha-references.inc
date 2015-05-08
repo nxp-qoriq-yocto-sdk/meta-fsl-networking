@@ -63,6 +63,10 @@ SHA-L2SWITCH-UTIL = "fb128e873cf28edf2490c2d61568a52bf5fc22ae"
 URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git;branch=sdk-v1.8"
 SHA-PKC-HOST = "708555822be4d8fbf5015e69489f27ccd8e7e016"
 
+# skmm-host
+URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git;branch=sdk-v1.8"
+SHA-SKMM-HOST = "a655c571a92f4a5d6ced09869c2f17609ee47361"
+
 # qemu
 URL-QEMU = "git://git.am.freescale.net/gitolite/sdk/qemu.git;branch=fsl-sdk-v1.8"
 SHA-QEMU = "00ac004143e9fe46944a1885b04268fcd3a95a3a"
