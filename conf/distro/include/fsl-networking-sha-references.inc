@@ -30,13 +30,13 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "e0fa2c07abb6bd3f2eb45b23376c56b3de75babe"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "a4466f3a10abb90004efbd1ff2f0052335a7aee2"
+SHA-LINUX = "d345eaf21d8c9b032d8e9d6facf316a2b2b90ef5"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "5cf9bc5de55c84b539f10de117d863122bc33c58"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "9961bb6ea88a143d205890d135aafc7b9a52410d"
+SHA-U-BOOT = "82db1eec9cff07d9da405e65a36a08f902c87676"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "dcc08cb54be3bd5ce46c9dac05edc52c381a8430"
