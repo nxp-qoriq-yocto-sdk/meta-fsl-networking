@@ -53,11 +53,11 @@ SHA-ETH-CONFIG = "1d6ad160fda9123e93c65141aa1578b6253ff7bc"
 
 # l2switch-uio
 URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=dev_fixes"
-SHA-L2SWITCH-UIO = "53de57167e1d15b5e2f3ca9abc11d005818d370f"
+SHA-L2SWITCH-UIO = "0c9921f643dfb43483fc146443a1b6f414b3bec9"
 
 # l2switch-util
 URL-L2SWITCH-UTIL = "git://git.am.freescale.net/gitolite/sdk/l2switch-util.git;branch=master"
-SHA-L2SWITCH-UTIL = "fb128e873cf28edf2490c2d61568a52bf5fc22ae"
+SHA-L2SWITCH-UTIL = "0c10ddbe1141e2d016abd59baf6efb19cb7f2156"
 
 # pkc-host
 URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git;branch=sdk-v1.8"
