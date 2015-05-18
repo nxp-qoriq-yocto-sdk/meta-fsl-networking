@@ -6,7 +6,7 @@ URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
 SHA-ASF = "8d744dd31858c3252fee8148114699d01937a21c"
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
-SHA-CST = "327932dd9cffdbeb86e91b05ceab5b8354ce7ed2"
+SHA-CST = "6f57c86c93cab0f4d0a40d83b685afa6932a6301"
 # flib
 URL-FLIB = "git://git.am.freescale.net/gitolite/sdk/flib.git;branch=extra-v1.8.x"
 SHA-FLIB = "2206af990f76d784f4aab4308872d78f4f44e52c"
@@ -30,7 +30,7 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "2ff7649c8047dd0d2143acb4743c53e6e6ba4878"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "fcb98ca99626b913043d7f0264601ec04a7fbf10"
+SHA-LINUX = "4660e029b87eee5b2a28ee3ee13f2042548803fa"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "426f7a6535d93dac76f5125035e0938a85e778d2"
@@ -45,7 +45,7 @@ URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.g
 SHA-DPA-OFFLOAD = "44ce7824fc791caccb4d71ea91a19ed8dbb45595"
 # drivers
 URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
-SHA-DRIVERS = "1eda3c8064f58d6eaee839ce32b75a8b99e1f2bc"
+SHA-DRIVERS = "e65a5e6657f91cde945e521df5b9ac460f2c8151"
 #================== FSL packages outside of sdk-devel.git ================#
 # eth-config
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
