@@ -24,19 +24,19 @@ URL-HV-CFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git;branch=master"
 SHA-HV-CFG = "b9287b07390d17bfba936a806a72b91b89507c22"
 # hypervisor
 URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
-SHA-HYPERVISOR = "0af857ab1a78fa15827603ba81e1dd909e3460ae"
+SHA-HYPERVISOR = "fca5fef8f0ddaa6a59228772e018520872e60c01"
 # libos
 URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "2ff7649c8047dd0d2143acb4743c53e6e6ba4878"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "ed306324dd1583499ab4c98ca30754ba179d5662"
+SHA-LINUX = "3be643b5c235100cde3580186419ac8661f97fba"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "426f7a6535d93dac76f5125035e0938a85e778d2"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "b5c2dd2b6ed8b65a63effa293d8c374a27841a1a"
+SHA-U-BOOT = "98a671260f8113e5baa4c5e71740b3ac5c3edd91"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "6f3f783e3d4cab1b2ee63de7b21d3fa707e8584a"
