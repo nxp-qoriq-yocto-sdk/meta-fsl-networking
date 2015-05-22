@@ -3,7 +3,7 @@
 #================== FSL packages inside of sdk-devel.git ================#
 # asf
 URL-ASF = "git://git.am.freescale.net/gitolite/asf.git;branch=master"
-SHA-ASF = "8d744dd31858c3252fee8148114699d01937a21c"
+SHA-ASF = "62ba10ab6bab8f8f53934e4bb55b5a552bf3fd6b"
 # cst
 URL-CST = "git://git.am.freescale.net/gitolite/cst.git;branch=master"
 SHA-CST = "6f57c86c93cab0f4d0a40d83b685afa6932a6301"
@@ -30,22 +30,22 @@ URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "2ff7649c8047dd0d2143acb4743c53e6e6ba4878"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "3be643b5c235100cde3580186419ac8661f97fba"
+SHA-LINUX = "c8d7e1ecee68d61bcdfb25f5a93fe10ecc932cee"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "426f7a6535d93dac76f5125035e0938a85e778d2"
 # u-boot
 URL-U-BOOT = "git://git.am.freescale.net/gitolite/sdk/u-boot-devel.git;branch=master"
-SHA-U-BOOT = "98a671260f8113e5baa4c5e71740b3ac5c3edd91"
+SHA-U-BOOT = "03084cb9be731ba834f292672936ee547de368ee"
 # demo-apps
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
-SHA-DEMO-APPS = "6f3f783e3d4cab1b2ee63de7b21d3fa707e8584a"
+SHA-DEMO-APPS = "d513ca22bbf2683378d5b0216b0d55eae80dca02"
 # dpa-offload
 URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
-SHA-DPA-OFFLOAD = "44ce7824fc791caccb4d71ea91a19ed8dbb45595"
+SHA-DPA-OFFLOAD = "beb126289ce74c589c2655eab8842530276d24bb"
 # drivers
 URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
-SHA-DRIVERS = "e65a5e6657f91cde945e521df5b9ac460f2c8151"
+SHA-DRIVERS = "3b0717952400577608a548fc4c4858a9efd1bd96"
 #================== FSL packages outside of sdk-devel.git ================#
 # eth-config
 URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.git;branch=master"
