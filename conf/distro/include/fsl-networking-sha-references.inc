@@ -24,13 +24,13 @@ URL-HV-CFG = "git://git.am.freescale.net/gitolite/sdk/hv-cfg.git;branch=master"
 SHA-HV-CFG = "b9287b07390d17bfba936a806a72b91b89507c22"
 # hypervisor
 URL-HYPERVISOR = "git://git.am.freescale.net/gitolite/hv/hypervisor.git;branch=master"
-SHA-HYPERVISOR = "ad1da626904adeafe138f333c0743e4289e14a65"
+SHA-HYPERVISOR = "e17b3ecbbdadebf7e31ba21134b689334da74e10"
 # libos
 URL-LIBOS = "git://git.am.freescale.net/gitolite/hv/libos.git;branch=master"
 SHA-LIBOS = "2ff7649c8047dd0d2143acb4743c53e6e6ba4878"
 # linux
 URL-LINUX = "git://git.am.freescale.net/gitolite/sdk/linux-devel.git;branch=ls2"
-SHA-LINUX = "1b189c445fc54387c7a3bb94c61232d4f3846922"
+SHA-LINUX = "8d44d5b5de453b0b091a182db7e56921befe438e"
 # rcw
 URL-RCW = "git://git.am.freescale.net/gitolite/sdk/rcw.git;branch=master"
 SHA-RCW = "426f7a6535d93dac76f5125035e0938a85e778d2"
