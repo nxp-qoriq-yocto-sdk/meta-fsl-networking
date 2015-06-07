@@ -52,7 +52,7 @@ URL-ETH-CONFIG = "git://git.am.freescale.net/gitolite/dpaa-modules/eth-config.gi
 SHA-ETH-CONFIG = "1d6ad160fda9123e93c65141aa1578b6253ff7bc"
 
 # l2switch-uio
-URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=dev_fixes"
+URL-L2SWITCH-UIO = "git://git.am.freescale.net/gitolite/sdk/l2switch-uio.git;branch=master"
 SHA-L2SWITCH-UIO = "80de8322d0ab8c28f5dfbe3cde8759a1efbe06c9"
 
 # l2switch-util
