@@ -71,5 +71,7 @@ IMAGE_INSTALL += " \
 IMAGE_INSTALL_remove_ls102xa = " \
      u-boot-qoriq-images \
 "
+# web-sysmon rdepends on cairo-dev
+IMAGE_INSTALL_append_t4240 = " cairo-dev"
 
 IMAGE_FSTYPES = "tar.gz"

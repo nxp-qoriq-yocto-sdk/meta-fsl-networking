@@ -171,3 +171,4 @@ IMAGE_INSTALL_append_t4240qds = " \
         skmm-host \
 "
 
+IMAGE_INSTALL_append_t4240 = " web-sysmon"
