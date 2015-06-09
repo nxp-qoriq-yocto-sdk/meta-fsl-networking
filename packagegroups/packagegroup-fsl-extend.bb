@@ -87,6 +87,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     git \
     git-perltools \
     intltool \
+    libsdl-dev \
     lsb \
     lsbinitscripts \
     lsbtest \
