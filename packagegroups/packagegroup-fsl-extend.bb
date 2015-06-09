@@ -76,6 +76,7 @@ RDEPENDS_packagegroup-fsl-extend-db = "\
 RDEPENDS_packagegroup-fsl-extend-misc = "\
     bind \
     bison \
+    bzip2 \
     ccache \
     chkconfig \
     chrpath \
@@ -86,6 +87,7 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     gettext-runtime \
     git \
     git-perltools \
+    htop \
     intltool \
     libsdl-dev \
     lsb \
@@ -95,6 +97,8 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     man \
     man-pages \
     mdadm \
+    nano \
+    openssl-dev \
     oprofile \
     parted \
     perf \
@@ -102,12 +106,14 @@ RDEPENDS_packagegroup-fsl-extend-misc = "\
     resolvconf \
     rpm \
     rt-tests \
+    screen \
     subversion \
     tcl \
     texinfo \
     u-boot-mkimage \
     unzip \
     valgrind \
+    vim \
     watchdog \
     which \
     xinetd \
