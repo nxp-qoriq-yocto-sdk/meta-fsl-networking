@@ -1,16 +1,16 @@
 DESCRIPTION = "Openstack demo scripts and configure files"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690"
+LIC_FILES_CHKSUM = "file://COPYING;md5=3da9cfbcb788c80a0384361b4de20420"
 
-SRC_URI = " \
-    file://Icehouse_conf.tgz \
-    file://openstack_deploy_T4.sh \
-"
+SRC_URI = "git://git.am.freescale.net/gitolite/sdk/openstack-demo.git;branch=master"
+SRCREV = "9a857f8cc02c02d14f699e7716798d7a8da701c0"
+
+S = "${WORKDIR}/git"
 
 do_install () {
-	install -d ${D}${ROOT_HOME}
-	cp -a ${WORKDIR}/Icehouse_conf ${D}${ROOT_HOME}
-	install -m 0755 ${WORKDIR}/openstack_deploy_T4.sh ${D}${ROOT_HOME}
+    install -d ${D}${ROOT_HOME}/Icehouse_conf
+    cp -a ${S}/conf/* ${D}${ROOT_HOME}/Icehouse_conf
+    install -m 0755 ${S}/scripts/openstack_deploy_T4.sh ${D}${ROOT_HOME}
 }
 
 FILES_${PN} += "${ROOT_HOME}"
