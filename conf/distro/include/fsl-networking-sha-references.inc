@@ -61,7 +61,7 @@ SHA-L2SWITCH-UTIL = "0c10ddbe1141e2d016abd59baf6efb19cb7f2156"
 
 # pkc-host
 URL-PKC-HOST = "git://git.am.freescale.net/gitolite/sdk/pkc-host.git;branch=sdk-v1.8"
-SHA-PKC-HOST = "f2de03e190a84c307bf2de693595a642dd19106c"
+SHA-PKC-HOST = "31a80a6134e69541eaa0b4ec58c9e63d00680c75"
 
 # skmm-host
 URL-SKMM-HOST = "git://git.am.freescale.net/gitolite/sdk/skmm-host.git;branch=sdk-v1.8"
