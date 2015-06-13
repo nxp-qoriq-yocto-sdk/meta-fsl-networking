@@ -1,2 +1,0 @@
-SRC_URI = "${URL-FMLIB}"
-SRCREV = "${SHA-FMLIB}"

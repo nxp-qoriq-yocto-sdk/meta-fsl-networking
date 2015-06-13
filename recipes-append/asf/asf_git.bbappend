@@ -1,2 +1,0 @@
-SRC_URI = "${URL-ASF}"
-SRCREV = "${SHA-ASF}"

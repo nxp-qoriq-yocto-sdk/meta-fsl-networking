@@ -1,2 +1,0 @@
-SRC_URI = "${URL-CST}"
-SRCREV = "${SHA-CST}"
