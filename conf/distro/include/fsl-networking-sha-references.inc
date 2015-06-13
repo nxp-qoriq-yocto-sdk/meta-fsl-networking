@@ -41,8 +41,8 @@ SHA-U-BOOT = "d7cfd640f858ab8b71335e134d4d89187e466a42"
 URL-DEMO-APPS = "git://git.am.freescale.net/gitolite/usdpaa-apps.git;branch=sdk-v1.8.x"
 SHA-DEMO-APPS = "95744440cf214d73884c44c0dbc296e1e4b4c8f4"
 # dpa-offload
-URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/dpaamodules/dpa-offload.git;branch=master"
-SHA-DPA-OFFLOAD = "beb126289ce74c589c2655eab8842530276d24bb"
+URL-DPA-OFFLOAD = "git://git.am.freescale.net/gitolite/sdk/dpa-offload.git;branch=master"
+SHA-DPA-OFFLOAD = "ed6191db9439d1aaba27fc01238da770d1d8ef9e"
 # drivers
 URL-DRIVERS = "git://git.am.freescale.net/gitolite/usdpaa.git;branch=sdk-v1.8.x"
 SHA-DRIVERS = "3b0717952400577608a548fc4c4858a9efd1bd96"
