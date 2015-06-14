@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=36b27801447e0662ee0138d17fe93880 \
                     file://wpa_supplicant/wpa_supplicant.c;beginline=1;endline=12;md5=3430fda79f2ba1dd545f0b3c4d6e4d24"
 DEPENDS += "dbus libnl libgcrypt"
 
-SRC_URI = "git://w1.fi/hostap.git;protocol=git;tag=hostap_2_4 \
+SRC_URI = "git://w1.fi/hostap.git;protocol=git \
            file://defconfig \
            file://wpa-supplicant.sh \
            file://wpa_supplicant.conf \
@@ -13,6 +13,7 @@ SRC_URI = "git://w1.fi/hostap.git;protocol=git;tag=hostap_2_4 \
            file://99_wpa_supplicant \
            file://0001-Add-DPAA-MACsec-API.patch \
           "
+SRCREV = "bc04db9b06ea9c38441be9b6e7b2be24ce2f98a9"
 
 S = "${WORKDIR}/git"
 
