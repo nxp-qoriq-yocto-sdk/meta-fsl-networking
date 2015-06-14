@@ -9,9 +9,8 @@ SRCREV = "ad5a3108f9ede39ea41fde18d4ac0cc7680cf650"
 
 S = "${WORKDIR}/git"
 
-UCODE_t1023 = "AQ28nm-FW_2.0.B3_Freescale_T1024RDB_120514.cld"
-UCODE_t1024 = "AQ28nm-FW_2.0.B3_Freescale_T1024RDB_120514.cld AQ28nm-FW_2.0.B9_Freescale_T1024RDB_012115.cld"
-UCODE_t2080 = "cs4315-cs4340-PHY-ucode.txt Firmware_1.37.10_011014_Freescale_T2080PCIe.cld"
+UCODE ?= ""
+UCODE_t2080 = "cs4315-cs4340-PHY-ucode.txt"
 UCODE_t4240 = "cs4315-cs4340-PHY-ucode.txt"
 do_install () {
     install -d ${D}/boot
