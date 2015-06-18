@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://Cortina-EULA;md5=ef3a0b9eaf40547d263a4f67040dc56e"
 inherit deploy
 
 SRC_URI = "git://git.am.freescale.net/gitolite/users/r63061/firmware.git"
-SRCREV = "ad5a3108f9ede39ea41fde18d4ac0cc7680cf650"
+SRCREV = "df010f21c85b4c9e9f472e472d78cd7b5044cfe8"
 
 S = "${WORKDIR}/git"
 
